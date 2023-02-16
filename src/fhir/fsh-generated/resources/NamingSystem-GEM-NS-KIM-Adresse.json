@@ -1,0 +1,28 @@
+{
+  "resourceType": "NamingSystem",
+  "id": "GEM-NS-KIM-Adresse",
+  "name": "GEM_NS_KIM-Adresse",
+  "status": "active",
+  "kind": "identifier",
+  "date": "2023-02-01",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.gematik.de/"
+        }
+      ]
+    }
+  ],
+  "responsible": "gematik GmbH",
+  "description": "E-Rezept Token",
+  "uniqueId": [
+    {
+      "type": "uri",
+      "value": "http://gematik.de/fhir/sid/KIM-Adresse",
+      "preferred": true
+    }
+  ]
+}
