@@ -3,5 +3,7 @@ Id: GEM-CS-KIM-Dienstkennung
 Title: "Kim Dienstkennung CS"
 Description: "Dienstkennungen von KIM für FHIR-Nachrichten"
 * insert MetaCodeSystem(GEM-CS-MEDREQ-KIM-Dienstkennung)
-* #eRezept;Rezeptanforderung;V1.0 "Rezeptanforderung mit KIM"
-* #eEB;Anforderung;V1.0 "Elektronische Ersatzbescheinigung"
+* #eRezept_Rezeptanforderung "Rezeptanforderung mit KIM"
+* #eEB_Anforderung "Elektronische Ersatzbescheinigung"
+
+//TODO CodeSystem um weitere bekannte Anwendungsfälle erweitern Zum Beispiel aus dem KIM Team

@@ -4,8 +4,7 @@ Id: GEM-PR-KIM-MessageBundle
 Title: "GEM_PR_KIM_MessageBundle"
 Description: "Basic Bundle for communication of FHIR Ressources with KIM Messages"
 * ^status = #draft
-// TODO
-//* obeys resolve-references-in-bundle
+* obeys resolve-references-in-bundle
 
 //Slice für identifier
 * identifier 1..
@@ -26,10 +25,7 @@ Description: "Basic Bundle for communication of FHIR Ressources with KIM Message
 * entry[MessageHeader].resource only GEM_PR_KIM_MessageHeader
 * entry[MessageHeader].fullUrl 1..1
 
-
-
 // Invariante zum Auflösen der Referenzen
-
 Invariant: resolve-references-in-bundle
 Description: "Alle Referenzen innerhalb eines Bundles müssen aufgelöst werden können"
 Expression: "Bundle.entry.resource.descendants().reference.where($this.startsWith('#').not()).all((%resource.entry.fullUrl.join('|') + '|').contains($this + '|'))"

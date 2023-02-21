@@ -10,11 +10,11 @@
   "url": "https://gematik.de/fhir/atf/CodeSystem/GEM-CS-MEDREQ-KIM-Dienstkennung",
   "concept": [
     {
-      "code": "eRezept;Rezeptanforderung;V1.0",
+      "code": "eRezept_Rezeptanforderung",
       "display": "Rezeptanforderung mit KIM"
     },
     {
-      "code": "eEB;Anforderung;V1.0",
+      "code": "eEB_Anforderung",
       "display": "Elektronische Ersatzbescheinigung"
     }
   ],
