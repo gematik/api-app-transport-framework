@@ -1,0 +1,119 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "GEM-PR-KIM-MessageHeader",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Foundation.Other"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "not-classified"
+    }
+  ],
+  "url": "https://gematik.de/fhir/atf/StructureDefinition/GEM-PR-KIM-MessageHeader",
+  "version": "0.9",
+  "name": "GEM_PR_KIM_MessageHeader",
+  "title": "GEM PR KIM MessageHeader",
+  "status": "draft",
+  "description": "Basic Message Header for communication of FHIR Ressources with KIM Messages",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "MessageHeader",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MessageHeader",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "MessageHeader.event[x]",
+        "path": "MessageHeader.event[x]",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/atf/ValueSet/GEM-VS-KIM-Dienstkennung"
+        }
+      },
+      {
+        "id": "MessageHeader.destination",
+        "path": "MessageHeader.destination",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MessageHeader.destination.receiver",
+        "path": "MessageHeader.destination.receiver",
+        "min": 1
+      },
+      {
+        "id": "MessageHeader.destination.receiver.identifier",
+        "path": "MessageHeader.destination.receiver.identifier",
+        "min": 1,
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "https://gematik.de/fhir/atf/StructureDefinition/GEM-PR-MEDREQ-KIM-Adresse",
+              "https://gematik.de/fhir/atf/StructureDefinition/GEM-PR-MEDREQ-TIM-Adresse"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MessageHeader.destination.receiver.display",
+        "path": "MessageHeader.destination.receiver.display",
+        "short": "Anzeigename der KIM Adresse",
+        "mustSupport": true
+      },
+      {
+        "id": "MessageHeader.sender",
+        "path": "MessageHeader.sender",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MessageHeader.sender.identifier",
+        "path": "MessageHeader.sender.identifier",
+        "min": 1,
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "https://gematik.de/fhir/atf/StructureDefinition/GEM-PR-MEDREQ-KIM-Adresse",
+              "https://gematik.de/fhir/atf/StructureDefinition/GEM-PR-MEDREQ-TIM-Adresse"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MessageHeader.sender.display",
+        "path": "MessageHeader.sender.display",
+        "short": "Anzeigename der KIM Adresse",
+        "mustSupport": true
+      },
+      {
+        "id": "MessageHeader.focus",
+        "path": "MessageHeader.focus",
+        "min": 1
+      }
+    ]
+  }
+}
