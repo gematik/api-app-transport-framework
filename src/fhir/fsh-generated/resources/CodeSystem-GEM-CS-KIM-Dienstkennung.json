@@ -11,7 +11,15 @@
   "concept": [
     {
       "code": "eRezept_Rezeptanforderung",
-      "display": "Rezeptanforderung mit KIM"
+      "display": "Rezeptanforderung"
+    },
+    {
+      "code": "eRezept_Klaerfall",
+      "display": "Klärfall im Kontext des Erezpetes"
+    },
+    {
+      "code": "eRezept_ParenteraleErnaehrung",
+      "display": "Rezeptanforderung für Parenterale Ernährung"
     },
     {
       "code": "eEB_Anforderung",
@@ -20,5 +28,5 @@
   ],
   "experimental": false,
   "publisher": "gematik GmbH",
-  "count": 2
+  "count": 4
 }
