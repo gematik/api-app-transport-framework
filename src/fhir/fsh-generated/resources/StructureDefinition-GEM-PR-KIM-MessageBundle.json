@@ -1,0 +1,131 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "GEM-PR-KIM-MessageBundle",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Foundation.Other"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "not-classified"
+    }
+  ],
+  "url": "https://gematik.de/fhir/atf/StructureDefinition/GEM-PR-KIM-MessageBundle",
+  "version": "0.9",
+  "name": "GEM_PR_KIM_MessageBundle",
+  "title": "GEM_PR_KIM_MessageBundle",
+  "status": "draft",
+  "description": "Basic Bundle for communication of FHIR Ressources with KIM Messages",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "cda",
+      "uri": "http://hl7.org/v3/cda",
+      "name": "CDA (R2)"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Bundle",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Bundle",
+        "path": "Bundle",
+        "constraint": [
+          {
+            "key": "resolve-references-in-bundle",
+            "severity": "error",
+            "human": "Alle Referenzen innerhalb eines Bundles müssen aufgelöst werden können",
+            "expression": "Bundle.entry.resource.descendants().reference.where($this.startsWith('#').not()).all((%resource.entry.fullUrl.join('|') + '|').contains($this + '|'))",
+            "source": "https://gematik.de/fhir/atf/StructureDefinition/GEM-PR-KIM-MessageBundle"
+          }
+        ]
+      },
+      {
+        "id": "Bundle.identifier",
+        "path": "Bundle.identifier",
+        "min": 1
+      },
+      {
+        "id": "Bundle.identifier.system",
+        "path": "Bundle.identifier.system",
+        "min": 1,
+        "fixedUri": "urn:ietf:rfc:3986"
+      },
+      {
+        "id": "Bundle.identifier.value",
+        "path": "Bundle.identifier.value",
+        "short": "Eindeutige UUID",
+        "min": 1
+      },
+      {
+        "id": "Bundle.type",
+        "path": "Bundle.type",
+        "fixedCode": "message"
+      },
+      {
+        "id": "Bundle.timestamp",
+        "path": "Bundle.timestamp",
+        "min": 1
+      },
+      {
+        "id": "Bundle.entry",
+        "path": "Bundle.entry",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "resource"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Bundle.entry:MessageHeader",
+        "path": "Bundle.entry",
+        "sliceName": "MessageHeader",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Bundle.entry:MessageHeader.fullUrl",
+        "path": "Bundle.entry.fullUrl",
+        "min": 1
+      },
+      {
+        "id": "Bundle.entry:MessageHeader.resource",
+        "path": "Bundle.entry.resource",
+        "min": 1,
+        "type": [
+          {
+            "code": "MessageHeader",
+            "profile": [
+              "https://gematik.de/fhir/atf/StructureDefinition/GEM-PR-KIM-MessageHeader"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

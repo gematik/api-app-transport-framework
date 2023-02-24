@@ -1,0 +1,24 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "GEM_CS_KIM_Dienstkennung",
+  "id": "GEM-CS-KIM-Dienstkennung",
+  "title": "Kim Dienstkennung CS",
+  "description": "Dienstkennungen von KIM für FHIR-Nachrichten",
+  "version": "1.0",
+  "url": "https://gematik.de/fhir/atf/CodeSystem/GEM-CS-MEDREQ-KIM-Dienstkennung",
+  "concept": [
+    {
+      "code": "eRezept_Rezeptanforderung",
+      "display": "Rezeptanforderung mit KIM"
+    },
+    {
+      "code": "eEB_Anforderung",
+      "display": "Elektronische Ersatzbescheinigung"
+    }
+  ],
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "count": 2
+}
