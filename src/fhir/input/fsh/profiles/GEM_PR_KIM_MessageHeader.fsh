@@ -21,7 +21,3 @@ Description: "Basic Message Header for communication of FHIR Ressources with KIM
 
 //TODO Für IG und Instances: Referenzpunkt display als Anzeigename
 //TODO Für IG und Instances: Im source.endpoint und destination.endpoint 1..1, sollten diese als KIM Adresse genutzt werden! Diese müssten mit "mailto:" beginnen, da der Datentyp url ist.
-//TODO Für IG: Wie gehen wir damit um, wenn die übersendeten FHIR Profile sich als nicht valide herausstellen?
-// -> Wenn ein Empfänger die Nachricht nicht verarbeiten kann (egal ob die Nachricht nicht valide ist oder ob es einen Verarbeitungsfehler gab),
-// müsste ein NACK gesendet werden, also eine Message mit einem entsprechenden Eventcode für
-// Fehlermeldungen (gibt es den in KIM?) und als Focus eine OperationOutcode-Ressource mit Details zum Fehler.
