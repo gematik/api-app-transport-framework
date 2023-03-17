@@ -8,13 +8,13 @@ Description: "MessageHeader des MessageBundles"
 
 * sender 1..1 MS
 * sender.identifier 1..1 MS
-* sender.identifier only IdentifierAddressKim or IdentifierAddressTim
+* sender.identifier only IdentifierAddressKIM or IdentifierAddressTIM
 * sender.display 0..1 MS
   * ^short = "Anzeigename der Absender Adresse"
 * destination 1..* MS
 * destination.receiver 1..1
 * destination.receiver.identifier 1..1 MS
-* destination.receiver.identifier only IdentifierAddressKim or IdentifierAddressTim
+* destination.receiver.identifier only IdentifierAddressKIM or IdentifierAddressTIM
 * destination.receiver.display 0..1 MS
   * ^short = "Anzeigename der Empfänger Adresse"
 * focus 1..*

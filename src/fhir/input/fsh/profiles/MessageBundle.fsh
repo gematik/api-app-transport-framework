@@ -1,7 +1,7 @@
-Profile: BundleMessageAppTransportFramework
+Profile: BundleAppTransportFramework
 Parent: Bundle
-Id: bundle-message-app-transport-framework
-Title: "MessageBundle"
+Id: bundle-app-transport-framework
+Title: "MessageBundle für den Nachrichtentransport"
 Description: "Bundle zum Zusammenfasssen der FHIR-Instanzen, welche in innerhalb dieses UseCases zusammengefasst werden sollen."
 * ^status = #draft
 * obeys resolve-references-in-bundle

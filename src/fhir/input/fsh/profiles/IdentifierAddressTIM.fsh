@@ -1,4 +1,4 @@
-Profile: IdentifierAddressTim
+Profile: IdentifierAddressTIM
 Parent: Identifier
 Id: identifier-address-tim
 Title: "TIM-Adresse Identifier"
@@ -10,7 +10,7 @@ Description: "Identifier zur Angabe der TIM-Adresse"
   * ^example.valueString = "example@super-care.tim.telematik"
 
 
-Instance: NamingSystemAddressTim
+Instance: NamingSystemAddressTIM
 InstanceOf: NamingSystem
 Usage: #definition
 Title: "TIM-Adresse NamingSystem"

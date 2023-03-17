@@ -1,4 +1,4 @@
-Profile: IdentifierAddressKim
+Profile: IdentifierAddressKIM
 Parent: Identifier
 Id: identifier-address-kim
 Title: "KIM-Adresse Identifier"
@@ -15,12 +15,12 @@ Description: "Dies ist keine gültge KIM-Adresse"
 Expression: "$this.toString().matches('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$')"
 Severity: #warning
 
-Instance: NamingSystemAddressKim
+Instance: NamingSystemAddressKIM
 InstanceOf: NamingSystem
 Usage: #definition
 Title: "KIM-Adresse NamingSystem"
 Description: "NamingSystem für eine KIM-Address"
-* name = "NamingSystemAddressKim"
+* name = "NamingSystemAddressKIM"
 * status = #active
 * kind = #identifier
 * date = "2023-02-01"
