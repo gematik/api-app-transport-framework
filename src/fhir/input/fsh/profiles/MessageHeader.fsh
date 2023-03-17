@@ -1,22 +1,22 @@
-Profile: GEM_PR_KIM_MessageHeader
+Profile: MessageHeaderAppTransportFramework
 Parent: MessageHeader
-Id: GEM-PR-KIM-MessageHeader
-Title: "GEM PR KIM MessageHeader"
-Description: "Basic Message Header for communication of FHIR Ressources with KIM Messages"
+Id: message-header-app-transport
+Title: "MessageHeader"
+Description: "MessageHeader des MessageBundles"
 * ^status = #draft
-* event[x] from GEM_VS_KIM_Dienstkennung (required)
+* event[x] from ServiceIdentifierVS (required)
 
 * sender 1..1 MS
 * sender.identifier 1..1 MS
-* sender.identifier only GEM_PR_KIM_AdressIdentifier or GEM_PR_TIM_AdressIdentifier
+* sender.identifier only IdentifierAddressKIM or IdentifierAddressTIM
 * sender.display 0..1 MS
-  * ^short = "Anzeigename der KIM Adresse"
+  * ^short = "Anzeigename der Absender Adresse"
 * destination 1..* MS
 * destination.receiver 1..1
 * destination.receiver.identifier 1..1 MS
-* destination.receiver.identifier only GEM_PR_KIM_AdressIdentifier or GEM_PR_TIM_AdressIdentifier
+* destination.receiver.identifier only IdentifierAddressKIM or IdentifierAddressTIM
 * destination.receiver.display 0..1 MS
-  * ^short = "Anzeigename der KIM Adresse"
+  * ^short = "Anzeigename der Empfänger Adresse"
 * focus 1..*
 
 //TODO Für IG und Instances: Referenzpunkt display als Anzeigename

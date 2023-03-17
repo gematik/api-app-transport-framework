@@ -2,79 +2,71 @@
   "resourceType": "CodeSystem",
   "status": "draft",
   "content": "complete",
-  "name": "GEM_CS_KIM_Dienstkennung",
-  "id": "GEM-CS-KIM-Dienstkennung",
-  "title": "Kim Dienstkennung CS",
-  "description": "Dienstkennungen von KIM für FHIR-Nachrichten",
+  "name": "ServiceIdentifierCS",
+  "id": "service-identifier-cs",
+  "title": "Anwendungskennzeichen (CS)",
+  "description": "CodeSystem zum Anwendungskennzeichen zur Identifkation des UseCases, für welchen die FHIR-Instanzen verwendet werden",
   "version": "1.0",
-  "url": "https://gematik.de/fhir/atf/CodeSystem/GEM-CS-MEDREQ-KIM-Dienstkennung",
+  "url": "https://gematik.de/fhir/atf/CodeSystem/service-identifier-cs",
   "concept": [
     {
-      "code": "eRezept_Rezeptanforderung_Rezeptanfrage_an_Sender_zurueck",
+      "code": "eRezept_Rezeptanforderung;Rezeptanfrage_an_Sender_zurueck",
       "display": "Anfrage an einen Arzt ein Rezept auszustellen und das Rezept an den Sender zurück zu schicken"
     },
     {
-      "code": "eRezept_Rezeptanforderung_Rezeptanfrage_nur_Ausstellen",
+      "code": "eRezept_Rezeptanforderung;Rezeptanfrage;nur_Ausstellen",
       "display": "Anfrage an einen Arzt ein Rezept auszustellen"
     },
     {
-      "code": "eRezept_Rezeptanforderung_Rezeptanfrage_weiterleiten_an_Apotheke",
+      "code": "eRezept_Rezeptanforderung;Rezeptanfrage;weiterleiten_an_Apotheke",
       "display": "Anfrage an einen Arzt ein Rezept auszustellen und das Rezept an die Apotheke weiterzuleiten"
     },
     {
-      "code": "eRezept_Rezeptanforderung_Rezeptanfrage_Storno",
+      "code": "eRezept_Rezeptanforderung;Rezeptanfrage;Storno",
       "display": "Abbruch der Rezeptanfrage"
     },
     {
-      "code": "eRezept_Rezeptanforderung_Rezeptbestaetigung",
+      "code": "eRezept_Rezeptanforderung;Rezeptbestaetigung",
       "display": "Bestätigung und Übermittlung eines ausgestellten Rezeptes"
     },
     {
-      "code": "eRezept_Rezeptanforderung_Abgabeanfrage",
+      "code": "eRezept_Rezeptanforderung;Abgabeanfrage",
       "display": "Anfrage zur Erfüllung eines Rezeptes und Abgabe des Medikaments"
     },
     {
-      "code": "eRezept_Rezeptanforderung_Abgabeanfrage_Storno",
+      "code": "eRezept_Rezeptanforderung;Abgabeanfrage;Storno",
       "display": "Abbruch der Rezeptanfrage"
     },
     {
-      "code": "eRezept_Rezeptanforderung_Abgabebestaetigung",
+      "code": "eRezept_Rezeptanforderung;Abgabebestaetigung",
       "display": "Bestätigung der Erfüllung und Abgabe eines Medikamentes"
     },
     {
-      "code": "eRezept_ParenteraleErnaehrung_Rezeptanfrage",
+      "code": "eRezept_ParenteraleErnaehrung;Rezeptanfrage",
       "display": "Rezeptanfrage für eine parenterale Zubereitung"
     },
     {
-      "code": "eRezept_ParenteraleErnaehrung_Rezeptanfrage_Storno",
+      "code": "eRezept_ParenteraleErnaehrung;Rezeptanfrage_Storno",
       "display": "Abbruch der Rezeptanfrage für eine parenterale Zubereitung"
     },
     {
-      "code": "eRezept_ParenteraleErnaehrung_Rezeptbestaetigung",
+      "code": "eRezept_ParenteraleErnaehrung;Rezeptbestaetigung",
       "display": "Bestätigung und Übermittlung eines ausgestellten Rezeptes für eine parenterale Zubereitung"
     },
     {
-      "code": "eRezept_Klaerfall",
-      "display": "Klärfall im Kontext des Erezpetes"
-    },
-    {
-      "code": "eRezept_ParenteraleErnaehrung",
-      "display": "Rezeptanforderung für Parenterale Ernährung"
-    },
-    {
-      "code": "eEB_Anfrage",
+      "code": "eEB;Anfrage",
       "display": "Anfragedaten zum Erhalt von Versichertendaten"
     },
     {
-      "code": "eEB_Bescheinigung",
+      "code": "eEB;Bescheinigung",
       "display": "Versichertendaten in verschiedenen Ausprägungen"
     },
     {
-      "code": "eEB_Fehler",
+      "code": "eEB;Fehler",
       "display": "Fehlermeldung bzgl. der Ermittlung der Daten des Versicherten"
     }
   ],
   "experimental": false,
   "publisher": "gematik GmbH",
-  "count": 16
+  "count": 14
 }

@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "GEM-PR-KIM-MessageBundle",
+  "id": "bundle-message-app-transport-framework",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,12 +11,12 @@
       "valueCode": "not-classified"
     }
   ],
-  "url": "https://gematik.de/fhir/atf/StructureDefinition/GEM-PR-KIM-MessageBundle",
+  "url": "https://gematik.de/fhir/atf/StructureDefinition/bundle-message-app-transport-framework",
   "version": "0.9",
-  "name": "GEM_PR_KIM_MessageBundle",
-  "title": "GEM_PR_KIM_MessageBundle",
+  "name": "BundleMessageAppTransportFramework",
+  "title": "MessageBundle",
   "status": "draft",
-  "description": "Basic Bundle for communication of FHIR Ressources with KIM Messages",
+  "description": "Bundle zum Zusammenfasssen der FHIR-Instanzen, welche in innerhalb dieses UseCases zusammengefasst werden sollen.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -56,7 +56,7 @@
             "severity": "error",
             "human": "Alle Referenzen innerhalb eines Bundles müssen aufgelöst werden können",
             "expression": "Bundle.entry.resource.descendants().reference.where($this.startsWith('#').not()).all((%resource.entry.fullUrl.join('|') + '|').contains($this + '|'))",
-            "source": "https://gematik.de/fhir/atf/StructureDefinition/GEM-PR-KIM-MessageBundle"
+            "source": "https://gematik.de/fhir/atf/StructureDefinition/bundle-message-app-transport-framework"
           }
         ]
       },
@@ -121,7 +121,7 @@
           {
             "code": "MessageHeader",
             "profile": [
-              "https://gematik.de/fhir/atf/StructureDefinition/GEM-PR-KIM-MessageHeader"
+              "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport"
             ]
           }
         ]
