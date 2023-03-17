@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "GEM-PR-KIM-MessageHeader",
+  "id": "message-header-app-transport",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
@@ -11,12 +11,12 @@
       "valueCode": "not-classified"
     }
   ],
-  "url": "https://gematik.de/fhir/atf/StructureDefinition/GEM-PR-KIM-MessageHeader",
+  "url": "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport",
   "version": "0.9",
-  "name": "GEM_PR_KIM_MessageHeader",
-  "title": "GEM PR KIM MessageHeader",
+  "name": "MessageHeaderAppTransportFramework",
+  "title": "MessageHeader",
   "status": "draft",
-  "description": "Basic Message Header for communication of FHIR Ressources with KIM Messages",
+  "description": "MessageHeader des MessageBundles",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -47,7 +47,7 @@
         "path": "MessageHeader.event[x]",
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/atf/ValueSet/GEM-VS-KIM-Dienstkennung"
+          "valueSet": "https://gematik.de/fhir/atf/ValueSet/service-identifier-vs"
         }
       },
       {
@@ -69,8 +69,8 @@
           {
             "code": "Identifier",
             "profile": [
-              "https://gematik.de/fhir/atf/StructureDefinition/GEM-PR-MEDREQ-KIM-Adresse",
-              "https://gematik.de/fhir/atf/StructureDefinition/GEM-PR-MEDREQ-TIM-Adresse"
+              "https://gematik.de/fhir/atf/StructureDefinition/identifier-address-kim",
+              "https://gematik.de/fhir/atf/StructureDefinition/identifier-address-tim"
             ]
           }
         ],
@@ -79,7 +79,7 @@
       {
         "id": "MessageHeader.destination.receiver.display",
         "path": "MessageHeader.destination.receiver.display",
-        "short": "Anzeigename der KIM Adresse",
+        "short": "Anzeigename der Empfänger Adresse",
         "mustSupport": true
       },
       {
@@ -96,8 +96,8 @@
           {
             "code": "Identifier",
             "profile": [
-              "https://gematik.de/fhir/atf/StructureDefinition/GEM-PR-MEDREQ-KIM-Adresse",
-              "https://gematik.de/fhir/atf/StructureDefinition/GEM-PR-MEDREQ-TIM-Adresse"
+              "https://gematik.de/fhir/atf/StructureDefinition/identifier-address-kim",
+              "https://gematik.de/fhir/atf/StructureDefinition/identifier-address-tim"
             ]
           }
         ],
@@ -106,7 +106,7 @@
       {
         "id": "MessageHeader.sender.display",
         "path": "MessageHeader.sender.display",
-        "short": "Anzeigename der KIM Adresse",
+        "short": "Anzeigename der Absender Adresse",
         "mustSupport": true
       },
       {

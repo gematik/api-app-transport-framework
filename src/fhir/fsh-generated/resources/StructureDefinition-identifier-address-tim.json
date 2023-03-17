@@ -1,14 +1,14 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "GEM-PR-MEDREQ-KIM-Adresse",
-  "url": "https://gematik.de/fhir/atf/StructureDefinition/GEM-PR-MEDREQ-KIM-Adresse",
+  "id": "identifier-address-tim",
+  "url": "https://gematik.de/fhir/atf/StructureDefinition/identifier-address-tim",
   "version": "1.0",
-  "name": "GEM_PR_KIM_AdressIdentifier",
-  "title": "GEM PR MEDREQ KIM-Adresse",
+  "name": "IdentifierAddressTim",
+  "title": "TIM-Adresse Identifier",
   "status": "draft",
   "experimental": false,
   "publisher": "gematik GmbH",
-  "description": "Identifier zur Angabe der KIM-Adresse",
+  "description": "Identifier zur Angabe der TIM-Adresse",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -38,7 +38,7 @@
         "id": "Identifier.system",
         "path": "Identifier.system",
         "min": 1,
-        "fixedUri": "http://gematik.de/fhir/sid/KIM-Adresse",
+        "fixedUri": "http://gematik.de/fhir/sid/TIM-Adresse",
         "mustSupport": true
       },
       {
@@ -48,7 +48,7 @@
         "example": [
           {
             "label": "General",
-            "valueString": "example@super-care.kim.telematik"
+            "valueString": "example@super-care.tim.telematik"
           }
         ]
       }

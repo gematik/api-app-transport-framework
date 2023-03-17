@@ -1,12 +1,10 @@
-Profile: GEM_PR_KIM_MessageBundle
+Profile: BundleAppTransportFramework
 Parent: Bundle
-Id: GEM-PR-KIM-MessageBundle
-Title: "GEM_PR_KIM_MessageBundle"
-Description: "Basic Bundle for communication of FHIR Ressources with KIM Messages"
+Id: bundle-app-transport-framework
+Title: "MessageBundle für den Nachrichtentransport"
+Description: "Bundle zum Zusammenfasssen der FHIR-Instanzen, welche in innerhalb dieses UseCases zusammengefasst werden sollen."
 * ^status = #draft
 * obeys resolve-references-in-bundle
-
-//Slice für identifier
 * identifier 1..
 * identifier.system 1..
 * identifier.system = "urn:ietf:rfc:3986" (exactly)
@@ -22,7 +20,7 @@ Description: "Basic Bundle for communication of FHIR Ressources with KIM Message
 * entry contains
     MessageHeader 1..1
 * entry[MessageHeader].resource 1..1
-* entry[MessageHeader].resource only GEM_PR_KIM_MessageHeader
+* entry[MessageHeader].resource only MessageHeaderAppTransportFramework
 * entry[MessageHeader].fullUrl 1..1
 
 // Invariante zum Auflösen der Referenzen

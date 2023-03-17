@@ -1,20 +1,20 @@
-Profile: GEM_PR_TIM_AdressIdentifier
+Profile: IdentifierAddressTIM
 Parent: Identifier
-Id: GEM-PR-MEDREQ-TIM-Adresse
-Title: "GEM PR MEDREQ TIM-Adresse"
+Id: identifier-address-tim
+Title: "TIM-Adresse Identifier"
 Description: "Identifier zur Angabe der TIM-Adresse"
-* insert Meta (GEM-PR-MEDREQ-TIM-Adresse)
+* insert Meta (identifier-address-tim)
 * system = $tim (exactly)
 * system 1..1 MS
 * value 1..1
   * ^example.valueString = "example@super-care.tim.telematik"
 
 
-Instance: GEM-NS-TIM-Adresse
+Instance: NamingSystemAddressTIM
 InstanceOf: NamingSystem
 Usage: #definition
-Title: "GEM NS TIM-Adresse"
-Description: "NamingSystem for Gematik TIM-Adresse"
+Title: "TIM-Adresse NamingSystem"
+Description: "NamingSystem für eine TIM-Adresse"
 * name = "GEM_NS_TIM-Adresse"
 * status = #active
 * kind = #identifier
