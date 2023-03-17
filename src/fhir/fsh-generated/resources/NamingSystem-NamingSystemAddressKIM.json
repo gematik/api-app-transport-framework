@@ -1,7 +1,7 @@
 {
   "resourceType": "NamingSystem",
-  "id": "NamingSystemAddressTim",
-  "name": "GEM_NS_TIM-Adresse",
+  "id": "NamingSystemAddressKIM",
+  "name": "NamingSystemAddressKIM",
   "status": "active",
   "kind": "identifier",
   "date": "2023-02-01",
@@ -21,7 +21,7 @@
   "uniqueId": [
     {
       "type": "uri",
-      "value": "http://gematik.de/fhir/sid/TIM-Adresse",
+      "value": "http://gematik.de/fhir/sid/KIM-Adresse",
       "preferred": true
     }
   ]
