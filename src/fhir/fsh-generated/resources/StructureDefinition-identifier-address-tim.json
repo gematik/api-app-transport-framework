@@ -3,7 +3,7 @@
   "id": "identifier-address-tim",
   "url": "https://gematik.de/fhir/atf/StructureDefinition/identifier-address-tim",
   "version": "1.0",
-  "name": "IdentifierAddressTim",
+  "name": "IdentifierAddressTIM",
   "title": "TIM-Adresse Identifier",
   "status": "draft",
   "experimental": false,
