@@ -3,7 +3,7 @@
   "id": "identifier-address-kim",
   "url": "https://gematik.de/fhir/atf/StructureDefinition/identifier-address-kim",
   "version": "1.0",
-  "name": "IdentifierAddressKim",
+  "name": "IdentifierAddressKIM",
   "title": "KIM-Adresse Identifier",
   "status": "draft",
   "experimental": false,
