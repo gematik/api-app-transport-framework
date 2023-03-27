@@ -14,15 +14,15 @@
       "display": "Anfrage an einen Arzt ein Rezept auszustellen und das Rezept an den Sender zurück zu schicken"
     },
     {
-      "code": "eRezept_Rezeptanforderung;Rezeptanfrage;nur_Ausstellen",
+      "code": "eRezept_Rezeptanforderung;Rezeptanfrage_nur_Ausstellen",
       "display": "Anfrage an einen Arzt ein Rezept auszustellen"
     },
     {
-      "code": "eRezept_Rezeptanforderung;Rezeptanfrage;weiterleiten_an_Apotheke",
+      "code": "eRezept_Rezeptanforderung;Rezeptanfrage_weiterleiten_an_Apotheke",
       "display": "Anfrage an einen Arzt ein Rezept auszustellen und das Rezept an die Apotheke weiterzuleiten"
     },
     {
-      "code": "eRezept_Rezeptanforderung;Rezeptanfrage;Storno",
+      "code": "eRezept_Rezeptanforderung;Rezeptanfrage_Storno",
       "display": "Abbruch der Rezeptanfrage"
     },
     {
@@ -34,7 +34,7 @@
       "display": "Anfrage zur Erfüllung eines Rezeptes und Abgabe des Medikaments"
     },
     {
-      "code": "eRezept_Rezeptanforderung;Abgabeanfrage;Storno",
+      "code": "eRezept_Rezeptanforderung;Abgabeanfrage_Storno",
       "display": "Abbruch der Rezeptanfrage"
     },
     {
