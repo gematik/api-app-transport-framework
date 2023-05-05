@@ -3,6 +3,7 @@ Id: service-identifier-cs
 Title: "Anwendungskennzeichen (CS)"
 Description: "CodeSystem zum Anwendungskennzeichen zur Identifkation des UseCases, für welchen die FHIR-Instanzen verwendet werden"
 * insert MetaCodeSystem(service-identifier-cs)
+* ^caseSensitive = true
 * #eRezept_Rezeptanforderung;Rezeptanfrage_an_Sender_zurueck "Anfrage an einen Arzt ein Rezept auszustellen und das Rezept an den Sender zurück zu schicken" // Empfänger schickt das Rezept zurück
 * #eRezept_Rezeptanforderung;Rezeptanfrage_nur_Ausstellen "Anfrage an einen Arzt ein Rezept auszustellen" // Empfänger schickt das Rezept zurück
 * #eRezept_Rezeptanforderung;Rezeptanfrage_weiterleiten_an_Apotheke "Anfrage an einen Arzt ein Rezept auszustellen und das Rezept an die Apotheke weiterzuleiten" // Sender schickt auch einen DispenseRequest mit, der weitergeleitet werden soll
@@ -17,3 +18,4 @@ Description: "CodeSystem zum Anwendungskennzeichen zur Identifkation des UseCase
 * #eEB;Anfrage "Anfragedaten zum Erhalt von Versichertendaten"
 * #eEB;Bescheinigung "Versichertendaten in verschiedenen Ausprägungen"
 * #eEB;Fehler "Fehlermeldung bzgl. der Ermittlung der Daten des Versicherten"
+* #Selbsttest;Lieferung; "Diese Dienstkennung dient ausschließlich der Einrichtung des Kontos innerhalb eines PVS und des Testes, ob Nachrichten versendet und empfangen werden können. Diese Dienstkennung wird im PVS bei der normalen Abholung von Nachrichten ignoriert."

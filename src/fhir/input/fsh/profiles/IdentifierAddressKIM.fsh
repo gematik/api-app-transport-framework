@@ -7,12 +7,14 @@ Description: "Identifier zur Angabe der KIM-Adresse"
 * system = $kim (exactly)
 * system 1..1 MS
 * value 1..1
+* value.minLength = 5
+* value.maxLength = 320
 * value obeys KIM-adresse-validieren
   * ^example.valueString = "example@super-care.kim.telematik"
 
 Invariant: KIM-adresse-validieren
 Description: "Dies ist keine gültge KIM-Adresse"
-Expression: "$this.toString().matches('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$')"
+Expression: "$this.toString().matches('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$')"
 Severity: #warning
 
 Instance: NamingSystemAddressKIM

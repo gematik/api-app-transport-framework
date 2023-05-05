@@ -15,7 +15,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 Title: "TIM-Adresse NamingSystem"
 Description: "NamingSystem für eine TIM-Adresse"
-* name = "GEM_NS_TIM-Adresse"
+* name = "NamingSystemAddressTIM"
 * status = #active
 * kind = #identifier
 * date = "2023-02-01"

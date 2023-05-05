@@ -1,0 +1,40 @@
+{
+  "resourceType": "MessageHeader",
+  "id": "ExampleMessageHeaderAppTransportFramework",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport"
+    ]
+  },
+  "eventCoding": {
+    "code": "Selbsttest;Lieferung",
+    "system": "https://gematik.de/fhir/atf/CodeSystem/service-identifier-cs"
+  },
+  "source": {
+    "endpoint": "https://sender.example.com/endpoint"
+  },
+  "sender": {
+    "identifier": {
+      "system": "http://gematik.de/fhir/sid/KIM-Adresse",
+      "value": "sender@example.com"
+    },
+    "display": "Sender Example"
+  },
+  "destination": [
+    {
+      "endpoint": "https://receiver.example.com/endpoint",
+      "receiver": {
+        "identifier": {
+          "system": "http://gematik.de/fhir/sid/KIM-Adresse",
+          "value": "receiver@example.com"
+        },
+        "display": "Receiver Example"
+      }
+    }
+  ],
+  "focus": [
+    {
+      "reference": "urn:uuid:86a87254-ce15-11ed-afa1-0242ac120004"
+    }
+  ]
+}
