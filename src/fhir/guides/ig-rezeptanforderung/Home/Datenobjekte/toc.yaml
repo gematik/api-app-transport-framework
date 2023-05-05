@@ -1,4 +1,6 @@
 - name: Index
   filename: Index.page.md
-- name: DEMO:Anfrage zum Ausstellen einer Verordnung (ServiceRequest)
-  filename: Prescription_ServiceRequest
+- name: MessageBundle
+  filename: MessageBundle
+- name: MessageHeader
+  filename: MessageHeader
