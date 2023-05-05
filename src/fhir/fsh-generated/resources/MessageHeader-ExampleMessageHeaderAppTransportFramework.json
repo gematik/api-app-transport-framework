@@ -16,7 +16,7 @@
   "sender": {
     "identifier": {
       "system": "http://gematik.de/fhir/sid/KIM-Adresse",
-      "value": "sender@example.com"
+      "value": "example@gematik.kim.de"
     },
     "display": "Sender Example"
   },

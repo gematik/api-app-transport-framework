@@ -7,8 +7,6 @@ Description: "Identifier zur Angabe der KIM-Adresse"
 * system = $kim (exactly)
 * system 1..1 MS
 * value 1..1
-* value.minLength = 5
-* value.maxLength = 320
 * value obeys KIM-adresse-validieren
   * ^example.valueString = "example@super-care.kim.telematik"
 
@@ -34,3 +32,10 @@ Description: "NamingSystem für eine KIM-Address"
 * uniqueId.type = #uri
 * uniqueId.value = $kim
 * uniqueId.preferred = true
+
+Instance: ExampleKimAddress
+InstanceOf: IdentifierAddressKIM
+Usage: #inline
+Title: "ExampleKimAddress"
+Description: "Beispiel KIM Adresse"
+* value = "example@gematik.kim.de"

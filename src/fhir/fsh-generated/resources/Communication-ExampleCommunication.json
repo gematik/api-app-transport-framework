@@ -7,6 +7,7 @@
       "coding": [
         {
           "system": "http://loinc.org",
+          "code": "45012-6",
           "display": "Communication regarding test results"
         }
       ]
@@ -23,6 +24,7 @@
     {
       "contentAttachment": {
         "title": "Selbsttest Bestätigung",
+        "contentType": "text/plain",
         "data": "U2VsYnN0dGVzdCBhYnNjaGxpZXNzZW4uIEJpdHRlIGtsYXJlbiBTaWUgZGllIFRlc3RlcmdlYm5pc3NlIGFiLg=="
       }
     }
