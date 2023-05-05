@@ -10,16 +10,8 @@
   "url": "https://gematik.de/fhir/atf/CodeSystem/service-identifier-cs",
   "concept": [
     {
-      "code": "eRezept_Rezeptanforderung;Rezeptanfrage_an_Sender_zurueck",
-      "display": "Anfrage an einen Arzt ein Rezept auszustellen und das Rezept an den Sender zurück zu schicken"
-    },
-    {
-      "code": "eRezept_Rezeptanforderung;Rezeptanfrage_nur_Ausstellen",
+      "code": "eRezept_Rezeptanforderung;Rezeptanfrage",
       "display": "Anfrage an einen Arzt ein Rezept auszustellen"
-    },
-    {
-      "code": "eRezept_Rezeptanforderung;Rezeptanfrage_weiterleiten_an_Apotheke",
-      "display": "Anfrage an einen Arzt ein Rezept auszustellen und das Rezept an die Apotheke weiterzuleiten"
     },
     {
       "code": "eRezept_Rezeptanforderung;Rezeptanfrage_Storno",
@@ -42,15 +34,15 @@
       "display": "Bestätigung der Erfüllung und Abgabe eines Medikamentes"
     },
     {
-      "code": "eRezept_ParenteraleErnaehrung;Rezeptanfrage",
+      "code": "eRezept_ParenteraleZubereitung;Rezeptanfrage",
       "display": "Rezeptanfrage für eine parenterale Zubereitung"
     },
     {
-      "code": "eRezept_ParenteraleErnaehrung;Rezeptanfrage_Storno",
+      "code": "eRezept_ParenteraleZubereitung;Rezeptanfrage_Storno",
       "display": "Abbruch der Rezeptanfrage für eine parenterale Zubereitung"
     },
     {
-      "code": "eRezept_ParenteraleErnaehrung;Rezeptbestaetigung",
+      "code": "eRezept_ParenteraleZubereitung;Rezeptbestaetigung",
       "display": "Bestätigung und Übermittlung eines ausgestellten Rezeptes für eine parenterale Zubereitung"
     },
     {
