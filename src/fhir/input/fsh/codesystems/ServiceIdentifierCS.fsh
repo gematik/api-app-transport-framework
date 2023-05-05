@@ -18,4 +18,4 @@ Description: "CodeSystem zum Anwendungskennzeichen zur Identifkation des UseCase
 * #eEB;Anfrage "Anfragedaten zum Erhalt von Versichertendaten"
 * #eEB;Bescheinigung "Versichertendaten in verschiedenen Ausprägungen"
 * #eEB;Fehler "Fehlermeldung bzgl. der Ermittlung der Daten des Versicherten"
-* #Selbsttest;Lieferung; "Diese Dienstkennung dient ausschließlich der Einrichtung des Kontos innerhalb eines PVS und des Testes, ob Nachrichten versendet und empfangen werden können. Diese Dienstkennung wird im PVS bei der normalen Abholung von Nachrichten ignoriert."
+* #Selbsttest;Lieferung "Diese Dienstkennung dient ausschließlich der Einrichtung des Kontos innerhalb eines PVS und des Testes, ob Nachrichten versendet und empfangen werden können. Diese Dienstkennung wird im PVS bei der normalen Abholung von Nachrichten ignoriert."
