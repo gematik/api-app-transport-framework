@@ -6,6 +6,12 @@
       "https://gematik.de/fhir/atf/StructureDefinition/atf-operation-outcome"
     ]
   },
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/atf/StructureDefinition/atf-message-id-ex",
+      "valueString": "da669fc6-b9f9-4ced-8f31-95fe35564601"
+    }
+  ],
   "issue": [
     {
       "severity": "error",

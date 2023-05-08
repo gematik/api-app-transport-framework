@@ -28,6 +28,27 @@
   "differential": {
     "element": [
       {
+        "id": "OperationOutcome.extension",
+        "path": "OperationOutcome.extension",
+        "min": 1
+      },
+      {
+        "id": "OperationOutcome.extension:MessageID",
+        "path": "OperationOutcome.extension",
+        "sliceName": "MessageID",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/atf/StructureDefinition/atf-message-id-ex"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "OperationOutcome.issue",
         "path": "OperationOutcome.issue",
         "mustSupport": true
