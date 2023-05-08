@@ -27,7 +27,7 @@
     },
     {
       "code": "eRezept_Rezeptanforderung;Abgabeanfrage_Storno",
-      "display": "Abbruch der Rezeptanfrage"
+      "display": "Abbruch der Abgabeanfrage"
     },
     {
       "code": "eRezept_Rezeptanforderung;Abgabebestaetigung",
@@ -65,5 +65,5 @@
   "experimental": false,
   "publisher": "gematik GmbH",
   "caseSensitive": true,
-  "count": 15
+  "count": 13
 }
