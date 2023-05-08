@@ -1,0 +1,16 @@
+{
+  "resourceType": "OperationOutcome",
+  "id": "ExampleFailedToValidateOperationOutcome",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/atf/StructureDefinition/atf-operation-outcome"
+    ]
+  },
+  "issue": [
+    {
+      "severity": "fatal",
+      "code": "invalid",
+      "diagnostics": "Ressourcen konnten nicht validiert werden"
+    }
+  ]
+}
