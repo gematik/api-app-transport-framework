@@ -33,6 +33,13 @@
   "differential": {
     "element": [
       {
+        "id": "MessageHeader.id",
+        "path": "MessageHeader.id",
+        "short": "Eindeutige ID der Nachricht, anzugeben als UUID",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "MessageHeader.event[x]",
         "path": "MessageHeader.event[x]",
         "binding": {

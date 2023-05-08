@@ -6,6 +6,9 @@ Description: "MessageHeader des MessageBundles"
 * ^status = #draft
 * event[x] from ServiceIdentifierVS (required)
 
+* id 1..1 MS
+  * ^short = "Eindeutige ID der Nachricht, anzugeben als UUID"
+
 * sender 1..1 MS
 * sender.identifier 1..1 MS
 * sender.identifier only IdentifierAddressKIM or IdentifierAddressTIM
