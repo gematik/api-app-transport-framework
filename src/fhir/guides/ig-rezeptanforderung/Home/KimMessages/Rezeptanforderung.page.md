@@ -17,7 +17,7 @@ Die FHIR-Datensätze in Anfrage- und Antwortnachrichten werden ausschließlich a
 |Content-Description     |Rezeptanforderung                               |ja|
 Der Anhang enthält die Rezeptanforderung als FHIR-Ressource
 
-#### KIM Rezeptanforderung Beispielnachricht
+### KIM Rezeptanforderung Beispielnachricht
 
     Date: Fri, 4 Nov 2022 13:02:59 +0100 (CET)
     From: pflegeeinrichtung@kim.telematik-test

@@ -1,10 +1,6 @@
-# Inhalt
+## {page-title}
 
-- [Inhalt](#inhalt)
-  - [KIM MDN (Eingangsbestätigung)](#kim-mdn-eingangsbestätigung)
-    - [KIM MDN (Eingangsbestätigung) Beispielnachricht](#kim-mdn-eingangsbestätigung-beispielnachricht)
-
-## KIM MDN (Eingangsbestätigung)
+### KIM MDN (Empfangsbestätigung)
 
 Eingangsbestätigungen sind als Antwort auf jeglichen Nachrichtentyp im Kontext der eRezept-Rezeptanforderung zu versenden.
 
@@ -17,7 +13,7 @@ Eingangsbestätigungen sind als Antwort auf jeglichen Nachrichtentyp im Kontext 
 
 Weitere Anforderungen der eNachricht-Eingangsbestätigung sind in der [Spezifikation MDN](https://partnerportal.kv-telematik.de/download/attachments/71095111/%C3%9Cbergreifende_Anforderungen_f%C3%BCr_KIM-Anwendungen_V1.0.1.pdf?version=1&modificationDate=1626757312000&api=v2) beschrieben.
 
-### KIM MDN (Eingangsbestätigung) Beispielnachricht
+#### KIM MDN (Empfangsbestätigung) Beispielnachricht
 
     Content-Type: multipart/report; report-type=disposition-notification; boundary="----
     =_Part_124_456146547.1541654416816"
