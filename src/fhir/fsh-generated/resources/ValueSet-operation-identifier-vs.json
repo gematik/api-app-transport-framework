@@ -4,7 +4,7 @@
   "name": "OperationIdentifierVS",
   "id": "operation-identifier-vs",
   "title": "Verarbeitungsidentifier (VS)",
-  "description": "ValueSet zur Angabe von Verarbeitungsergebnissen unter Nutzung des App Transport Frameworks",
+  "description": "ValueSet zur Angabe der FHIR-Interpretierbarkeit unter Nutzung des App Transport Frameworks",
   "version": "1.0",
   "url": "https://gematik.de/fhir/atf/ValueSet/operation-identifier-vs",
   "experimental": false,
