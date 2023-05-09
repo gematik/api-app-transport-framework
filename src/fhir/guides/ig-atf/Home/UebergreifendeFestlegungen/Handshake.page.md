@@ -45,9 +45,10 @@ MessageHeader.eventCode ist hierbei "atf;Empfangsbestaetigung". Der OperationOut
 
 ### Senden der Empfangsbestätigung
 
-Dieses Bundle soll nach Überprüfung der Verarbeitbarkeit der gesendeten Ressourcen übermittelt werden.
+Nachdem eine Nachricht im System angekommen ist MUSS das System mit einer Bestätigung antworten. Diese Bestätigung enthält die Information, ob die übermittelten FHIR-Ressourcen interpretiert werden konnten und eine weiterverarbeitung im empfangenden System möglich ist.
+Das bedeutet, dass das empfangende System bei Eingang einer Nachricht die Ressourcen validieren und feststellen soll, ob alle Inhalte für die Weiterverarbeitung vorhanden sind.
 
-Unter .issue können dem sendenden System als Antwort mehrere Einträge übermittelt werden. Enthalten alle Einträge nur issues mit OperationOutcome.issue.severity = "warning" oder "information" ist davon auszugehen, dass die Nachricht wie gewünscht verarbeitet werden kann.
+Unter .issue können dem sendenden System als Antwort mehrere Einträge übermittelt werden. Enthalten alle Einträge nur issues mit OperationOutcome.issue.severity = "warning" oder "information" ist davon auszugehen, dass die Nachricht wie gewünscht verarbeitet werden kann. Das sendende System geht dann davon aus, dass die Nachricht verstanden wurde und die Übertragung erfolgreich war.
 
 Sobald ein OperationOutcome.issue.sverity = "error" oder "fatal" enthält, ist davon auszugehen, dass der Vorgang abgebrochen wurde und die Anfrage nicht erfolgreich war.
 
