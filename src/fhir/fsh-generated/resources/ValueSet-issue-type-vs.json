@@ -1,0 +1,31 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "IssueTypeVS",
+  "id": "issue-type-vs",
+  "title": "Issue Type VS",
+  "description": "Gibt an welche Art der Antwort auf eine Operation gegeben werden kann",
+  "version": "0.9",
+  "url": "https://gematik.de/fhir/atf/ValueSet/issue-type-vs",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/R4/codesystem-issue-type.html",
+        "concept": [
+          {
+            "code": "invalid",
+            "display": "Content invalid against the specification or a profile."
+          },
+          {
+            "code": "processing",
+            "display": "Processing issues. These are expected to be final e.g. there is no point resubmitting the same content unchanged."
+          },
+          {
+            "code": "informational",
+            "display": "A message unrelated to the processing success of the completed operation (examples of the latter include things like reminders of password expiry, system maintenance times, etc.)."
+          }
+        ]
+      }
+    ]
+  }
+}

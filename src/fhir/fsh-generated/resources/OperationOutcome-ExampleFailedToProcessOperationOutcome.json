@@ -1,0 +1,27 @@
+{
+  "resourceType": "OperationOutcome",
+  "id": "ExampleFailedToProcessOperationOutcome",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/atf/StructureDefinition/atf-operation-outcome"
+    ]
+  },
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/atf/StructureDefinition/atf-message-id-ex",
+      "valueString": "da669fc6-b9f9-4ced-8f31-95fe35564601"
+    }
+  ],
+  "issue": [
+    {
+      "severity": "error",
+      "code": "processing",
+      "diagnostics": "MessageHeader verweist auf keine Ressource unter .focus"
+    },
+    {
+      "severity": "warning",
+      "code": "processing",
+      "diagnostics": "MessageHeader.sender konnte nicht gefunden werden"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "atf-operation-outcome",
+  "url": "https://gematik.de/fhir/atf/StructureDefinition/atf-operation-outcome",
+  "version": "0.9",
+  "name": "ATFOperationOutcome",
+  "title": "ATF Operation Outcome",
+  "status": "active",
+  "description": "Antwort auf eine eingegangene ATF Anfrage",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "OperationOutcome",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/OperationOutcome",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "OperationOutcome.extension",
+        "path": "OperationOutcome.extension",
+        "min": 1
+      },
+      {
+        "id": "OperationOutcome.extension:MessageID",
+        "path": "OperationOutcome.extension",
+        "sliceName": "MessageID",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/atf/StructureDefinition/atf-message-id-ex"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "OperationOutcome.issue",
+        "path": "OperationOutcome.issue",
+        "mustSupport": true
+      },
+      {
+        "id": "OperationOutcome.issue.code",
+        "path": "OperationOutcome.issue.code",
+        "short": "Art der Antwort",
+        "definition": "Gibt an, ob bei der Bearbeitung der Anfrage Fehler aufgetreten sind, oder die Anfrage erfolgreich bearbeitet wurde.\n    Wenn die Bearbeitung erfolgreich war, wird der code #informational gesetzt und eine entsprechende Beschreibung unter .diagnostics hinzugefügt.",
+        "mustSupport": true
+      },
+      {
+        "id": "OperationOutcome.issue.diagnostics",
+        "path": "OperationOutcome.issue.diagnostics",
+        "short": "Zusatzinformationen",
+        "definition": "Hier sind menschenlesbar Informationen zur Bearbeitung der Anfrage einzutragen.",
+        "min": 1,
+        "mustSupport": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "atf-message-id-ex",
+  "url": "https://gematik.de/fhir/atf/StructureDefinition/atf-message-id-ex",
+  "version": "1.0",
+  "name": "ATFMessageIDEX",
+  "title": "ATF Message ID EX",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "description": "Extension zur Darstellung einer MessageID in ",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://gematik.de/fhir/atf/StructureDefinition/atf-message-id-ex"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "short": "Angabe der ID der Nachricht, auf die sich dieser OperationOutcome bezieht",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}
