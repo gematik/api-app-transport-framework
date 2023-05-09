@@ -27,7 +27,7 @@
     },
     {
       "code": "eRezept_Rezeptanforderung;Abgabeanfrage_Storno",
-      "display": "Abbruch der Rezeptanfrage"
+      "display": "Abbruch der Abgabeanfrage"
     },
     {
       "code": "eRezept_Rezeptanforderung;Abgabebestaetigung",
