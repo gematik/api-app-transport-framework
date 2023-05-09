@@ -8,3 +8,5 @@
   filename: UebergreifendeFestlegungen
 - name: Datenobjekte
   filename: Datenobjekte
+- name: Beispiel KIM Nachrichten
+  filename: KimMessages
