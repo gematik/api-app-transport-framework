@@ -8,8 +8,8 @@ Diese Seite beschreibt das grobe Konzept für den Nachrichtenaustausch.
 
 ## Sicherstellung der Verarbeitbarkeit
 
-Je nach gewähltem Transportmedium kann zunächst überprüft werden, ob das empfangene System den Anwendungsfall unterstützt. Für KIM wäre das die Überprüfung des Verzeichnisdienstes (VZD).
-Beispielnachrichten für KIM befinden sich unter {{pagelink:Home/KimMessages/}}.
+Je nach gewähltem Transportmedium kann zunächst überprüft werden, ob das empfangene System den Anwendungsfall unterstützt. Für KIM wäre das bspw. die Überprüfung des Verzeichnisdienstes (VZD), ob die [Dienstkennung](https://fachportal.gematik.de/toolkit/dienstkennung-kim-kom-le) von der empfangenen Adresse unterstützt wird. Weitere Informationen zu KIM finden sich im [Fachportal](https://fachportal.gematik.de/anwendungen/kommunikation-im-medizinwesen)
+Beispielnachrichten für KIM befinden sich unter {{pagelink:Home/KimMessages}}.
 
 Nach der Prüfung kann die Nachricht dann zusammengestellt werden.
 
@@ -35,7 +35,7 @@ Das fertiggestellte Bundle kann nun mit einem Übertragungsmedium der Wahl über
 
 ## Empfangsbestätigung
 
-Wenn Nachrichten mit dem ATF ausgetauscht werden ist es für die Interoperabilität und Darstellung hilfreich, wenn Rückgemeldet wird, ob der empfangene Auftrag technisch verarbeitet werden kann. Hierzu wurde ein {{pagelink:Home/Datenobjekte/OperationOutcome}} modelliert.
+Wenn Nachrichten mit dem ATF ausgetauscht werden, ist es für die Interoperabilität und Darstellung hilfreich, wenn rückgemeldet wird, ob der empfangene Auftrag technisch verarbeitet werden konnte. Hierzu wurde ein {{pagelink:Home/Datenobjekte/OperationOutcome}} modelliert, um entsprechende Auskunft darüber zu geben.
 
 ### Struktur der Empfangsbestätigung
 
@@ -50,3 +50,9 @@ Dieses Bundle soll nach Überprüfung der Verarbeitbarkeit der gesendeten Ressou
 Unter .issue können dem sendenden System als Antwort mehrere Einträge übermittelt werden. Enthalten alle Einträge nur issues mit OperationOutcome.issue.severity = "warning" oder "information" ist davon auszugehen, dass die Nachricht wie gewünscht verarbeitet werden kann.
 
 Sobald ein OperationOutcome.issue.sverity = "error" oder "fatal" enthält, ist davon auszugehen, dass der Vorgang abgebrochen wurde und die Anfrage nicht erfolgreich war.
+
+## Darstellung des Nachrichtenaustausches
+
+Hier beispielhaft ein Nachrichtenaustausch im Anwendungsfall ["E-Rezept Rezeptanforderung"](https://simplifier.net/erezept-servicerequest)
+
+{{render:guides/ig-atf/images/Nachrichtenaustausch.png}}

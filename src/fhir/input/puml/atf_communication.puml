@@ -1,0 +1,12 @@
+@startuml Nachrichtenaustausch
+autonumber "<b>[0]"
+participant Sender as S #LightBlue
+participant Empfänger as E #LightYellow
+
+activate S
+S -> E++: <b>Fachliche Anfrage/ Initiale Nachricht</b>\nMessageHeader.eventCode = #eRezept_Rezeptanforderung;Rezeptanfrage
+E -> S: <b>Bestätigung</b>\nMessageHeader.eventCode = #atf;Empfangsbestaetigung\nMessageHeader.focus = OperationOutcome
+E -> S: <b>Fachliche Antwort auf die initiale Nachricht</b>\nMessageHeader.eventCode = #eRezept_Rezeptanforderung;Rezeptbestaetigung
+S -> E--: <b>Bestätigung</b>\\nMessageHeader.eventCode = #atf;Empfangsbestaetigung\nMessageHeader.focus = OperationOutcome
+deactivate E
+@enduml
