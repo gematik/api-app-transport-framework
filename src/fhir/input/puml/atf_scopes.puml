@@ -1,0 +1,20 @@
+@startuml ATF-Scope
+
+skinparam rectangle {
+    roundCorner<<Concept>> 25
+}
+
+ rectangle "ATF-MessageBundle" #lightyellow{
+  collections "FHIR Ressourcen 1..*" #lightgreen
+  rectangle "ATF-MessageHeader 1..1"
+  
+}
+
+
+legend right
+    | Farbe | Kommentar |
+    |<#lightyellow>| ATF FHIR-Bundle |
+    |<#lightgreen>| Ressoucen des Anwendungsfalls |
+endlegend
+
+@enduml
