@@ -26,3 +26,10 @@ Historisch ist MessageHeader.eventCode ein wesentlicher Bezeichner, der angibt, 
 
 Der EventCode drückt aus, welcher Anwendungsfall und welcher Übertragungsweg innerhalb eines Anwendungsfalls behandelt wird.
 
+## Einordnung und Abgrenzung
+
+Diese Spezifikation beschreibt den umgebenden Container (MessageBundle) und einen Eintrag in diesem Bundle, der immer vorhanden sein muss. Die Anwendungsfälle, die von diesem Projekt abhängen werden möglicherweise weitere Einschränkungen am Bundle und MessageHeader vornehmen, aber das Kommunikationspattern übernehmen.
+
+Jede Nachricht besteht also aus einem Bundle, welches mindestens den MessageHeader und je nach Anwendungsfall weitere Ressourcen enthält.
+
+{{render:guides/ig-atf/images/ATF-Scopes.png}}

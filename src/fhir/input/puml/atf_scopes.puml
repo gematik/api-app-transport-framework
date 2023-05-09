@@ -5,7 +5,7 @@ skinparam rectangle {
 }
 
  rectangle "ATF-MessageBundle" #lightyellow{
-  collections "FHIR Ressourcen 1..*" #lightgreen
+  collections "FHIR Ressourcen 0..*" #lightgreen
   rectangle "ATF-MessageHeader 1..1"
   
 }
@@ -14,7 +14,7 @@ skinparam rectangle {
 legend right
     | Farbe | Kommentar |
     |<#lightyellow>| ATF FHIR-Bundle |
-    |<#lightgreen>| Ressoucen des Anwendungsfalls |
+    |<#lightgreen>| FHIR-Ressoucen des Anwendungsfalls |
 endlegend
 
 @enduml
