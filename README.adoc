@@ -1,8 +1,0 @@
-<img align="right" width="200" height="37" src="Gematik_Logo_Flag.png"/> <br/>
-# API app transport framework FHIR-Profiles
-
-The profiles are intended to serve as a basis for various use cases in which medical data is exchanged via messaging services such as KIM and TIM.
-Ressources are published on https://simplifier.net/app-transport-framework
-
-## About The Project
-This Repo contains the fsh files to the later published App-Transport-Framework files on simplifier.net.
