@@ -32,4 +32,4 @@ Diese Spezifikation beschreibt den umgebenden Container (MessageBundle) und eine
 
 Jede Nachricht besteht also aus einem Bundle, welches mindestens den MessageHeader und je nach Anwendungsfall weitere Ressourcen enthält.
 
-{{render:src/fhir/guides/ig-atf/images/ATF-Scopes.png}}
+{{render:src/fhir/guides/ig-atf/images/ATF-Scope.png}}
