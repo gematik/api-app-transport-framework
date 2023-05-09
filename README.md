@@ -13,7 +13,7 @@ If you want to contribute, please check our [CONTRIBUTING.md](./CONTRIBUTING.md)
 
 ## License
 
-Copyright [yyyy] gematik GmbH
+Copyright 2023 gematik GmbH
 
 Licensed under the **Apache License, Version 2.0** (the "License"); you may not use this file except in compliance with the License.
 
