@@ -1,5 +1,3 @@
-- name: Index
-  filename: Index.page.md
 - name: Methodik
   filename: Methodik.page.md
 - name: Nachrichtenaustausch
