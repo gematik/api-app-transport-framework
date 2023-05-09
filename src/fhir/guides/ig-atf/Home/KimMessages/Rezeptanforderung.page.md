@@ -1,3 +1,7 @@
+---
+topic: KIMMessages
+---
+
 ## {page-title}
 
 ### KIM Rezeptanforderung

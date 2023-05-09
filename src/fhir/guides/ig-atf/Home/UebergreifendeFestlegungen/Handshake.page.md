@@ -1,3 +1,7 @@
+---
+topic: Nachrichtenaustausch
+---
+
 # {page-title}
 
 Diese Seite beschreibt das grobe Konzept für den Nachrichtenaustausch.
@@ -5,7 +9,7 @@ Diese Seite beschreibt das grobe Konzept für den Nachrichtenaustausch.
 ## Sicherstellung der Verarbeitbarkeit
 
 Je nach gewähltem Transportmedium kann zunächst überprüft werden, ob das empfangene System den Anwendungsfall unterstützt. Für KIM wäre das die Überprüfung des Verzeichnisdienstes (VZD).
-Beispielnachrichten für KIM befinden sich [hier](../KimMessages/).
+Beispielnachrichten für KIM befinden sich unter {{pagelink:Home/KimMessages/}}.
 
 Nach der Prüfung kann die Nachricht dann zusammengestellt werden.
 
@@ -31,7 +35,7 @@ Das fertiggestellte Bundle kann nun mit einem Übertragungsmedium der Wahl über
 
 ## Empfangsbestätigung
 
-Wenn Nachrichten mit dem ATF ausgetauscht werden ist es für die Interoperabilität und Darstellung hilfreich, wenn Rückgemeldet wird, ob der empfangene Auftrag technisch verarbeitet werden kann. Hierzu wurde ein [OperationOutcome](../Datenobjekte/OperationOutcome/) modelliert.
+Wenn Nachrichten mit dem ATF ausgetauscht werden ist es für die Interoperabilität und Darstellung hilfreich, wenn Rückgemeldet wird, ob der empfangene Auftrag technisch verarbeitet werden kann. Hierzu wurde ein {{pagelink:Home/Datenobjekte/OperationOutcome}} modelliert.
 
 ### Struktur der Empfangsbestätigung
 
