@@ -10,19 +10,19 @@
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/R4/codesystem-issue-type.html",
+        "system": "http://hl7.org/fhir/issue-type",
         "concept": [
           {
             "code": "invalid",
-            "display": "Content invalid against the specification or a profile."
+            "display": "Invalid Content"
           },
           {
             "code": "processing",
-            "display": "Processing issues. These are expected to be final e.g. there is no point resubmitting the same content unchanged."
+            "display": "Processing Failure"
           },
           {
             "code": "informational",
-            "display": "A message unrelated to the processing success of the completed operation (examples of the latter include things like reminders of password expiry, system maintenance times, etc.)."
+            "display": "Informational Note"
           }
         ]
       }
