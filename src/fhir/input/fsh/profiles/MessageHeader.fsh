@@ -3,6 +3,7 @@ Parent: MessageHeader
 Id: message-header-app-transport
 Title: "MessageHeader"
 Description: "MessageHeader des MessageBundles"
+* insert Meta(message-header-app-transport)
 * ^status = #draft
 * event[x] from ServiceIdentifierVS (required)
 

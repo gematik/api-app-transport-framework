@@ -2,10 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "message-header-app-transport",
   "url": "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport",
-  "version": "0.9",
+  "version": "1.0",
   "name": "MessageHeaderAppTransportFramework",
   "title": "MessageHeader",
   "status": "draft",
+  "experimental": false,
+  "publisher": "gematik GmbH",
   "description": "MessageHeader des MessageBundles",
   "fhirVersion": "4.0.1",
   "mapping": [
