@@ -1,12 +1,14 @@
 {
   "resourceType": "ValueSet",
-  "status": "active",
+  "status": "draft",
   "name": "IssueTypeVS",
   "id": "issue-type-vs",
   "title": "Issue Type VS",
   "description": "Gibt an welche Art der Antwort auf eine Operation gegeben werden kann",
-  "version": "0.9",
+  "version": "1.0",
   "url": "https://gematik.de/fhir/atf/ValueSet/issue-type-vs",
+  "experimental": false,
+  "publisher": "gematik GmbH",
   "compose": {
     "include": [
       {
