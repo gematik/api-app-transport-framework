@@ -45,7 +45,7 @@ MessageHeader.eventCode ist hierbei "atf;Empfangsbestaetigung". Der OperationOut
 
 ### Senden der Empfangsbestätigung
 
-Nachdem eine Nachricht im System angekommen ist MUSS das System mit einer Bestätigung antworten. Diese Bestätigung enthält die Information, ob die übermittelten FHIR-Ressourcen interpretiert werden konnten und eine weiterverarbeitung im empfangenden System möglich ist.
+Nachdem eine Nachricht im System angekommen ist SOLL das System mit einer Bestätigung antworten. Diese Bestätigung enthält die Information, ob die übermittelten FHIR-Ressourcen interpretiert werden konnten und eine weiterverarbeitung im empfangenden System möglich ist.
 Das bedeutet, dass das empfangende System bei Eingang einer Nachricht die Ressourcen validieren und feststellen soll, ob alle Inhalte für die Weiterverarbeitung vorhanden sind.
 
 Unter .issue können dem sendenden System als Antwort mehrere Einträge übermittelt werden. Enthalten alle Einträge nur issues mit OperationOutcome.issue.severity = "warning" oder "information" ist davon auszugehen, dass die Nachricht wie gewünscht verarbeitet werden kann. Das sendende System geht dann davon aus, dass die Nachricht verstanden wurde und die Übertragung erfolgreich war.
@@ -57,3 +57,7 @@ Sobald ein OperationOutcome.issue.sverity = "error" oder "fatal" enthält, ist d
 Hier beispielhaft ein Nachrichtenaustausch im Anwendungsfall ["E-Rezept Rezeptanforderung"](https://simplifier.net/erezept-servicerequest)
 
 {{render:src/fhir/guides/ig-atf/images/Nachrichtenaustausch.png}}
+
+## Fehlerhandling
+
+Im MessageHeader ist unter .source anzugeben welche Software den Request abgesetzt hat. Falls die ankommenden Daten nicht validiert oder verarbeitet werden können, soll es hier die Möglichkeit geben mindestens eine E-Mail anzugeben. So kann im Fehlerfall möglichst automatisiert ein Fehlerbericht an das sendende System übermittelt werden. Der Nutzer SOLL dann auch benachrichtigt werden, dass es zu einem Fehler kam und der Hersteller entsprechend informiert wurde.
