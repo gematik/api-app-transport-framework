@@ -23,5 +23,11 @@ Description: "MessageHeader des MessageBundles"
   * ^short = "Anzeigename der Empfänger Adresse"
 * focus 1..*
 
+* source MS
+  * name 1..1 MS
+  * software 1..1 MS
+  * version 1..1 MS
+  * contact 1..1 MS
+
 //TODO Für IG und Instances: Referenzpunkt display als Anzeigename
 //TODO Für IG und Instances: Im source.endpoint und destination.endpoint 1..1, sollten diese als KIM Adresse genutzt werden! Diese müssten mit "mailto:" beginnen, da der Datentyp url ist.

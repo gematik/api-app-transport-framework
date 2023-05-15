@@ -11,7 +11,14 @@
     "system": "https://gematik.de/fhir/atf/CodeSystem/service-identifier-cs"
   },
   "source": {
-    "endpoint": "https://sender.example.com/endpoint"
+    "endpoint": "https://topdoc-systems.de",
+    "name": "TopDoc Systems",
+    "software": "TopDoc TI",
+    "version": "2.4.5",
+    "contact": {
+      "system": "email",
+      "value": "support@topdoc-systems.de"
+    }
   },
   "sender": {
     "identifier": {
