@@ -24,10 +24,16 @@ Description: "MessageHeader des MessageBundles"
 * focus 1..*
 
 * source MS
+  * ^short = "Angabe der Informationen des Absendenden Systems"
   * name 1..1 MS
+    * ^short = "Name des Softwareherstellers"
   * software 1..1 MS
+    * ^short = "Name der Software"
   * version 1..1 MS
+    * ^short = "Version der Software"
   * contact 1..1 MS
+    * ^short = "Kontaktinformation zum Hersteller"
+    * ^comment = "Es ist mindestens eine Email anzugeben, um Kontakt mit dem Hersteller herzustellen"
 
 //TODO Für IG und Instances: Referenzpunkt display als Anzeigename
 //TODO Für IG und Instances: Im source.endpoint und destination.endpoint 1..1, sollten diese als KIM Adresse genutzt werden! Diese müssten mit "mailto:" beginnen, da der Datentyp url ist.
