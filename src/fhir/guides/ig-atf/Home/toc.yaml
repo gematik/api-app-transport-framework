@@ -1,0 +1,12 @@
+- name: Index
+  filename: Index.page.md
+- name: Einführung
+  filename: Einfuehrung.page.md
+- name: Release Notes
+  filename: Release-Notes.page.md
+- name: Übergreifende Festlegungen
+  filename: UebergreifendeFestlegungen
+- name: Datenobjekte
+  filename: Datenobjekte
+- name: Beispiel KIM Nachrichten
+  filename: KimMessages

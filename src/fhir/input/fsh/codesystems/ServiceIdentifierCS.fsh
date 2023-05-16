@@ -8,7 +8,7 @@ Description: "CodeSystem zum Anwendungskennzeichen zur Identifkation des UseCase
 * #eRezept_Rezeptanforderung;Rezeptanfrage_Storno "Abbruch der Rezeptanfrage"
 * #eRezept_Rezeptanforderung;Rezeptbestaetigung "Bestätigung und Übermittlung eines ausgestellten Rezeptes"
 * #eRezept_Rezeptanforderung;Abgabeanfrage "Anfrage zur Erfüllung eines Rezeptes und Abgabe des Medikaments"
-* #eRezept_Rezeptanforderung;Abgabeanfrage_Storno "Abbruch der Rezeptanfrage"
+* #eRezept_Rezeptanforderung;Abgabeanfrage_Storno "Abbruch der Abgabeanfrage"
 * #eRezept_Rezeptanforderung;Abgabebestaetigung "Bestätigung der Erfüllung und Abgabe eines Medikamentes"
 * #eRezept_ParenteraleZubereitung;Rezeptanfrage "Rezeptanfrage für eine parenterale Zubereitung"
 * #eRezept_ParenteraleZubereitung;Rezeptanfrage_Storno "Abbruch der Rezeptanfrage für eine parenterale Zubereitung"
