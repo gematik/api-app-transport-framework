@@ -1,7 +1,7 @@
 {
   "resourceType": "NamingSystem",
   "id": "NamingSystemAddressTIM",
-  "name": "GEM_NS_TIM-Adresse",
+  "name": "NamingSystemAddressTIM",
   "status": "active",
   "kind": "identifier",
   "date": "2023-02-01",

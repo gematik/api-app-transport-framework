@@ -12,7 +12,7 @@ Description: "Identifier zur Angabe der KIM-Adresse"
 
 Invariant: KIM-adresse-validieren
 Description: "Dies ist keine gültge KIM-Adresse"
-Expression: "$this.toString().matches('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$')"
+Expression: "$this.toString().matches('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$')"
 Severity: #warning
 
 Instance: NamingSystemAddressKIM
@@ -32,3 +32,10 @@ Description: "NamingSystem für eine KIM-Address"
 * uniqueId.type = #uri
 * uniqueId.value = $kim
 * uniqueId.preferred = true
+
+Instance: ExampleKimAddress
+InstanceOf: IdentifierAddressKIM
+Usage: #inline
+Title: "ExampleKimAddress"
+Description: "Beispiel KIM Adresse"
+* value = "example@gematik.kim.de"

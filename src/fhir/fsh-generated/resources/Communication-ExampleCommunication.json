@@ -1,0 +1,34 @@
+{
+  "resourceType": "Communication",
+  "id": "ExampleCommunication",
+  "status": "completed",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://loinc.org",
+          "code": "45012-6",
+          "display": "Communication regarding test results"
+        }
+      ]
+    }
+  ],
+  "priority": "routine",
+  "subject": {
+    "display": "Max Mustermann"
+  },
+  "sender": {
+    "display": "Dr. Anna Schmidt"
+  },
+  "payload": [
+    {
+      "contentAttachment": {
+        "title": "Selbsttest Bestätigung",
+        "contentType": "text/plain",
+        "data": "U2VsYnN0dGVzdCBhYnNjaGxpZXNzZW4uIEJpdHRlIGtsYXJlbiBTaWUgZGllIFRlc3RlcmdlYm5pc3NlIGFiLg=="
+      }
+    }
+  ],
+  "sent": "2023-03-29T13:28:17.239+02:00",
+  "received": "2023-03-29T13:30:00.000+02:00"
+}
