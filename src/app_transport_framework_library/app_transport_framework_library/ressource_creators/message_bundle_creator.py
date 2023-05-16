@@ -1,4 +1,5 @@
 from datetime import datetime, timezone
+from typing import List
 from fhir.resources.meta import Meta
 from fhir.resources.bundle import Bundle, BundleEntry
 from fhir.resources.messageheader import MessageHeader
@@ -8,7 +9,7 @@ from uuid import uuid4
 
 class MessageBundleCreator:
     @staticmethod
-    def create_message_bundle(message_header: MessageHeader, resources: list[BundleEntry]) -> Bundle:
+    def create_message_bundle(message_header: MessageHeader, resources: List[BundleEntry]) -> Bundle:
         bundle_id = str(uuid4())
 
         entries = [

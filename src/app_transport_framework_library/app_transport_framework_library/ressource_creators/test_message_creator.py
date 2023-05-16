@@ -4,9 +4,10 @@ from fhir.resources.bundle import BundleEntry
 from fhir.resources.communication import Communication, CommunicationPayload
 from fhir.resources.fhirtypes import ReferenceType, CodeableConceptType
 from fhir.resources.attachment import Attachment
-from .message_bundle_creator import MessageBundleCreator
+from app_transport_framework_library.app_transport_framework_library.ressource_creators.message_bundle_creator import MessageBundleCreator
 
-from .message_header_creator import MessageHeaderCreator
+from app_transport_framework_library.app_transport_framework_library.ressource_creators.message_header_creator import MessageHeaderCreator
+
 
 
 class CommunicationCreator:
