@@ -10,6 +10,6 @@ class Communicator:
             "../fhir/fsh-generated/resources/poc/example_inbox/" + folder)
         if not os.path.exists(path):
             os.makedirs(path)
-        with open(f"{path}/{file_name}.jpg", "w") as file:
+        with open(f"{path}/{file_name}.json", "w") as file:
             file.write(ressource)
             file.close()
