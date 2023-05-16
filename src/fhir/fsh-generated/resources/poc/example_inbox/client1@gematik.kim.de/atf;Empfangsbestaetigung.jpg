@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "id": "172ed9cb-1c90-409a-8809-c9b725005692",
+    "id": "273cd255-0ac3-4432-9f73-1d7db9dc5b79",
     "meta": {
         "profile": [
             "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework"
@@ -8,16 +8,16 @@
     },
     "identifier": {
         "system": "urn:ietf:rfc:3986",
-        "value": "urn:uuid:172ed9cb-1c90-409a-8809-c9b725005692"
+        "value": "urn:uuid:273cd255-0ac3-4432-9f73-1d7db9dc5b79"
     },
     "type": "message",
-    "timestamp": "2023-05-16T19:52:09.818308+00:00",
+    "timestamp": "2023-05-16T19:59:21.895504+00:00",
     "entry": [
         {
-            "fullUrl": "urn:uuid:ba50fc88-220b-4c7c-8714-7ee44b3441a1",
+            "fullUrl": "urn:uuid:0bf8c67d-500f-417d-8ded-54ee08aaa774",
             "resource": {
                 "resourceType": "MessageHeader",
-                "id": "ba50fc88-220b-4c7c-8714-7ee44b3441a1",
+                "id": "0bf8c67d-500f-417d-8ded-54ee08aaa774",
                 "meta": {
                     "profile": [
                         "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport"
@@ -59,16 +59,16 @@
                 },
                 "focus": [
                     {
-                        "reference": "urn:uuid:b300ff31-7d1f-491c-a989-299fcde53b12"
+                        "reference": "urn:uuid:127d609c-2bb6-4131-8095-cf2fbf8fbe31"
                     }
                 ]
             }
         },
         {
-            "fullUrl": "urn:uuid:b300ff31-7d1f-491c-a989-299fcde53b12",
+            "fullUrl": "urn:uuid:127d609c-2bb6-4131-8095-cf2fbf8fbe31",
             "resource": {
                 "resourceType": "OperationOutcome",
-                "id": "b300ff31-7d1f-491c-a989-299fcde53b12",
+                "id": "127d609c-2bb6-4131-8095-cf2fbf8fbe31",
                 "meta": {
                     "profile": [
                         "https://gematik.de/fhir/atf/StructureDefinition/atf-operation-outcome"
@@ -77,7 +77,7 @@
                 "extension": [
                     {
                         "url": "https://gematik.de/fhir/atf/StructureDefinition/atf-message-id-ex",
-                        "valueString": "917a01fc-4bb0-4b6f-b6dd-778be9464350"
+                        "valueString": "12cae66b-42eb-4e8e-a9a5-2ea54a92c0b6"
                     }
                 ],
                 "issue": [
