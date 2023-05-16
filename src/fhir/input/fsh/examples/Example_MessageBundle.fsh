@@ -26,6 +26,13 @@ Description: "Example MessageHeader for Selbsttest"
 * destination.receiver.identifier.value = "receiver@example.com"
 * destination.receiver.display = "Receiver Example"
 * focus.reference = "urn:uuid:86a87254-ce15-11ed-afa1-0242ac120004"
+* source.name = "TopDoc Systems"
+* source.software = "TopDoc TI"
+* source.version = "2.4.5"
+* source.endpoint = "https://topdoc-systems.de"
+* source.contact
+  * system = #email
+  * value = "support@topdoc-systems.de"
 
 Instance: ExampleCommunication
 InstanceOf: Communication
