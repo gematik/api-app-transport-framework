@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "id": "dc338a2c-cd76-4e88-a2f7-b5b0eebabd15",
+    "id": "56a81386-4fe6-4a63-81e8-a2792e803ba6",
     "meta": {
         "profile": [
             "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework"
@@ -8,15 +8,16 @@
     },
     "identifier": {
         "system": "urn:ietf:rfc:3986",
-        "value": "urn:uuid:dc338a2c-cd76-4e88-a2f7-b5b0eebabd15"
+        "value": "urn:uuid:56a81386-4fe6-4a63-81e8-a2792e803ba6"
     },
     "type": "message",
+    "timestamp": "2023-05-16T19:52:09.813382+00:00",
     "entry": [
         {
-            "fullUrl": "urn:uuid:ae4ca1a5-2553-4d6e-acf1-433e2a002a4c",
+            "fullUrl": "urn:uuid:917a01fc-4bb0-4b6f-b6dd-778be9464350",
             "resource": {
                 "resourceType": "MessageHeader",
-                "id": "ae4ca1a5-2553-4d6e-acf1-433e2a002a4c",
+                "id": "917a01fc-4bb0-4b6f-b6dd-778be9464350",
                 "meta": {
                     "profile": [
                         "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport"
@@ -47,20 +48,27 @@
                     "display": "Sender"
                 },
                 "source": {
-                    "endpointUrl": "https://sender.example.com/endpoint"
+                    "endpointUrl": "https://sender.example.com/endpoint",
+                    "name": "MedSoftwareInc",
+                    "software": "MedSoftwareInc EMR",
+                    "version": "1.0.5c",
+                    "contact": {
+                        "system": "email",
+                        "value": "dev@medSoftware.com"
+                    }
                 },
                 "focus": [
                     {
-                        "reference": "urn:uuid:4731dc72-3f65-4776-9ed7-8e2f53c476d9"
+                        "reference": "urn:uuid:5ca0e275-06e4-4df0-b6ce-1c7559141cdf"
                     }
                 ]
             }
         },
         {
-            "fullUrl": "urn:uuid:4731dc72-3f65-4776-9ed7-8e2f53c476d9",
+            "fullUrl": "urn:uuid:5ca0e275-06e4-4df0-b6ce-1c7559141cdf",
             "resource": {
                 "resourceType": "Communication",
-                "id": "4731dc72-3f65-4776-9ed7-8e2f53c476d9",
+                "id": "5ca0e275-06e4-4df0-b6ce-1c7559141cdf",
                 "status": "completed",
                 "category": [
                     {

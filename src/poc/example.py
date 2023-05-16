@@ -5,13 +5,13 @@ from atf_message_library.atf_message_processor.atf_bundle_processor import ATF_B
 from atf_message_library.atf_message_processor.models.bundle_focus_content import BundleFocusContent
 from atf_message_library.atf_message_processor.models.empfangsbestaetigung import Empfangsbestaetigung
 from atf_message_library.atf_message_processor.models.message_to_send import MessageToSend
-from atf_message_library.atf_message_processor.ressource_creators.test_message_creator import CommunicationCreator, TestMessageCreator
+from atf_message_library.atf_message_processor.ressource_creators.test_message_creator import TestMessageCreator
 
 
-from fhir.resources.fhirtypes import ReferenceType
+from fhir.resources.fhirtypes import ReferenceType, ContactPointType
 from fhir.resources.identifier import Identifier
 from fhir.resources.messageheader import MessageHeaderSource
-from fhir.resources.communication import Communication, CommunicationPayload
+from fhir.resources.communication import Communication
 
 from example_helper.communication_mock import Communicator
 
@@ -24,8 +24,13 @@ sender = ReferenceType(
     display="Sender"
 )
 sender_source = MessageHeaderSource(
+    name="MedSoftwareInc",
+    software="MedSoftwareInc EMR",
+    version="1.0.5c",
+    contact=ContactPointType(system="email", value="dev@medSoftware.com"),
     endpointUrl="https://sender.example.com/endpoint",
 )
+
 
 receiver_address = "client2@gematik.kim.de"
 receiver = ReferenceType(
@@ -36,6 +41,10 @@ receiver = ReferenceType(
     display="Receiver"
 )
 receiver_source = MessageHeaderSource(
+    name="PSSolutions",
+    software="Globotron 500",
+    version="2.1.3",
+    contact=ContactPointType(system="email", value="dev@ps_solutions.com"),
     endpointUrl="https://receiver.example.com/endpoint",
 )
 
@@ -96,7 +105,7 @@ receiver_processor.focus_Ressource_to_process_event.subscribe(
 # Testnachricht erstellen
 message_id = str(uuid4())
 testbundle = TestMessageCreator.create_test_bundle(
-    sender, receiver, message_id)
+    sender, sender_source, receiver, message_id)
 print(f"Sending Test-Message with message_id '{message_id}'")
 # Testnachricht "senden"
 communicator.send(receiver_address,

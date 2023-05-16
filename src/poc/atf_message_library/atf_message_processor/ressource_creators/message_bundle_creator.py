@@ -1,7 +1,8 @@
+from datetime import datetime, timezone
 from fhir.resources.meta import Meta
 from fhir.resources.bundle import Bundle, BundleEntry
 from fhir.resources.messageheader import MessageHeader
-from fhir.resources.fhirtypes import IdentifierType
+from fhir.resources.fhirtypes import IdentifierType, Instant
 from uuid import uuid4
 
 
@@ -25,7 +26,8 @@ class MessageBundleCreator:
             type="message",
             identifier=IdentifierType(
                 system="urn:ietf:rfc:3986", value=f"urn:uuid:{bundle_id}"),
-            entry=entries
+            entry=entries,
+            timestamp=datetime.now(timezone.utc).isoformat(),
         )
 
         return message_bundle

@@ -45,12 +45,10 @@ class CommunicationCreator:
 
 
 class TestMessageCreator:
-    def create_test_bundle(sender: ReferenceType,  receiver: ReferenceType, message_id: str):
+    def create_test_bundle(sender: ReferenceType, source: MessageHeaderSource,   receiver: ReferenceType, message_id: str):
         communication_id = str(uuid4())
 
-        source = MessageHeaderSource(
-            endpointUrl="https://sender.example.com/endpoint",
-        )
+        source = source
         message_receiver = receiver
         destination = [MessageHeaderDestination(endpointUrl="https://receiver.example.com/endpoint",
                                                 receiver=message_receiver)]

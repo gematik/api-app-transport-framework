@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "id": "ad4512c0-0264-4c3a-9c0a-4aa5e8e64308",
+    "id": "172ed9cb-1c90-409a-8809-c9b725005692",
     "meta": {
         "profile": [
             "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework"
@@ -8,15 +8,16 @@
     },
     "identifier": {
         "system": "urn:ietf:rfc:3986",
-        "value": "urn:uuid:ad4512c0-0264-4c3a-9c0a-4aa5e8e64308"
+        "value": "urn:uuid:172ed9cb-1c90-409a-8809-c9b725005692"
     },
     "type": "message",
+    "timestamp": "2023-05-16T19:52:09.818308+00:00",
     "entry": [
         {
-            "fullUrl": "urn:uuid:fbd803ca-a88e-4da6-961a-78c52010ff94",
+            "fullUrl": "urn:uuid:ba50fc88-220b-4c7c-8714-7ee44b3441a1",
             "resource": {
                 "resourceType": "MessageHeader",
-                "id": "fbd803ca-a88e-4da6-961a-78c52010ff94",
+                "id": "ba50fc88-220b-4c7c-8714-7ee44b3441a1",
                 "meta": {
                     "profile": [
                         "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport"
@@ -47,20 +48,27 @@
                     "display": "Receiver"
                 },
                 "source": {
-                    "endpointUrl": "https://receiver.example.com/endpoint"
+                    "endpointUrl": "https://receiver.example.com/endpoint",
+                    "name": "PSSolutions",
+                    "software": "Globotron 500",
+                    "version": "2.1.3",
+                    "contact": {
+                        "system": "email",
+                        "value": "dev@ps_solutions.com"
+                    }
                 },
                 "focus": [
                     {
-                        "reference": "urn:uuid:3c5d0e52-87b5-4cfa-a4d6-877bdb8d9cc2"
+                        "reference": "urn:uuid:b300ff31-7d1f-491c-a989-299fcde53b12"
                     }
                 ]
             }
         },
         {
-            "fullUrl": "urn:uuid:3c5d0e52-87b5-4cfa-a4d6-877bdb8d9cc2",
+            "fullUrl": "urn:uuid:b300ff31-7d1f-491c-a989-299fcde53b12",
             "resource": {
                 "resourceType": "OperationOutcome",
-                "id": "3c5d0e52-87b5-4cfa-a4d6-877bdb8d9cc2",
+                "id": "b300ff31-7d1f-491c-a989-299fcde53b12",
                 "meta": {
                     "profile": [
                         "https://gematik.de/fhir/atf/StructureDefinition/atf-operation-outcome"
@@ -69,7 +77,7 @@
                 "extension": [
                     {
                         "url": "https://gematik.de/fhir/atf/StructureDefinition/atf-message-id-ex",
-                        "valueString": "ae4ca1a5-2553-4d6e-acf1-433e2a002a4c"
+                        "valueString": "917a01fc-4bb0-4b6f-b6dd-778be9464350"
                     }
                 ],
                 "issue": [
