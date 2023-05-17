@@ -7,7 +7,7 @@ class Communicator:
 
     def write_result_ressource(self, folder: str, file_name: str, ressource: str):
         path = os.path.join(
-            "../fhir/fsh-generated/resources/poc/example_inbox/" + folder)
+            "./fsh-generated/example_inbox/" + folder)
         if not os.path.exists(path):
             os.makedirs(path)
         with open(f"{path}/{file_name}.json", "w") as file:
