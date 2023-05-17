@@ -4,9 +4,10 @@ from fhir.resources.bundle import BundleEntry
 from fhir.resources.communication import Communication, CommunicationPayload
 from fhir.resources.fhirtypes import ReferenceType, CodeableConceptType
 from fhir.resources.attachment import Attachment
-from .message_bundle_creator import MessageBundleCreator
+from app_transport_framework_library.app_transport_framework_library.ressource_creators.message_bundle_creator import MessageBundleCreator
 
-from .message_header_creator import MessageHeaderCreator
+from app_transport_framework_library.app_transport_framework_library.ressource_creators.message_header_creator import MessageHeaderCreator
+
 
 
 class CommunicationCreator:
@@ -45,12 +46,10 @@ class CommunicationCreator:
 
 
 class TestMessageCreator:
-    def create_test_bundle(sender: ReferenceType,  receiver: ReferenceType, message_id: str):
+    def create_test_bundle(sender: ReferenceType, source: MessageHeaderSource,   receiver: ReferenceType, message_id: str):
         communication_id = str(uuid4())
 
-        source = MessageHeaderSource(
-            endpointUrl="https://sender.example.com/endpoint",
-        )
+        source = source
         message_receiver = receiver
         destination = [MessageHeaderDestination(endpointUrl="https://receiver.example.com/endpoint",
                                                 receiver=message_receiver)]

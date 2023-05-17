@@ -1,4 +1,4 @@
-from typing import Tuple
+from typing import List, Tuple
 from fhir.resources.messageheader import MessageHeader
 from fhir.resources.bundle import Bundle
 from fhir.resources.bundle import Bundle
@@ -7,7 +7,9 @@ from fhir.resources.messageheader import MessageHeader
 from fhir.resources.communication import Communication
 from fhir.resources.bundle import BundleEntry
 
-from atf_message_library.atf_message_processor.base_use_case_handler import BaseUseCaseHandler
+from app_transport_framework_library.base_use_case_handler import BaseUseCaseHandler
+
+
 
 
 class SelbsttestLieferungHandler(BaseUseCaseHandler):
@@ -17,7 +19,7 @@ class SelbsttestLieferungHandler(BaseUseCaseHandler):
                 return entry.resource
         return None
 
-    def handle(self, message_header: MessageHeader, bundle: Bundle) -> Tuple[list[BundleEntry], list[OperationOutcomeIssue]]:
+    def handle(self, message_header: MessageHeader, bundle: Bundle) -> Tuple[List[BundleEntry], List[OperationOutcomeIssue]]:
         self.bundleEntries = []
         self.issues = []
         if not any([isinstance(self.resolve_reference(focus_ref.reference, Bundle.parse_raw(bundle.json())), Communication) for focus_ref in message_header.focus]):
