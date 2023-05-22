@@ -134,7 +134,7 @@ class ATF_BundleProcessor:
         self.message_to_send_event.trigger(message_to_send)
 
     def create_MessageToSend(self, message_header, operation_outcome):
-        destination = [MessageHeaderDestination(endpointUrl=message_header.source.endpointUrl,
+        destination = [MessageHeaderDestination(endpoint=message_header.source.endpoint,
                                                 receiver=message_header.sender)]
 
         operationOutcomeBundle = OperationOutcomeBundleCreator.create_operation_outcome_receipt_bundle(
