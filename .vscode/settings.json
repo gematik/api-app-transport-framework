@@ -1,3 +1,6 @@
 {
-  "python.analysis.extraPaths": ["./src/app_transport_framework_library"]
+  "python.analysis.extraPaths": [
+    "./src/app_transport_framework_library",
+    "./src"
+  ]
 }

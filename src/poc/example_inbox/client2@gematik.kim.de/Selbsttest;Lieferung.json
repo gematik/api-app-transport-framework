@@ -1,95 +1,77 @@
 {
-    "resourceType": "Bundle",
-    "id": "30c974be-8bae-4b53-a900-5e7792aeb89f",
+    "id": "fd75c2e4-3205-4fdc-aa30-0ea2b359f4c4",
     "meta": {
         "profile": [
             "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework"
         ]
     },
-    "identifier": {
-        "system": "urn:ietf:rfc:3986",
-        "value": "urn:uuid:30c974be-8bae-4b53-a900-5e7792aeb89f"
-    },
-    "type": "message",
-    "timestamp": "2023-05-17T09:40:16.513425+00:00",
     "entry": [
         {
-            "fullUrl": "urn:uuid:6710002d-ee05-4ff1-b58d-616476f02eaf",
+            "fullUrl": "urn:uuid:5447be4a-3945-4a71-b9c8-e126e0bc36ca",
             "resource": {
-                "resourceType": "MessageHeader",
-                "id": "6710002d-ee05-4ff1-b58d-616476f02eaf",
+                "id": "5447be4a-3945-4a71-b9c8-e126e0bc36ca",
                 "meta": {
                     "profile": [
                         "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport"
                     ]
                 },
-                "eventCoding": {
-                    "system": "https://gematik.de/fhir/atf/CodeSystem/service-identifier-cs",
-                    "code": "Selbsttest;Lieferung",
-                    "display": "Diese Dienstkennung dient ausschlie\u00dflich der Einrichtung des Kontos innerhalb eines PVS und des Testes, ob Nachrichten versendet und empfangen werden k\u00f6nnen. Diese Dienstkennung wird im PVS bei der normalen Abholung von Nachrichten ignoriert."
-                },
                 "destination": [
                     {
-                        "endpointUrl": "https://receiver.example.com/endpoint",
+                        "endpoint": "https://receiver.example.com/endpoint",
                         "receiver": {
+                            "display": "Receiver",
                             "identifier": {
                                 "system": "http://gematik.de/fhir/sid/KIM-Adresse",
                                 "value": "client2@gematik.kim.de"
-                            },
-                            "display": "Receiver"
+                            }
                         }
                     }
                 ],
-                "sender": {
-                    "identifier": {
-                        "system": "http://gematik.de/fhir/sid/KIM-Adresse",
-                        "value": "client1@gematik.kim.de"
-                    },
-                    "display": "Sender"
-                },
-                "source": {
-                    "endpointUrl": "https://sender.example.com/endpoint",
-                    "name": "MedSoftwareInc",
-                    "software": "MedSoftwareInc EMR",
-                    "version": "1.0.5c",
-                    "contact": {
-                        "system": "email",
-                        "value": "dev@medSoftware.com"
-                    }
+                "eventCoding": {
+                    "code": "Selbsttest;Lieferung",
+                    "display": "Diese Dienstkennung dient ausschlie\u00dflich der Einrichtung des Kontos innerhalb eines PVS und des Testes, ob Nachrichten versendet und empfangen werden k\u00f6nnen. Diese Dienstkennung wird im PVS bei der normalen Abholung von Nachrichten ignoriert.",
+                    "system": "https://gematik.de/fhir/atf/CodeSystem/service-identifier-cs"
                 },
                 "focus": [
                     {
-                        "reference": "urn:uuid:4aaa4962-c596-4772-a43c-eb6918ab90df"
+                        "reference": "urn:uuid:a30e99a7-83d2-4803-929c-9131b823169a"
                     }
-                ]
+                ],
+                "sender": {
+                    "display": "Sender",
+                    "identifier": {
+                        "system": "http://gematik.de/fhir/sid/KIM-Adresse",
+                        "value": "client1@gematik.kim.de"
+                    }
+                },
+                "source": {
+                    "contact": {
+                        "system": "email",
+                        "value": "dev@medSoftware.com"
+                    },
+                    "endpoint": "https://sender.example.com/endpoint",
+                    "name": "MedSoftwareInc",
+                    "software": "MedSoftwareInc EMR",
+                    "version": "1.0.5c"
+                },
+                "resourceType": "MessageHeader"
             }
         },
         {
-            "fullUrl": "urn:uuid:4aaa4962-c596-4772-a43c-eb6918ab90df",
+            "fullUrl": "urn:uuid:a30e99a7-83d2-4803-929c-9131b823169a",
             "resource": {
-                "resourceType": "Communication",
-                "id": "4aaa4962-c596-4772-a43c-eb6918ab90df",
-                "status": "completed",
+                "id": "a30e99a7-83d2-4803-929c-9131b823169a",
                 "category": [
                     {
                         "coding": [
                             {
-                                "system": "http://loinc.org",
                                 "code": "45012-6",
-                                "display": "Communication regarding test results"
+                                "display": "Communication regarding test results",
+                                "system": "http://loinc.org"
                             }
                         ]
                     }
                 ],
-                "priority": "routine",
-                "subject": {
-                    "display": "Max Mustermann"
-                },
-                "sent": "2023-03-29T13:28:17.239000+02:00",
-                "received": "2023-03-29T13:30:00+02:00",
-                "sender": {
-                    "display": "Dr. Anna Schmidt"
-                },
                 "payload": [
                     {
                         "contentAttachment": {
@@ -98,8 +80,26 @@
                             "title": "Selbsttest Best\u00e4tigung"
                         }
                     }
-                ]
+                ],
+                "priority": "routine",
+                "received": "2023-03-29T13:30:00+02:00",
+                "sender": {
+                    "display": "Dr. Anna Schmidt"
+                },
+                "sent": "2023-03-29T13:28:17.239000+02:00",
+                "status": "completed",
+                "subject": {
+                    "display": "Max Mustermann"
+                },
+                "resourceType": "Communication"
             }
         }
-    ]
+    ],
+    "identifier": {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:uuid:fd75c2e4-3205-4fdc-aa30-0ea2b359f4c4"
+    },
+    "timestamp": "2023-05-22T21:59:31.029662+00:00",
+    "type": "message",
+    "resourceType": "Bundle"
 }

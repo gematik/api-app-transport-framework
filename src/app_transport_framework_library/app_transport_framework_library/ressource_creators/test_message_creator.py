@@ -51,7 +51,7 @@ class TestMessageCreator:
 
         source = source
         message_receiver = receiver
-        destination = [MessageHeaderDestination(endpointUrl="https://receiver.example.com/endpoint",
+        destination = [MessageHeaderDestination(endpoint="https://receiver.example.com/endpoint",
                                                 receiver=message_receiver)]
 
         message_header = MessageHeaderCreator.create_message_header(
