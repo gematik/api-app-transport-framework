@@ -4,14 +4,14 @@ from fhir.resources.bundle import Bundle
 from fhir.resources.messageheader import MessageHeader, MessageHeaderSource, MessageHeaderDestination
 from fhir.resources.operationoutcome import OperationOutcomeIssue
 from fhir.resources.fhirtypes import ReferenceType
-from app_transport_framework_library.app_transport_framework_library.base_use_case_handler import BaseUseCaseHandler
-from app_transport_framework_library.app_transport_framework_library.models.bundle_focus_content import BundleFocusContent
-from app_transport_framework_library.app_transport_framework_library.models.event import Event
-from app_transport_framework_library.app_transport_framework_library.models.message_to_send import MessageToSend
-from app_transport_framework_library.app_transport_framework_library.ressource_creators.operation_outcome_bundle_creator import OperationOutcomeBundleCreator
-from app_transport_framework_library.app_transport_framework_library.ressource_creators.operation_outcome_creator import OperationOutcomeCreator
-from app_transport_framework_library.app_transport_framework_library.use_cases.empfangsbestaetigung_handler import EmpfangsbestaetigungHandler
-from app_transport_framework_library.app_transport_framework_library.use_cases.selbsttest_lieferung_handler import SelbsttestLieferungHandler
+from app_transport_framework_library.base_use_case_handler import BaseUseCaseHandler
+from app_transport_framework_library.models.bundle_focus_content import BundleFocusContent
+from app_transport_framework_library.models.event import Event
+from app_transport_framework_library.models.message_to_send import MessageToSend
+from app_transport_framework_library.ressource_creators.operation_outcome_bundle_creator import OperationOutcomeBundleCreator
+from app_transport_framework_library.ressource_creators.operation_outcome_creator import OperationOutcomeCreator
+from app_transport_framework_library.use_cases.empfangsbestaetigung_handler import EmpfangsbestaetigungHandler
+from app_transport_framework_library.use_cases.selbsttest_lieferung_handler import SelbsttestLieferungHandler
 
 
 
@@ -140,7 +140,7 @@ class ATF_BundleProcessor:
         operationOutcomeBundle = OperationOutcomeBundleCreator.create_operation_outcome_receipt_bundle(
             self.sender, self.source, destination, operation_outcome)
         message_to_send = MessageToSend(
-            operation_outcome_bundle=operationOutcomeBundle,
+            atf_bundle=operationOutcomeBundle,
             receiver=message_header.sender.identifier.value,
             message_type="atf;Empfangsbestaetigung"
         )

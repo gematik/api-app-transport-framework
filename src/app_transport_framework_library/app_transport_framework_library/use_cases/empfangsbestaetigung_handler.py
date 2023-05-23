@@ -26,7 +26,7 @@ class EmpfangsbestaetigungHandler(BaseUseCaseHandler):
         message_id = outcome.extension[0].valueString.split(
             'urn:uuid:')[-1]
         empfangsbestaetigung = Empfangsbestaetigung(
-            message_id, True, message_header.sender.identifier.value, outcome.issue[0])
+            message_id, True, message_header.sender.identifier.value, message_header.destination[0].receiver.identifier.value, outcome.issue[0])
 
         self.received_Empfangsbestaetigung_event.trigger(empfangsbestaetigung)
         return self.bundleEntries, self.issues
