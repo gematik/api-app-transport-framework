@@ -2,8 +2,6 @@
 import base64
 from uuid import uuid4
 
-
-
 from fhir.resources.fhirtypes import ReferenceType, ContactPointType
 from fhir.resources.identifier import Identifier
 from fhir.resources.messageheader import MessageHeaderSource
@@ -58,14 +56,14 @@ receiver_processor = ATF_BundleProcessor(receiver, receiver_source)
 
 def on_message_from_receiver_to_sender(message_to_send: MessageToSend):
     communicator.send(message_to_send.receiver,
-                      message_to_send.message_type, message_to_send.operation_outcome_bundle.json(indent=4))
-    sender_processor.process_bundle(message_to_send.operation_outcome_bundle)
+                      message_to_send.message_type, message_to_send.atf_bundle.json(indent=4))
+    sender_processor.process_bundle(message_to_send.atf_bundle)
 
 
 def on_message_from_sender_to_receiver(message_to_send: MessageToSend):
     communicator.send(message_to_send.receiver,
-                      message_to_send.message_type, message_to_send.operation_outcome_bundle.json(indent=4))
-    receiver_processor.process_bundle(message_to_send.operation_outcome_bundle)
+                      message_to_send.message_type, message_to_send.atf_bundle.json(indent=4))
+    receiver_processor.process_bundle(message_to_send.atf_bundle)
 
 
 def on_sender_received_Empfangsbestaetigung(empfangsbestaetigung: Empfangsbestaetigung):
