@@ -1,0 +1,93 @@
+{
+    "id": "2be3a339-b95c-4d49-8b73-041f129cb492",
+    "meta": {
+        "profile": [
+            "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework"
+        ]
+    },
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:0ce07aff-cc70-45c8-909f-e39f7952b06a",
+            "resource": {
+                "id": "0ce07aff-cc70-45c8-909f-e39f7952b06a",
+                "meta": {
+                    "profile": [
+                        "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport"
+                    ]
+                },
+                "destination": [
+                    {
+                        "endpoint": "https://sender.example.com/endpoint",
+                        "receiver": {
+                            "display": "Sender",
+                            "identifier": {
+                                "system": "http://gematik.de/fhir/sid/KIM-Adresse",
+                                "value": "client1@gematik.kim.de"
+                            }
+                        }
+                    }
+                ],
+                "eventCoding": {
+                    "code": "atf;Empfangsbestaetigung",
+                    "display": "Empfangsbest\u00e4tigung und Auskunft \u00fcber FHIR Interpretierbarkeit der Nachricht",
+                    "system": "https://gematik.de/fhir/atf/CodeSystem/operation-identifier-cs"
+                },
+                "focus": [
+                    {
+                        "reference": "urn:uuid:29dfa530-936b-4598-a423-4084dd904d24"
+                    }
+                ],
+                "sender": {
+                    "display": "Receiver",
+                    "identifier": {
+                        "system": "http://gematik.de/fhir/sid/KIM-Adresse",
+                        "value": "client2@gematik.kim.de"
+                    }
+                },
+                "source": {
+                    "contact": {
+                        "system": "email",
+                        "value": "dev@ps_solutions.com"
+                    },
+                    "endpoint": "https://receiver.example.com/endpoint",
+                    "name": "PSSolutions",
+                    "software": "Globotron 500",
+                    "version": "2.1.3"
+                },
+                "resourceType": "MessageHeader"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:29dfa530-936b-4598-a423-4084dd904d24",
+            "resource": {
+                "id": "29dfa530-936b-4598-a423-4084dd904d24",
+                "meta": {
+                    "profile": [
+                        "https://gematik.de/fhir/atf/StructureDefinition/atf-operation-outcome"
+                    ]
+                },
+                "extension": [
+                    {
+                        "url": "https://gematik.de/fhir/atf/StructureDefinition/atf-message-id-ex",
+                        "valueString": "789bc165-1ccb-4a88-9de4-4af0549efe58"
+                    }
+                ],
+                "issue": [
+                    {
+                        "code": "informational",
+                        "diagnostics": "Anfrage erfolgreich entgegengenommen",
+                        "severity": "information"
+                    }
+                ],
+                "resourceType": "OperationOutcome"
+            }
+        }
+    ],
+    "identifier": {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:uuid:2be3a339-b95c-4d49-8b73-041f129cb492"
+    },
+    "timestamp": "2023-05-23T09:38:50.339177+00:00",
+    "type": "message",
+    "resourceType": "Bundle"
+}

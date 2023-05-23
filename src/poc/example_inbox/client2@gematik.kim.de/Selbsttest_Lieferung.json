@@ -1,0 +1,105 @@
+{
+    "id": "c84ce1b1-4e68-43eb-9c18-030dfbf74fe7",
+    "meta": {
+        "profile": [
+            "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework"
+        ]
+    },
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:789bc165-1ccb-4a88-9de4-4af0549efe58",
+            "resource": {
+                "id": "789bc165-1ccb-4a88-9de4-4af0549efe58",
+                "meta": {
+                    "profile": [
+                        "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport"
+                    ]
+                },
+                "destination": [
+                    {
+                        "endpoint": "https://receiver.example.com/endpoint",
+                        "receiver": {
+                            "display": "Receiver",
+                            "identifier": {
+                                "system": "http://gematik.de/fhir/sid/KIM-Adresse",
+                                "value": "client2@gematik.kim.de"
+                            }
+                        }
+                    }
+                ],
+                "eventCoding": {
+                    "code": "Selbsttest;Lieferung",
+                    "display": "Diese Dienstkennung dient ausschlie\u00dflich der Einrichtung des Kontos innerhalb eines PVS und des Testes, ob Nachrichten versendet und empfangen werden k\u00f6nnen. Diese Dienstkennung wird im PVS bei der normalen Abholung von Nachrichten ignoriert.",
+                    "system": "https://gematik.de/fhir/atf/CodeSystem/service-identifier-cs"
+                },
+                "focus": [
+                    {
+                        "reference": "urn:uuid:029ea7f1-cc5e-4128-9d48-b25df1dbb61d"
+                    }
+                ],
+                "sender": {
+                    "display": "Sender",
+                    "identifier": {
+                        "system": "http://gematik.de/fhir/sid/KIM-Adresse",
+                        "value": "client1@gematik.kim.de"
+                    }
+                },
+                "source": {
+                    "contact": {
+                        "system": "email",
+                        "value": "dev@medSoftware.com"
+                    },
+                    "endpoint": "https://sender.example.com/endpoint",
+                    "name": "MedSoftwareInc",
+                    "software": "MedSoftwareInc EMR",
+                    "version": "1.0.5c"
+                },
+                "resourceType": "MessageHeader"
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:029ea7f1-cc5e-4128-9d48-b25df1dbb61d",
+            "resource": {
+                "id": "029ea7f1-cc5e-4128-9d48-b25df1dbb61d",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "code": "45012-6",
+                                "display": "Communication regarding test results",
+                                "system": "http://loinc.org"
+                            }
+                        ]
+                    }
+                ],
+                "payload": [
+                    {
+                        "contentAttachment": {
+                            "contentType": "text/plain",
+                            "data": "U2VsYnN0dGVzdCBhYnNjaGxpZXNzZW4uIEJpdHRlIGtsYXJlbiBTaWUgZGllIFRlc3RlcmdlYm5pc3NlIGFiLg==",
+                            "title": "Selbsttest Best\u00e4tigung"
+                        }
+                    }
+                ],
+                "priority": "routine",
+                "received": "2023-03-29T13:30:00+02:00",
+                "sender": {
+                    "display": "Dr. Anna Schmidt"
+                },
+                "sent": "2023-03-29T13:28:17.239000+02:00",
+                "status": "completed",
+                "subject": {
+                    "display": "Max Mustermann"
+                },
+                "resourceType": "Communication"
+            }
+        }
+    ],
+    "identifier": {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:uuid:c84ce1b1-4e68-43eb-9c18-030dfbf74fe7"
+    },
+    "timestamp": "2023-05-23T09:38:50.327808+00:00",
+    "type": "message",
+    "resourceType": "Bundle"
+}
