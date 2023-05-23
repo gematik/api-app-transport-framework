@@ -31,7 +31,7 @@ sender_source = MessageHeaderSource(
     software="MedSoftwareInc EMR",
     version="1.0.5c",
     contact=ContactPointType(system="email", value="dev@medSoftware.com"),
-    endpointUrl="https://sender.example.com/endpoint",
+    endpoint="https://sender.example.com/endpoint",
 )
 
 
@@ -48,7 +48,7 @@ receiver_source = MessageHeaderSource(
     software="Globotron 500",
     version="2.1.3",
     contact=ContactPointType(system="email", value="dev@ps_solutions.com"),
-    endpointUrl="https://receiver.example.com/endpoint",
+    endpoint="https://receiver.example.com/endpoint",
 )
 
 communicator = Communicator()

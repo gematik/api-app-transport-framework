@@ -13,6 +13,9 @@
     "include": [
       {
         "system": "https://gematik.de/fhir/atf/CodeSystem/service-identifier-cs"
+      },
+      {
+        "system": "https://gematik.de/fhir/atf/CodeSystem/operation-identifier-cs"
       }
     ]
   }
