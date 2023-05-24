@@ -77,7 +77,7 @@ class ATF_BundleProcessor:
 
         if handler_key in self.use_case_handlers:
             handler = self.use_case_handlers[handler_key]
-            ressources, issues = handler.handle(message_header, parsed_bundle)
+            ressources, issues = handler.handle(message_header, bundle)
 
             if issues:
                 self.send_empfangsbestätigung(message_header, issues)

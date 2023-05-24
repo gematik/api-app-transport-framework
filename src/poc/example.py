@@ -56,24 +56,24 @@ receiver_processor = ATF_BundleProcessor(receiver, receiver_source)
 
 def on_message_from_receiver_to_sender(message_to_send: MessageToSend):
     communicator.send(message_to_send.receiver,
-                      message_to_send.message_type, message_to_send.atf_bundle.json(indent=4))
+                      message_to_send.message_type, message_to_send.atf_bundle.json(indent=4, ensure_ascii=False))
     sender_processor.process_bundle(message_to_send.atf_bundle)
 
 
 def on_message_from_sender_to_receiver(message_to_send: MessageToSend):
     communicator.send(message_to_send.receiver,
-                      message_to_send.message_type, message_to_send.atf_bundle.json(indent=4))
+                      message_to_send.message_type, message_to_send.atf_bundle.json(indent=4, ensure_ascii=False))
     receiver_processor.process_bundle(message_to_send.atf_bundle)
 
 
 def on_sender_received_Empfangsbestaetigung(empfangsbestaetigung: Empfangsbestaetigung):
     print(f"'{sender_address}' received Empfangsbestaetigung for '{empfangsbestaetigung.message_id}' from '{empfangsbestaetigung.sender}'")
-    print(empfangsbestaetigung.details.json(indent=4))
+    print(empfangsbestaetigung.details.json(indent=4, ensure_ascii=False))
 
 
 def on_receiver_received_Empfangsbestaetigung(empfangsbestaetigung: Empfangsbestaetigung):
     print(f"'{receiver_address}' received Empfangsbestaetigung for '{empfangsbestaetigung.message_id}' from '{empfangsbestaetigung.sender}'")
-    print(empfangsbestaetigung.details.json(indent=4))
+    print(empfangsbestaetigung.details.json(indent=4, ensure_ascii=False))
 
 
 def on_focus_Ressource_to_process(bundle_content: BundleFocusContent):
@@ -110,7 +110,7 @@ testbundle = TestMessageCreator.create_test_bundle(
 print(f"Sending Test-Message with message_id '{message_id}'")
 # Testnachricht "senden"
 communicator.send(receiver_address,
-                  f"Selbsttest;Lieferung", testbundle.json(indent=4))
+                  f"Selbsttest;Lieferung", testbundle.json(indent=4,ensure_ascii=False))
 
 # Testnachricht (beim Empfänger) verarbeiten
 receiver_processor.process_bundle(testbundle)

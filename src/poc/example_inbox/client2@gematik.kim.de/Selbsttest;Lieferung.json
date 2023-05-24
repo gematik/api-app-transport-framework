@@ -1,5 +1,5 @@
 {
-    "id": "44c27faf-fa73-46cc-be48-08307ad18d94",
+    "id": "00b0b5ea-477a-443a-90f6-c457d7df451c",
     "meta": {
         "profile": [
             "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework"
@@ -7,9 +7,9 @@
     },
     "entry": [
         {
-            "fullUrl": "urn:uuid:6cd5adbc-4356-4c80-8a74-828bff0ca62b",
+            "fullUrl": "urn:uuid:35cf5d64-b4e2-4395-9940-5ecb5231afee",
             "resource": {
-                "id": "6cd5adbc-4356-4c80-8a74-828bff0ca62b",
+                "id": "35cf5d64-b4e2-4395-9940-5ecb5231afee",
                 "meta": {
                     "profile": [
                         "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport"
@@ -29,12 +29,12 @@
                 ],
                 "eventCoding": {
                     "code": "Selbsttest;Lieferung",
-                    "display": "Diese Dienstkennung dient ausschlie\u00dflich der Einrichtung des Kontos innerhalb eines PVS und des Testes, ob Nachrichten versendet und empfangen werden k\u00f6nnen. Diese Dienstkennung wird im PVS bei der normalen Abholung von Nachrichten ignoriert.",
+                    "display": "Diese Dienstkennung dient ausschließlich der Einrichtung des Kontos innerhalb eines PVS und des Testes, ob Nachrichten versendet und empfangen werden können. Diese Dienstkennung wird im PVS bei der normalen Abholung von Nachrichten ignoriert.",
                     "system": "https://gematik.de/fhir/atf/CodeSystem/service-identifier-cs"
                 },
                 "focus": [
                     {
-                        "reference": "urn:uuid:a842382f-de58-4208-be7a-a3ff56ea4dd5"
+                        "reference": "urn:uuid:7b07de44-b878-4f13-8f80-ec1160c25827"
                     }
                 ],
                 "sender": {
@@ -58,9 +58,9 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:a842382f-de58-4208-be7a-a3ff56ea4dd5",
+            "fullUrl": "urn:uuid:7b07de44-b878-4f13-8f80-ec1160c25827",
             "resource": {
-                "id": "a842382f-de58-4208-be7a-a3ff56ea4dd5",
+                "id": "7b07de44-b878-4f13-8f80-ec1160c25827",
                 "category": [
                     {
                         "coding": [
@@ -77,7 +77,7 @@
                         "contentAttachment": {
                             "contentType": "text/plain",
                             "data": "U2VsYnN0dGVzdCBhYnNjaGxpZXNzZW4uIEJpdHRlIGtsYXJlbiBTaWUgZGllIFRlc3RlcmdlYm5pc3NlIGFiLg==",
-                            "title": "Selbsttest Best\u00e4tigung"
+                            "title": "Selbsttest Bestätigung"
                         }
                     }
                 ],
@@ -97,9 +97,9 @@
     ],
     "identifier": {
         "system": "urn:ietf:rfc:3986",
-        "value": "urn:uuid:44c27faf-fa73-46cc-be48-08307ad18d94"
+        "value": "urn:uuid:00b0b5ea-477a-443a-90f6-c457d7df451c"
     },
-    "timestamp": "2023-05-23T20:06:56.830505+00:00",
+    "timestamp": "2023-05-24T21:29:38.123815+00:00",
     "type": "message",
     "resourceType": "Bundle"
 }
