@@ -4,21 +4,15 @@ from fhir.resources.bundle import Bundle
 from fhir.resources.messageheader import MessageHeader, MessageHeaderSource, MessageHeaderDestination
 from fhir.resources.operationoutcome import OperationOutcomeIssue
 from fhir.resources.fhirtypes import ReferenceType
-from app_transport_framework_library.base_use_case_handler import BaseUseCaseHandler
+from app_transport_framework_library.base_use_case_validator import BaseUseCaseValidator
 from app_transport_framework_library.models.bundle_focus_content import BundleFocusContent
 from app_transport_framework_library.models.event import Event
 from app_transport_framework_library.models.message_to_send import MessageToSend
 from app_transport_framework_library.ressource_creators.operation_outcome_bundle_creator import OperationOutcomeBundleCreator
 from app_transport_framework_library.ressource_creators.operation_outcome_creator import OperationOutcomeCreator
 from app_transport_framework_library.use_cases.empfangsbestaetigung_handler import EmpfangsbestaetigungHandler
-from app_transport_framework_library.use_cases.selbsttest_lieferung_handler import SelbsttestLieferungHandler
+from app_transport_framework_library.use_cases.selbsttest_lieferung_validator import SelbsttestLieferungValidator
 
-
-
-
-
-
-# Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -50,10 +44,10 @@ class ATF_BundleProcessor:
         self.register_use_case_handler(
             "https://gematik.de/fhir/atf/CodeSystem/service-identifier-cs",
             "Selbsttest;Lieferung",
-            SelbsttestLieferungHandler(self.sender, self.source)
+            SelbsttestLieferungValidator(self.sender, self.source)
         )
 
-    def register_use_case_handler(self, system: str, code: str, handler: BaseUseCaseHandler):
+    def register_use_case_handler(self, system: str, code: str, handler: BaseUseCaseValidator):
         self.use_case_handlers[(system, code)] = handler
 
     def process_bundle(self, bundle: Bundle) -> BundleFocusContent:

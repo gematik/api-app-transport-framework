@@ -4,13 +4,13 @@ from fhir.resources.operationoutcome import OperationOutcome, OperationOutcomeIs
 from fhir.resources.messageheader import MessageHeader
 from fhir.resources.bundle import BundleEntry
 
-from app_transport_framework_library.base_use_case_handler import BaseUseCaseHandler
+from app_transport_framework_library.base_use_case_validator import BaseUseCaseValidator
 from app_transport_framework_library.models.empfangsbestaetigung import Empfangsbestaetigung
 
 
 
 
-class EmpfangsbestaetigungHandler(BaseUseCaseHandler):
+class EmpfangsbestaetigungHandler(BaseUseCaseValidator):
 
     def resolve_reference(self, reference_str: str, bundle: Bundle):
         for entry in bundle.entry:
