@@ -5,9 +5,10 @@ from fhir.resources.messageheader import MessageHeader, MessageHeaderSource, Mes
 from fhir.resources.operationoutcome import OperationOutcomeIssue
 from fhir.resources.fhirtypes import ReferenceType
 from app_transport_framework_library.base_use_case_validator import BaseUseCaseValidator
-from app_transport_framework_library.models.bundle_focus_content import BundleFocusContent
+from app_transport_framework_library.models.bundle_content import BundleContent
 from app_transport_framework_library.models.event import Event
 from app_transport_framework_library.models.message_to_send import MessageToSend
+from app_transport_framework_library.models.service_identifier import ServiceIdentifier
 from app_transport_framework_library.ressource_creators.operation_outcome_bundle_creator import OperationOutcomeBundleCreator
 from app_transport_framework_library.ressource_creators.operation_outcome_creator import OperationOutcomeCreator
 from app_transport_framework_library.use_cases.empfangsbestaetigung_handler import EmpfangsbestaetigungHandler
@@ -24,7 +25,7 @@ class ATF_BundleProcessor:
         self.use_case_handlers = {}
         self.message_to_send_event = Event()
         self.received_Empfangsbestaetigung_event = Event()
-        self.focus_Ressource_to_process_event = Event()
+        self.bundle_content_to_process_event = Event()
         self.empfangsbestaetigungs_handler = EmpfangsbestaetigungHandler(
             self.sender, self.source)
         self.register_standard_use_case_handlers()
@@ -50,7 +51,7 @@ class ATF_BundleProcessor:
     def register_use_case_handler(self, system: str, code: str, handler: BaseUseCaseValidator):
         self.use_case_handlers[(system, code)] = handler
 
-    def process_bundle(self, bundle: Bundle) -> BundleFocusContent:
+    def process_bundle(self, bundle: Bundle) -> BundleContent:
         parsed_bundle = self.parse_bundle(bundle)
 
         if parsed_bundle is None:
@@ -65,21 +66,22 @@ class ATF_BundleProcessor:
             logger.error(
                 "Die empfangene Nachricht ist keine gültige ATF-Nachricht. Ein MessageHeader fehlt.")
             return
+        service_identifier = ServiceIdentifier(message_header.eventCoding.system,
+                                               message_header.eventCoding.code,
+                                               message_header.eventCoding.display)
+        print(service_identifier)
 
-        handler_key = (message_header.eventCoding.system,
-                       message_header.eventCoding.code)
-
-        if handler_key in self.use_case_handlers:
-            handler = self.use_case_handlers[handler_key]
+        if service_identifier in self.use_case_handlers:
+            handler = self.use_case_handlers[service_identifier]
             ressources, issues = handler.handle(message_header, bundle)
 
             if issues:
                 self.send_empfangsbestätigung(message_header, issues)
 
             if ressources:
-                focusRessource = BundleFocusContent(
-                    message_header.eventCoding.system, message_header.eventCoding.code, ressources)
-                self.focus_Ressource_to_process_event.trigger(focusRessource)
+                focusRessource = BundleContent(
+                    service_identifier, message_header.focusRessource, message_header.sender.identifier.value, ressources)
+                self.bundle_content_to_process_event.trigger(focusRessource)
 
         else:
             issues = self.create_unsupported_use_case_issues(
