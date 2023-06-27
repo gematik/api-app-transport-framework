@@ -1,0 +1,2 @@
+app-transport-framework-library>=0.1.10
+fhir-resources == 6.1.0

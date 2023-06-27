@@ -69,10 +69,9 @@ class ATF_BundleProcessor:
         service_identifier = ServiceIdentifier(message_header.eventCoding.system,
                                                message_header.eventCoding.code,
                                                message_header.eventCoding.display)
-        print(service_identifier)
 
-        if service_identifier in self.use_case_handlers:
-            handler = self.use_case_handlers[service_identifier]
+        if (service_identifier.system, service_identifier.code) in self.use_case_handlers:
+            handler = self.use_case_handlers[(service_identifier.system, service_identifier.code)]
             ressources, issues = handler.handle(message_header, bundle)
 
             if issues:
@@ -80,7 +79,7 @@ class ATF_BundleProcessor:
 
             if ressources:
                 focusRessource = BundleContent(
-                    service_identifier, message_header.focusRessource, message_header.sender.identifier.value, ressources)
+                    service_identifier, message_header.focus, message_header.sender.identifier.value, ressources)
                 self.bundle_content_to_process_event.trigger(focusRessource)
 
         else:
