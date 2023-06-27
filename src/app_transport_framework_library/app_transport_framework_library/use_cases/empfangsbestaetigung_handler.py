@@ -8,8 +8,6 @@ from app_transport_framework_library.base_use_case_validator import BaseUseCaseV
 from app_transport_framework_library.models.empfangsbestaetigung import Empfangsbestaetigung
 
 
-
-
 class EmpfangsbestaetigungHandler(BaseUseCaseValidator):
 
     def resolve_reference(self, reference_str: str, bundle: Bundle):
@@ -31,6 +29,6 @@ class EmpfangsbestaetigungHandler(BaseUseCaseValidator):
         self.received_Empfangsbestaetigung_event.trigger(empfangsbestaetigung)
         return self.bundleEntries, self.issues
 
-    def get_ressource_by_type(self, parsed_bundle: Bundle, type):
-        return next((entry.resource for entry in parsed_bundle.entry if isinstance(
+    def get_ressource_by_type(self, bundle: Bundle, type):
+        return next((entry.resource for entry in bundle.entry if isinstance(
             entry.resource, type)), None)

@@ -1,5 +1,5 @@
 {
-    "id": "77c30c79-fb25-4a34-a8e2-cd86d316b03f",
+    "id": "474bcf66-4b13-43fe-ad0f-28e7c16aae83",
     "meta": {
         "profile": [
             "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework"
@@ -7,9 +7,9 @@
     },
     "entry": [
         {
-            "fullUrl": "urn:uuid:dff75683-398e-45f2-b0ed-6d139552dbf7",
+            "fullUrl": "urn:uuid:07da5e20-94ab-48be-99fb-936ba768833c",
             "resource": {
-                "id": "dff75683-398e-45f2-b0ed-6d139552dbf7",
+                "id": "07da5e20-94ab-48be-99fb-936ba768833c",
                 "meta": {
                     "profile": [
                         "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport"
@@ -28,13 +28,13 @@
                     }
                 ],
                 "eventCoding": {
-                    "code": "Selbsttest;Lieferung",
-                    "display": "Diese Dienstkennung dient ausschließlich der Einrichtung des Kontos innerhalb eines PVS und des Testes, ob Nachrichten versendet und empfangen werden können. Diese Dienstkennung wird im PVS bei der normalen Abholung von Nachrichten ignoriert.",
-                    "system": "https://gematik.de/fhir/atf/CodeSystem/service-identifier-cs"
+                    "code": "atf;Empfangsbestaetigung",
+                    "display": "Empfangsbestätigung und Auskunft über FHIR Interpretierbarkeit der Nachricht",
+                    "system": "https://gematik.de/fhir/atf/CodeSystem/operation-identifier-cs"
                 },
                 "focus": [
                     {
-                        "reference": "urn:uuid:528440e4-b140-49eb-b1da-de319909cf53"
+                        "reference": "urn:uuid:df7df060-ee35-439e-81f8-ba41180f29d2"
                     }
                 ],
                 "sender": {
@@ -58,48 +58,36 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:528440e4-b140-49eb-b1da-de319909cf53",
+            "fullUrl": "urn:uuid:df7df060-ee35-439e-81f8-ba41180f29d2",
             "resource": {
-                "id": "528440e4-b140-49eb-b1da-de319909cf53",
-                "category": [
+                "id": "df7df060-ee35-439e-81f8-ba41180f29d2",
+                "meta": {
+                    "profile": [
+                        "https://gematik.de/fhir/atf/StructureDefinition/atf-operation-outcome"
+                    ]
+                },
+                "extension": [
                     {
-                        "coding": [
-                            {
-                                "code": "45012-6",
-                                "display": "Communication regarding test results",
-                                "system": "http://loinc.org"
-                            }
-                        ]
+                        "url": "https://gematik.de/fhir/atf/StructureDefinition/atf-message-id-ex",
+                        "valueString": "943ffc4c-0acf-4a6a-a1a0-ecd16b4e32d3"
                     }
                 ],
-                "payload": [
+                "issue": [
                     {
-                        "contentAttachment": {
-                            "contentType": "text/plain",
-                            "data": "U2VsYnN0dGVzdCBhYnNjaGxpZXNzZW4uIEJpdHRlIGtsYXJlbiBTaWUgZGllIFRlc3RlcmdlYm5pc3NlIGFiLg==",
-                            "title": "Selbsttest Bestätigung"
-                        }
+                        "code": "processing",
+                        "diagnostics": "Die empfangene Nachricht mit dem atf;Empfangsbestaetigung kann nicht verarbeitet werden, da der Use-Case nicht unterstützt wird.",
+                        "severity": "error"
                     }
                 ],
-                "priority": "routine",
-                "received": "2023-03-29T13:30:00+02:00",
-                "sender": {
-                    "display": "Dr. Anna Schmidt"
-                },
-                "sent": "2023-03-29T13:28:17.239000+02:00",
-                "status": "completed",
-                "subject": {
-                    "display": "Max Mustermann"
-                },
-                "resourceType": "Communication"
+                "resourceType": "OperationOutcome"
             }
         }
     ],
     "identifier": {
         "system": "urn:ietf:rfc:3986",
-        "value": "urn:uuid:77c30c79-fb25-4a34-a8e2-cd86d316b03f"
+        "value": "urn:uuid:474bcf66-4b13-43fe-ad0f-28e7c16aae83"
     },
-    "timestamp": "2023-05-27T20:55:28.701305+00:00",
+    "timestamp": "2023-05-27T20:55:29.394716+00:00",
     "type": "message",
     "resourceType": "Bundle"
 }
