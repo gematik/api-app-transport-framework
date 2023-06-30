@@ -1,5 +1,5 @@
 {
-    "id": "5ce85e88-8416-4517-8a14-4e103bdc8c72",
+    "id": "08844300-178c-40c5-b872-0457d9723669",
     "meta": {
         "profile": [
             "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework"
@@ -7,9 +7,9 @@
     },
     "entry": [
         {
-            "fullUrl": "urn:uuid:943ffc4c-0acf-4a6a-a1a0-ecd16b4e32d3",
+            "fullUrl": "urn:uuid:02c85013-a6a1-44a6-8c08-42d4c5dbccae",
             "resource": {
-                "id": "943ffc4c-0acf-4a6a-a1a0-ecd16b4e32d3",
+                "id": "02c85013-a6a1-44a6-8c08-42d4c5dbccae",
                 "meta": {
                     "profile": [
                         "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport"
@@ -29,12 +29,12 @@
                 ],
                 "eventCoding": {
                     "code": "atf;Empfangsbestaetigung",
-                    "display": "Empfangsbestätigung und Auskunft über FHIR Interpretierbarkeit der Nachricht",
+                    "display": "EmpfangsbestÃ¤tigung und Auskunft Ã¼ber FHIR Interpretierbarkeit der Nachricht",
                     "system": "https://gematik.de/fhir/atf/CodeSystem/operation-identifier-cs"
                 },
                 "focus": [
                     {
-                        "reference": "urn:uuid:af6266f9-5478-4193-8b43-9b6fe70e925b"
+                        "reference": "urn:uuid:94566542-da1f-4268-91de-444a324253c5"
                     }
                 ],
                 "sender": {
@@ -58,9 +58,9 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:af6266f9-5478-4193-8b43-9b6fe70e925b",
+            "fullUrl": "urn:uuid:94566542-da1f-4268-91de-444a324253c5",
             "resource": {
-                "id": "af6266f9-5478-4193-8b43-9b6fe70e925b",
+                "id": "94566542-da1f-4268-91de-444a324253c5",
                 "meta": {
                     "profile": [
                         "https://gematik.de/fhir/atf/StructureDefinition/atf-operation-outcome"
@@ -69,14 +69,14 @@
                 "extension": [
                     {
                         "url": "https://gematik.de/fhir/atf/StructureDefinition/atf-message-id-ex",
-                        "valueString": "9bad635e-5a99-4123-b319-c7547a93a5c4"
+                        "valueString": "1d28bb84-207a-4271-9aa7-f0b0eba5d1b4"
                     }
                 ],
                 "issue": [
                     {
-                        "code": "processing",
-                        "diagnostics": "Die empfangene Nachricht mit dem atf;Empfangsbestaetigung kann nicht verarbeitet werden, da der Use-Case nicht unterstützt wird.",
-                        "severity": "error"
+                        "code": "informational",
+                        "diagnostics": "Anfrage erfolgreich entgegengenommen",
+                        "severity": "information"
                     }
                 ],
                 "resourceType": "OperationOutcome"
@@ -85,9 +85,9 @@
     ],
     "identifier": {
         "system": "urn:ietf:rfc:3986",
-        "value": "urn:uuid:5ce85e88-8416-4517-8a14-4e103bdc8c72"
+        "value": "urn:uuid:08844300-178c-40c5-b872-0457d9723669"
     },
-    "timestamp": "2023-05-27T20:55:29.393127+00:00",
+    "timestamp": "2023-06-30T15:38:32.997586+00:00",
     "type": "message",
     "resourceType": "Bundle"
 }
