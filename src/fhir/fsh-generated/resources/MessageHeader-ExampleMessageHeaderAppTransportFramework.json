@@ -23,7 +23,7 @@
   "sender": {
     "identifier": {
       "system": "http://gematik.de/fhir/sid/KIM-Adresse",
-      "value": "example@gematik.kim.de"
+      "value": "example@gematik.kim.telematik"
     },
     "display": "Sender Example"
   },
@@ -33,7 +33,7 @@
       "receiver": {
         "identifier": {
           "system": "http://gematik.de/fhir/sid/KIM-Adresse",
-          "value": "receiver@example.com"
+          "value": "receiver@example.klaus.kim.telematik"
         },
         "display": "Receiver Example"
       }

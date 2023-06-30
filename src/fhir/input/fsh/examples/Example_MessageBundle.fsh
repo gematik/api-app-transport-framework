@@ -23,7 +23,7 @@ Description: "Example MessageHeader for Selbsttest"
 * sender.display = "Sender Example"
 * destination.endpoint = "https://receiver.example.com/endpoint"
 * destination.receiver.identifier.system = $kim
-* destination.receiver.identifier.value = "receiver@example.com"
+* destination.receiver.identifier.value = "receiver@example.klaus.kim.telematik"
 * destination.receiver.display = "Receiver Example"
 * focus.reference = "urn:uuid:86a87254-ce15-11ed-afa1-0242ac120004"
 * source.name = "TopDoc Systems"

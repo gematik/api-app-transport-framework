@@ -12,8 +12,8 @@ Description: "Identifier zur Angabe der KIM-Adresse"
 
 Invariant: KIM-adresse-validieren
 Description: "Dies ist keine gültge KIM-Adresse"
-Expression: "$this.toString().matches('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$')"
-Severity: #warning
+Expression: "$this.toString().matches('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-_]+\\\\.kim\\\\.telematik$')"
+Severity: #error
 
 Instance: NamingSystemAddressKIM
 InstanceOf: NamingSystem
@@ -38,4 +38,4 @@ InstanceOf: IdentifierAddressKIM
 Usage: #inline
 Title: "ExampleKimAddress"
 Description: "Beispiel KIM Adresse"
-* value = "example@gematik.kim.de"
+* value = "example@gematik.kim.telematik"
