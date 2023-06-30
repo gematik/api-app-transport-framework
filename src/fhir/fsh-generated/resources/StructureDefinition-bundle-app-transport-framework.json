@@ -2,7 +2,6 @@
   "resourceType": "StructureDefinition",
   "id": "bundle-app-transport-framework",
   "url": "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework",
-  "version": "1.0.0",
   "name": "BundleAppTransportFramework",
   "title": "MessageBundle für den Nachrichtentransport",
   "status": "draft",

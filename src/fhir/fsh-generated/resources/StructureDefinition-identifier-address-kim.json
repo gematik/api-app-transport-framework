@@ -54,9 +54,9 @@
         "constraint": [
           {
             "key": "KIM-adresse-validieren",
-            "severity": "warning",
+            "severity": "error",
             "human": "Dies ist keine gültge KIM-Adresse",
-            "expression": "$this.toString().matches('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$')",
+            "expression": "$this.toString().matches('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-_]+\\\\.kim\\\\.telematik$')",
             "source": "https://gematik.de/fhir/atf/StructureDefinition/identifier-address-kim"
           }
         ]
