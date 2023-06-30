@@ -9,7 +9,7 @@ Description: "Bundle zum Zusammenfasssen der FHIR-Instanzen, welche in innerhalb
 
 * meta.profile 1..* MS
 * meta.profile ^slicing.discriminator.type = #value
-* meta.profile ^slicing.discriminator.path = "profile"
+* meta.profile ^slicing.discriminator.path = "$this"
 * meta.profile ^slicing.rules = #openAtEnd
 
 * meta.profile contains atf-profile 1..1

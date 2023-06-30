@@ -18,7 +18,8 @@ Description: "Antwort auf eine eingegangene ATF Anfrage"
 Extension: ATFMessageIDEX
 Id: atf-message-id-ex
 Title: "ATF Message ID EX"
-Description: "Extension zur Darstellung einer MessageID in "
+Description: "Extension zur Darstellung einer MessageID"
+//TODO: Add Context for Extension
 * insert Meta (atf-message-id-ex)
 * value[x] only string
   * ^short = "Angabe der ID der Nachricht, auf die sich dieser OperationOutcome bezieht"

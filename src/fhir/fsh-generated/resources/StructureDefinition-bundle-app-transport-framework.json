@@ -59,7 +59,7 @@
           "discriminator": [
             {
               "type": "value",
-              "path": "profile"
+              "path": "$this"
             }
           ],
           "rules": "openAtEnd"
