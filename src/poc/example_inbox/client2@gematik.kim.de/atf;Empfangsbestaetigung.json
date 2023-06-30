@@ -1,5 +1,5 @@
 {
-    "id": "08844300-178c-40c5-b872-0457d9723669",
+    "id": "474bcf66-4b13-43fe-ad0f-28e7c16aae83",
     "meta": {
         "profile": [
             "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework"
@@ -7,9 +7,9 @@
     },
     "entry": [
         {
-            "fullUrl": "urn:uuid:02c85013-a6a1-44a6-8c08-42d4c5dbccae",
+            "fullUrl": "urn:uuid:07da5e20-94ab-48be-99fb-936ba768833c",
             "resource": {
-                "id": "02c85013-a6a1-44a6-8c08-42d4c5dbccae",
+                "id": "07da5e20-94ab-48be-99fb-936ba768833c",
                 "meta": {
                     "profile": [
                         "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport"
@@ -17,50 +17,50 @@
                 },
                 "destination": [
                     {
-                        "endpoint": "https://sender.example.com/endpoint",
+                        "endpoint": "https://receiver.example.com/endpoint",
                         "receiver": {
-                            "display": "Sender",
+                            "display": "Receiver",
                             "identifier": {
                                 "system": "http://gematik.de/fhir/sid/KIM-Adresse",
-                                "value": "client1@gematik.kim.de"
+                                "value": "client2@gematik.kim.de"
                             }
                         }
                     }
                 ],
                 "eventCoding": {
                     "code": "atf;Empfangsbestaetigung",
-                    "display": "EmpfangsbestÃ¤tigung und Auskunft Ã¼ber FHIR Interpretierbarkeit der Nachricht",
+                    "display": "Empfangsbestätigung und Auskunft über FHIR Interpretierbarkeit der Nachricht",
                     "system": "https://gematik.de/fhir/atf/CodeSystem/operation-identifier-cs"
                 },
                 "focus": [
                     {
-                        "reference": "urn:uuid:94566542-da1f-4268-91de-444a324253c5"
+                        "reference": "urn:uuid:df7df060-ee35-439e-81f8-ba41180f29d2"
                     }
                 ],
                 "sender": {
-                    "display": "Receiver",
+                    "display": "Sender",
                     "identifier": {
                         "system": "http://gematik.de/fhir/sid/KIM-Adresse",
-                        "value": "client2@gematik.kim.de"
+                        "value": "client1@gematik.kim.de"
                     }
                 },
                 "source": {
                     "contact": {
                         "system": "email",
-                        "value": "dev@ps_solutions.com"
+                        "value": "dev@medSoftware.com"
                     },
-                    "endpoint": "https://receiver.example.com/endpoint",
-                    "name": "PSSolutions",
-                    "software": "Globotron 500",
-                    "version": "2.1.3"
+                    "endpoint": "https://sender.example.com/endpoint",
+                    "name": "MedSoftwareInc",
+                    "software": "MedSoftwareInc EMR",
+                    "version": "1.0.5c"
                 },
                 "resourceType": "MessageHeader"
             }
         },
         {
-            "fullUrl": "urn:uuid:94566542-da1f-4268-91de-444a324253c5",
+            "fullUrl": "urn:uuid:df7df060-ee35-439e-81f8-ba41180f29d2",
             "resource": {
-                "id": "94566542-da1f-4268-91de-444a324253c5",
+                "id": "df7df060-ee35-439e-81f8-ba41180f29d2",
                 "meta": {
                     "profile": [
                         "https://gematik.de/fhir/atf/StructureDefinition/atf-operation-outcome"
@@ -69,14 +69,14 @@
                 "extension": [
                     {
                         "url": "https://gematik.de/fhir/atf/StructureDefinition/atf-message-id-ex",
-                        "valueString": "1d28bb84-207a-4271-9aa7-f0b0eba5d1b4"
+                        "valueString": "943ffc4c-0acf-4a6a-a1a0-ecd16b4e32d3"
                     }
                 ],
                 "issue": [
                     {
-                        "code": "informational",
-                        "diagnostics": "Anfrage erfolgreich entgegengenommen",
-                        "severity": "information"
+                        "code": "processing",
+                        "diagnostics": "Die empfangene Nachricht mit dem atf;Empfangsbestaetigung kann nicht verarbeitet werden, da der Use-Case nicht unterstützt wird.",
+                        "severity": "error"
                     }
                 ],
                 "resourceType": "OperationOutcome"
@@ -85,9 +85,9 @@
     ],
     "identifier": {
         "system": "urn:ietf:rfc:3986",
-        "value": "urn:uuid:08844300-178c-40c5-b872-0457d9723669"
+        "value": "urn:uuid:474bcf66-4b13-43fe-ad0f-28e7c16aae83"
     },
-    "timestamp": "2023-06-30T15:38:32.997586+00:00",
+    "timestamp": "2023-05-27T20:55:29.394716+00:00",
     "type": "message",
     "resourceType": "Bundle"
 }

@@ -6,13 +6,9 @@ from fhir.resources.operationoutcome import OperationOutcome, OperationOutcomeIs
 from fhir.resources.messageheader import MessageHeader
 from fhir.resources.communication import Communication
 from fhir.resources.bundle import BundleEntry
+from app_transport_framework_library.base_use_case_validator import BaseUseCaseValidator
 
-from app_transport_framework_library.base_use_case_handler import BaseUseCaseHandler
-
-
-
-
-class SelbsttestLieferungHandler(BaseUseCaseHandler):
+class SelbsttestLieferungValidator(BaseUseCaseValidator):
     def resolve_reference(self, reference_str: str, bundle: Bundle):
         for entry in bundle.entry:
             if entry.resource.id == reference_str.split('urn:uuid:')[-1]:

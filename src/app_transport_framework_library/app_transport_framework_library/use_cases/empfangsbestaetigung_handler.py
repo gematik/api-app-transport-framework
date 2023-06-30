@@ -4,13 +4,11 @@ from fhir.resources.operationoutcome import OperationOutcome, OperationOutcomeIs
 from fhir.resources.messageheader import MessageHeader
 from fhir.resources.bundle import BundleEntry
 
-from app_transport_framework_library.base_use_case_handler import BaseUseCaseHandler
+from app_transport_framework_library.base_use_case_validator import BaseUseCaseValidator
 from app_transport_framework_library.models.empfangsbestaetigung import Empfangsbestaetigung
 
 
-
-
-class EmpfangsbestaetigungHandler(BaseUseCaseHandler):
+class EmpfangsbestaetigungHandler(BaseUseCaseValidator):
 
     def resolve_reference(self, reference_str: str, bundle: Bundle):
         for entry in bundle.entry:
@@ -26,11 +24,11 @@ class EmpfangsbestaetigungHandler(BaseUseCaseHandler):
         message_id = outcome.extension[0].valueString.split(
             'urn:uuid:')[-1]
         empfangsbestaetigung = Empfangsbestaetigung(
-            message_id, True, message_header.sender.identifier.value, outcome.issue[0])
+            message_id, True, message_header.sender.identifier.value, message_header.destination[0].receiver.identifier.value, outcome.issue[0])
 
         self.received_Empfangsbestaetigung_event.trigger(empfangsbestaetigung)
         return self.bundleEntries, self.issues
 
-    def get_ressource_by_type(self, parsed_bundle: Bundle, type):
-        return next((entry.resource for entry in parsed_bundle.entry if isinstance(
+    def get_ressource_by_type(self, bundle: Bundle, type):
+        return next((entry.resource for entry in bundle.entry if isinstance(
             entry.resource, type)), None)
