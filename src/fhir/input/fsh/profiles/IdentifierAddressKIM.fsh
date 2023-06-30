@@ -12,7 +12,7 @@ Description: "Identifier zur Angabe der KIM-Adresse"
 
 Invariant: KIM-adresse-validieren
 Description: "Dies ist keine gültge KIM-Adresse"
-Expression: "$this.toString().matches('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-_]+\\\\.kim\\\\.telematik$')"
+Expression: "$this.toString().matches('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-_-]+\\\\.kim\\\\.telematik$')"
 Severity: #error
 
 Instance: NamingSystemAddressKIM
