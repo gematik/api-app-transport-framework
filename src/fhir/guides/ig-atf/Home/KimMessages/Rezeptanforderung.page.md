@@ -32,7 +32,7 @@ Der Anhang enthält die Rezeptanforderung als FHIR-Ressource
     MIME-Version: 1.0
     Content-Type: multipart/mixed;
      boundary="----=_Part_6_1831919254.1667563379306"
-    X-KIM-Dienstkennung: E-Rezept;Rezeptanforderung;V1.0
+    X-KIM-Dienstkennung: eRezept_Rezeptanforderung;Rezeptanfrage
     X-KIM-Sendersystem: SmartPlegeTI;1.8.0
 
     ------=_Part_6_1831919254.1667563379306

@@ -33,3 +33,9 @@ Diese Spezifikation beschreibt den umgebenden Container (MessageBundle) und eine
 Jede Nachricht besteht also aus einem Bundle, welches mindestens den MessageHeader und je nach Anwendungsfall weitere Ressourcen enthält.
 
 {{render:src/fhir/guides/ig-atf/images/ATF-Scope.png}}
+
+## Implementierung des Proof of Concept
+
+Die exemplarische [Implementierung des App-Transport-Frameworks](https://github.com/gematik/api-app-transport-framework/blob/main/src/poc/README.md>) und einer [Beispielbibliothek](https://github.com/gematik/api-app-transport-framework/blob/main/src/app_transport_framework_library/README.md) demonstriert die Anwendung in Python.
+
+Eine exemplarische Verwendung dieser Bibliothek, in der Form der Übermittlung einer Selbsttest-Nachricht, ist in einem [Beispiel](https://github.com/gematik/api-app-transport-framework/blob/main/src/poc/example.py) dargestellt.

@@ -5,14 +5,17 @@
   "id": "service-identifier-vs",
   "title": "Anwendungskennzeichen (VS)",
   "description": "ValueSet zum Anwendungskennzeichen zur Identifkation des UseCases, für welchen die FHIR-Instanzen verwendet werden",
-  "version": "1.0",
   "url": "https://gematik.de/fhir/atf/ValueSet/service-identifier-vs",
   "experimental": false,
   "publisher": "gematik GmbH",
+  "version": "1.0",
   "compose": {
     "include": [
       {
         "system": "https://gematik.de/fhir/atf/CodeSystem/service-identifier-cs"
+      },
+      {
+        "system": "https://gematik.de/fhir/atf/CodeSystem/operation-identifier-cs"
       }
     ]
   }

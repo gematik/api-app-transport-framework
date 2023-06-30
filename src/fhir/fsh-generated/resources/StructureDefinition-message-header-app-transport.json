@@ -42,6 +42,29 @@
         "mustSupport": true
       },
       {
+        "id": "MessageHeader.meta.profile",
+        "path": "MessageHeader.meta.profile",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "openAtEnd"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MessageHeader.meta.profile:atf-profile",
+        "path": "MessageHeader.meta.profile",
+        "sliceName": "atf-profile",
+        "min": 1,
+        "max": "1",
+        "patternCanonical": "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport"
+      },
+      {
         "id": "MessageHeader.event[x]",
         "path": "MessageHeader.event[x]",
         "binding": {

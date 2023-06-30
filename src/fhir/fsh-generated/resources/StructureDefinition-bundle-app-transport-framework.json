@@ -2,10 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "bundle-app-transport-framework",
   "url": "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework",
-  "version": "1.0.0",
+  "version": "1.0",
   "name": "BundleAppTransportFramework",
   "title": "MessageBundle für den Nachrichtentransport",
   "status": "draft",
+  "experimental": false,
+  "publisher": "gematik GmbH",
   "description": "Bundle zum Zusammenfasssen der FHIR-Instanzen, welche in innerhalb dieses UseCases zusammengefasst werden sollen.",
   "fhirVersion": "4.0.1",
   "mapping": [
@@ -49,6 +51,29 @@
             "source": "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework"
           }
         ]
+      },
+      {
+        "id": "Bundle.meta.profile",
+        "path": "Bundle.meta.profile",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "$this"
+            }
+          ],
+          "rules": "openAtEnd"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.meta.profile:atf-profile",
+        "path": "Bundle.meta.profile",
+        "sliceName": "atf-profile",
+        "min": 1,
+        "max": "1",
+        "patternCanonical": "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework"
       },
       {
         "id": "Bundle.identifier",

@@ -8,7 +8,7 @@
   "status": "draft",
   "experimental": false,
   "publisher": "gematik GmbH",
-  "description": "Extension zur Darstellung einer MessageID in ",
+  "description": "Extension zur Darstellung einer MessageID",
   "fhirVersion": "4.0.1",
   "mapping": [
     {

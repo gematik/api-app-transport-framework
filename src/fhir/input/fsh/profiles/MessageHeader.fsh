@@ -4,8 +4,16 @@ Id: message-header-app-transport
 Title: "MessageHeader"
 Description: "MessageHeader des MessageBundles"
 * insert Meta(message-header-app-transport)
-* ^status = #draft
+
 * event[x] from ServiceIdentifierVS (required)
+
+* meta.profile 1..* MS
+* meta.profile ^slicing.discriminator.type = #value
+* meta.profile ^slicing.discriminator.path = "$this"
+* meta.profile ^slicing.rules = #openAtEnd
+
+* meta.profile contains atf-profile 1..1
+* meta.profile[atf-profile] = "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport"
 
 * id 1..1 MS
   * ^short = "Eindeutige ID der Nachricht, anzugeben als UUID"
