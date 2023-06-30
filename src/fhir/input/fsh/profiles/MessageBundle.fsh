@@ -3,8 +3,18 @@ Parent: Bundle
 Id: bundle-app-transport-framework
 Title: "MessageBundle für den Nachrichtentransport"
 Description: "Bundle zum Zusammenfasssen der FHIR-Instanzen, welche in innerhalb dieses UseCases zusammengefasst werden sollen."
-* ^status = #draft
+* insert Meta(bundle-app-transport-framework)
+
 * obeys resolve-references-in-bundle
+
+* meta.profile 1..* MS
+* meta.profile ^slicing.discriminator.type = #value
+* meta.profile ^slicing.discriminator.path = "profile"
+* meta.profile ^slicing.rules = #openAtEnd
+
+* meta.profile contains atf-profile 1..1
+* meta.profile[atf-profile] = "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework"
+
 * identifier 1..
 * identifier.system 1..
 * identifier.system = "urn:ietf:rfc:3986" (exactly)
