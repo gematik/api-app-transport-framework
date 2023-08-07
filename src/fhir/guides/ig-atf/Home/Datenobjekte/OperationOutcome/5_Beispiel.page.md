@@ -2,4 +2,4 @@
 
 Valides Beispiel einer erfolgreichen OperationOutcome:
 
-{{json:ExampleSuccessfulOperationOutcome}}
+{{json:OperationOutcome/ExampleSuccessfulOperationOutcome}}

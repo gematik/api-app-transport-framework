@@ -2,4 +2,4 @@
 
 Valides Beispiel einer Verordnungsanfrage:
 
-{{json:ExampleMessageHeaderAppTransportFramework}}
+{{json:MessageHeader/ExampleMessageHeaderAppTransportFramework}}
