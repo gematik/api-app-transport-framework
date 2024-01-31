@@ -1,0 +1,162 @@
+[
+  {
+    "outputFile": "Bundle-ExampleBundleMessageContainer.json",
+    "fshName": "ExampleBundleMessageContainer",
+    "fshType": "Instance",
+    "fshFile": "examples/Example_MessageBundle.fsh",
+    "startLine": 3,
+    "endLine": 13
+  },
+  {
+    "outputFile": "CodeSystem-app-tags-cs.json",
+    "fshName": "AppTagsCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/AppTagsCS.fsh",
+    "startLine": 1,
+    "endLine": 39
+  },
+  {
+    "outputFile": "CodeSystem-operation-identifier-cs.json",
+    "fshName": "OperationIdentifierCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/OperationIdentifierCS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "CodeSystem-service-identifier-cs.json",
+    "fshName": "ServiceIdentifierCS",
+    "fshType": "CodeSystem",
+    "fshFile": "codesystems/ServiceIdentifierCS.fsh",
+    "startLine": 1,
+    "endLine": 19
+  },
+  {
+    "outputFile": "Communication-ExampleCommunication.json",
+    "fshName": "ExampleCommunication",
+    "fshType": "Instance",
+    "fshFile": "examples/Example_MessageBundle.fsh",
+    "startLine": 37,
+    "endLine": 53
+  },
+  {
+    "outputFile": "MessageHeader-ExampleMessageHeaderAppTransportFramework.json",
+    "fshName": "ExampleMessageHeaderAppTransportFramework",
+    "fshType": "Instance",
+    "fshFile": "examples/Example_MessageBundle.fsh",
+    "startLine": 15,
+    "endLine": 35
+  },
+  {
+    "outputFile": "NamingSystem-NamingSystemAddressKIM.json",
+    "fshName": "NamingSystemAddressKIM",
+    "fshType": "Instance",
+    "fshFile": "profiles/IdentifierAddressKIM.fsh",
+    "startLine": 12,
+    "endLine": 28
+  },
+  {
+    "outputFile": "NamingSystem-NamingSystemAddressTIM.json",
+    "fshName": "NamingSystemAddressTIM",
+    "fshType": "Instance",
+    "fshFile": "profiles/IdentifierAddressTIM.fsh",
+    "startLine": 13,
+    "endLine": 29
+  },
+  {
+    "outputFile": "OperationOutcome-ExampleFailedToProcessOperationOutcome.json",
+    "fshName": "ExampleFailedToProcessOperationOutcome",
+    "fshType": "Instance",
+    "fshFile": "examples/OperationOutcome_examples.fsh",
+    "startLine": 16,
+    "endLine": 29
+  },
+  {
+    "outputFile": "OperationOutcome-ExampleFailedToValidateOperationOutcome.json",
+    "fshName": "ExampleFailedToValidateOperationOutcome",
+    "fshType": "Instance",
+    "fshFile": "examples/OperationOutcome_examples.fsh",
+    "startLine": 31,
+    "endLine": 40
+  },
+  {
+    "outputFile": "OperationOutcome-ExampleSuccessfulOperationOutcome.json",
+    "fshName": "ExampleSuccessfulOperationOutcome",
+    "fshType": "Instance",
+    "fshFile": "examples/OperationOutcome_examples.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "StructureDefinition-atf-message-id-ex.json",
+    "fshName": "ATFMessageIDEX",
+    "fshType": "Extension",
+    "fshFile": "profiles/OperationOutcome.fsh",
+    "startLine": 18,
+    "endLine": 25
+  },
+  {
+    "outputFile": "StructureDefinition-atf-operation-outcome.json",
+    "fshName": "ATFOperationOutcome",
+    "fshType": "Profile",
+    "fshFile": "profiles/OperationOutcome.fsh",
+    "startLine": 1,
+    "endLine": 16
+  },
+  {
+    "outputFile": "StructureDefinition-bundle-app-transport-framework.json",
+    "fshName": "BundleAppTransportFramework",
+    "fshType": "Profile",
+    "fshFile": "profiles/MessageBundle.fsh",
+    "startLine": 1,
+    "endLine": 34
+  },
+  {
+    "outputFile": "StructureDefinition-identifier-address-kim.json",
+    "fshName": "IdentifierAddressKIM",
+    "fshType": "Profile",
+    "fshFile": "profiles/IdentifierAddressKIM.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "StructureDefinition-identifier-address-tim.json",
+    "fshName": "IdentifierAddressTIM",
+    "fshType": "Profile",
+    "fshFile": "profiles/IdentifierAddressTIM.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "StructureDefinition-message-header-app-transport.json",
+    "fshName": "MessageHeaderAppTransportFramework",
+    "fshType": "Profile",
+    "fshFile": "profiles/MessageHeader.fsh",
+    "startLine": 1,
+    "endLine": 44
+  },
+  {
+    "outputFile": "ValueSet-issue-type-vs.json",
+    "fshName": "IssueTypeVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/IssueTypeVS.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "ValueSet-operation-identifier-vs.json",
+    "fshName": "OperationIdentifierVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/OperationIdentifierVS.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "ValueSet-service-identifier-vs.json",
+    "fshName": "ServiceIdentifierVS",
+    "fshType": "ValueSet",
+    "fshFile": "valuesets/ServiceIdentifierVS.fsh",
+    "startLine": 1,
+    "endLine": 7
+  }
+]

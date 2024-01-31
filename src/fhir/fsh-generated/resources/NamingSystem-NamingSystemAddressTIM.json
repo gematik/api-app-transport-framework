@@ -1,6 +1,7 @@
 {
   "resourceType": "NamingSystem",
   "id": "NamingSystemAddressTIM",
+  "description": "E-Rezept Token",
   "name": "NamingSystemAddressTIM",
   "status": "active",
   "kind": "identifier",
@@ -17,7 +18,6 @@
     }
   ],
   "responsible": "gematik GmbH",
-  "description": "E-Rezept Token",
   "uniqueId": [
     {
       "type": "uri",

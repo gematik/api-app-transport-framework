@@ -17,7 +17,7 @@ InstanceOf: MessageHeaderAppTransportFramework
 Usage: #example
 Title: "Example MessageHeader"
 Description: "Example MessageHeader for Selbsttest"
-* eventCoding = ServiceIdentifierCS#Selbsttest;Lieferung
+* eventCoding = ServiceIdentifierCS#atf;Selbsttest
 * source.endpoint = "https://sender.example.com/endpoint"
 * sender.identifier = ExampleKimAddress
 * sender.display = "Sender Example"

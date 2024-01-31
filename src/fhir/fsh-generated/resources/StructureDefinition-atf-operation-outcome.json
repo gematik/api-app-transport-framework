@@ -1,12 +1,6 @@
 {
   "resourceType": "StructureDefinition",
   "id": "atf-operation-outcome",
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
-      "valueString": "Foundation.Other"
-    }
-  ],
   "url": "https://gematik.de/fhir/atf/StructureDefinition/atf-operation-outcome",
   "version": "1.0",
   "name": "ATFOperationOutcome",

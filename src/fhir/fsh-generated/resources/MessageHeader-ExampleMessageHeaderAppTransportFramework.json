@@ -7,7 +7,7 @@
     ]
   },
   "eventCoding": {
-    "code": "Selbsttest;Lieferung",
+    "code": "atf;Selbsttest",
     "system": "https://gematik.de/fhir/atf/CodeSystem/service-identifier-cs"
   },
   "source": {

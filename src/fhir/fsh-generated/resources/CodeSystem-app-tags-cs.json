@@ -6,7 +6,6 @@
   "id": "app-tags-cs",
   "title": "App Tags (CS)",
   "description": "CodeSystem für die Nutzung im Attribut PayloadType in FHIR-Endpoint Ressourcen und zur Kennzeichnung von KIM-Adressen im Attribut kimData im LDAP-Directory.",
-  "version": "1.0",
   "url": "https://gematik.de/fhir/atf/CodeSystem/app-tags-cs",
   "concept": [
     {
@@ -20,14 +19,6 @@
     {
       "code": "GKH-AAR",
       "display": "Elektronische Beantragung einer Anschlussrehabilitation"
-    },
-    {
-      "code": "atf",
-      "display": "Strukturierte Rezeptanforderung an einen Arzt, initiiert durch eine Apotheke nach dem Start der Zubereitung einer parenteralen Zubereitung"
-    },
-    {
-      "code": "eRezept_ParenteraleZubereitung",
-      "display": "Strukturierte Rezeptanforderung an einen Arzt, initiiert durch eine Apotheke nach dem Start der Zubereitung einer parenteralen Zubereitung"
     },
     {
       "code": "BMP",
@@ -58,8 +49,24 @@
       "display": "Für die Übertragung von digitalen Mustern (6, 10 und 10A) wird im Bereich der vertragsärztlichen Versorgung diese Anwendung genutzt. Als Kommunikationspartner dienen hier Arztpraxen, Labore und Einrichtungen im Gesundheitswesen, dessen Übertragungssoftware für die sichere Übertragung ggf. von der KBV zertifiziert und für die Signierung der digitalen Inhalte einen elektronischen Heilberufsausweis (HBA) benötigen."
     },
     {
-      "code": "eRezept",
+      "code": "eRezept_Zuweisung",
       "display": "Austausch von Zugriffsinformationen von E-Rezepten (z.B. anwendungsfertige Zytostatika Zubereitungen) zwischen Praxis, Apotheke, Krankenhäusern und Pflegeeinrichtungen."
+    },
+    {
+      "code": "eRezept_Kommunikation",
+      "display": "Austausch von Zugriffsinformationen von E-Rezepten (z.B. anwendungsfertige Zytostatika Zubereitungen) zwischen Praxis, Apotheke, Krankenhäusern und Pflegeeinrichtungen."
+    },
+    {
+      "code": "atf",
+      "display": "Strukturierte Rezeptanforderung an einen Arzt, initiiert durch eine Apotheke nach dem Start der Zubereitung einer parenteralen Zubereitung"
+    },
+    {
+      "code": "eRezept_ParenteraleZubereitung",
+      "display": "Strukturierte Rezeptanforderung an einen Arzt, initiiert durch eine Apotheke nach dem Start der Zubereitung einer parenteralen Zubereitung"
+    },
+    {
+      "code": "eRezept_Rezeptanforderung",
+      "display": "Anfrage an einen Arzt ein Rezept auszustellen"
     },
     {
       "code": "eAU",
@@ -136,6 +143,7 @@
   ],
   "experimental": false,
   "publisher": "gematik GmbH",
+  "version": "1.0",
   "caseSensitive": true,
-  "count": 31
+  "count": 33
 }
