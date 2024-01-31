@@ -6,6 +6,7 @@
   "id": "operation-identifier-cs",
   "title": "Verarbeitungsidentifier (CS)",
   "description": "CodeSystem zur Angabe der FHIR-Interpretierbarkeit unter Nutzung des App Transport Frameworks",
+  "version": "1.0",
   "url": "https://gematik.de/fhir/atf/CodeSystem/operation-identifier-cs",
   "concept": [
     {
@@ -15,7 +16,6 @@
   ],
   "experimental": false,
   "publisher": "gematik GmbH",
-  "version": "1.0",
   "caseSensitive": true,
   "count": 1
 }

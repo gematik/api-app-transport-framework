@@ -1,6 +1,16 @@
 {
   "resourceType": "StructureDefinition",
   "id": "message-header-app-transport",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Foundation.Other"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "not-classified"
+    }
+  ],
   "url": "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport",
   "version": "1.0",
   "name": "MessageHeaderAppTransportFramework",

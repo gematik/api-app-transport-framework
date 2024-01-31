@@ -6,6 +6,7 @@
   "id": "service-identifier-cs",
   "title": "Anwendungskennzeichen (CS)",
   "description": "CodeSystem zum Anwendungskennzeichen zur Identifkation des UseCases, für welchen die FHIR-Instanzen verwendet werden",
+  "version": "1.0",
   "url": "https://gematik.de/fhir/atf/CodeSystem/service-identifier-cs",
   "concept": [
     {
@@ -63,7 +64,6 @@
   ],
   "experimental": false,
   "publisher": "gematik GmbH",
-  "version": "1.0",
   "caseSensitive": true,
   "count": 13
 }

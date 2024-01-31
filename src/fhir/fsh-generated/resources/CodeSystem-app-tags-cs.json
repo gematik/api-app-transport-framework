@@ -1,0 +1,141 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "AppTagsCS",
+  "id": "app-tags-cs",
+  "title": "App Tags (CS)",
+  "description": "CodeSystem für die Nutzung im Attribut PayloadType in FHIR-Endpoint Ressourcen und zur Kennzeichnung von KIM-Adressen im Attribut kimData im LDAP-Directory.",
+  "version": "1.0",
+  "url": "https://gematik.de/fhir/atf/CodeSystem/app-tags-cs",
+  "concept": [
+    {
+      "code": "Vorsorgeplaner",
+      "display": "Der Vorsorgeplaner ermöglicht die Kommunikation zwischen einer Krankenkasse und den Vertragsarztpraxen."
+    },
+    {
+      "code": "MVP",
+      "display": "Elektronischer Versorgungsplan Pflege im Rahmen des Modellprojektes Implementierung der Telematikinfrastruktur gem. §125 SGB XI in einem regionalen Versorgungsnetz der ambulanten und stationären Pflege in Berlin Nord-Ost"
+    },
+    {
+      "code": "GKH-AAR",
+      "display": "Elektronische Beantragung einer Anschlussrehabilitation"
+    },
+    {
+      "code": "atf",
+      "display": "Strukturierte Rezeptanforderung an einen Arzt, initiiert durch eine Apotheke nach dem Start der Zubereitung einer parenteralen Zubereitung"
+    },
+    {
+      "code": "eRezept_ParenteraleZubereitung",
+      "display": "Strukturierte Rezeptanforderung an einen Arzt, initiiert durch eine Apotheke nach dem Start der Zubereitung einer parenteralen Zubereitung"
+    },
+    {
+      "code": "BMP",
+      "display": "Elektronische Übermittlung des bundeseinheitlichen Medikationsplans von Vertragsärzten an Vertragsärzte und Pflegeeinrichtungen"
+    },
+    {
+      "code": "NDP2GO",
+      "display": "Elektronische Übermittlung der Notdienstpraxisdaten aus der KV-Notdienstpraxis an die Praxis des diensthabenden/durchführenden Arztes"
+    },
+    {
+      "code": "Vitalzeichen",
+      "display": "Elektronische Übermittlung von Vitalzeichen von Pflegeeinrichtungen an Vertragsärzte"
+    },
+    {
+      "code": "eEB",
+      "display": "Verfahren zur Übertragung der Versichertenstammdaten (VSD) von einer Krankenkasse bzw. Versicherungsunternehmen an eine Praxis"
+    },
+    {
+      "code": "KIM-Mail",
+      "display": "Default Dienstkennung, Default Abwesenheitsnotiz"
+    },
+    {
+      "code": "DALE-UV",
+      "display": "Datenaustauschverfahren zwischen Durchgangsärzten (Leistungserbringende) und den Trägern der Gesetzlichen Unfallversicherung (Berufsgenossenschaften und Unfallkassen)."
+    },
+    {
+      "code": "DiMus",
+      "display": "Für die Übertragung von digitalen Mustern (6, 10 und 10A) wird im Bereich der vertragsärztlichen Versorgung diese Anwendung genutzt. Als Kommunikationspartner dienen hier Arztpraxen, Labore und Einrichtungen im Gesundheitswesen, dessen Übertragungssoftware für die sichere Übertragung ggf. von der KBV zertifiziert und für die Signierung der digitalen Inhalte einen elektronischen Heilberufsausweis (HBA) benötigen."
+    },
+    {
+      "code": "eRezept",
+      "display": "Austausch von Zugriffsinformationen von E-Rezepten (z.B. anwendungsfertige Zytostatika Zubereitungen) zwischen Praxis, Apotheke, Krankenhäusern und Pflegeeinrichtungen."
+    },
+    {
+      "code": "eAU",
+      "display": "Elektronische Arbeitsunfähigkeitsbescheinigung"
+    },
+    {
+      "code": "Arztbrief",
+      "display": "Der elektronische Arztbrief (=eArztbrief) ermöglicht sowohl einen schnellen und sicheren Austausch von Informationen zwischen Ärzten als auch eine effiziente maschinelle Weiterverarbeitung im Softwaresystem des empfangenden Arztes. Basierend auf dem VHitG-Leitfaden (Version 2006) werden diese Informationen zusätzlich als PDF-Datei verschickt und optionale Anhänge wie Laborbefunde können strukturiert angehängt werden."
+    },
+    {
+      "code": "EBZ",
+      "display": "Elektronische Beantragung und Genehmigung zahnärztlicher Leistungen."
+    },
+    {
+      "code": "eDMP",
+      "display": "Die eDMP unterstützt aus Disease-Management-Programmen die elektronische Dokumentation und Übermittlung von Behandlungen chronisch kranker Patienten direkt aus den EDV-Systemen der Arztpraxen an entsprechende Datenannahmestellen. Mittels Quittierung durch den Empfänger wird sowohl eine Lese- als auch eine Prüf- und Verarbeitungsbestätigung der übertragenen Daten übermittelt."
+    },
+    {
+      "code": "eDokumentation-QSHLT",
+      "display": "Einlieferung eDokumentation, Qualitätssicherung in der Holmium-Laser-Therapie"
+    },
+    {
+      "code": "eDokumentation-QSKE",
+      "display": "Einlieferung eDokumentation, Qualitätssicherung in der Kapselendoskopie"
+    },
+    {
+      "code": "eDokumentation-QSMG",
+      "display": "Einlieferung eDokumentation, Qualitätssicherung in der Molekulargenetik"
+    },
+    {
+      "code": "eDokumentation-QSHGV",
+      "display": "Einlieferung eDokumentation, Qualitätssicherung in der Hörgeräteversorgung von Jugendlichen und Erwachsenen"
+    },
+    {
+      "code": "eDokumentation-QSHGVK",
+      "display": "Einlieferung eDokumentation, Qualitätssicherung in der Hörgeräteversorgung von Säuglingen, Kleinkindern und Kindern"
+    },
+    {
+      "code": "abD-eHKS",
+      "display": "Diese Anwendung dient zur Übermittlung von abrechnungsbegleitenden Dokumentationen von Hautkrebsbehandlungen an die KVen und deren Rückmeldungen und ermöglicht so eine elektronische Dokumentation von Hautkrebsscreenings zur frühzeitigen Erkennung und Behandlung von Hautkrebserkrankungen."
+    },
+    {
+      "code": "eNachricht",
+      "display": "Die eNachricht bietet eine Möglichkeit zum weitestgehend universellen Austausch von Informationen ohne direkten Patientenbezug zwischen allen KIM-Nutzern. Mittels kurzer Nachrichten mit E-Mail-Charakter können auf diese Art Informationen sicher und optional mit verschiedenen Anhängen sicher kommuniziert werden. Hinweis: Für Nachrichten mit direktem Patientenbezug sollte vorzugsweise die Anwendung eArztbrief verwendet werden."
+    },
+    {
+      "code": "KZVAbr",
+      "display": "Die KZV-Abrechnung ist eine sichere Übermittlungsmöglichkeit von Online-Monatsabrechnungen (KBR/KGL, PAR, ZE) und Online-Quartalsabrechnungen (KCH, KFO) an die KZV. Es soll auch die Möglichkeit bieten, zusätzliche Testabrechnungen und signierte Sammelerklärungen zu versenden, sofern die KZV dies vorsieht."
+    },
+    {
+      "code": "LDT-Auftrag",
+      "display": "Der Labordatentransfer (LDT) sichert eine schnelle Kommunikation zwischen Fachärzten für Laboratoriumsmedizin, Mikrobiologie, Transfusionsserologie, Zytologie oder Pathologie und den an sie überweisenden Ärzten. Beim LDT 3-Auftrag werden Laboraufträge in Form von Überweisungen oder Anforderungen vom Arzt bzw. einer Praxis an Laborfachärzte oder Laborgemeinschaften mittels der Formulare Muster 10 und Muster 10A elektronisch übermittelt. Für die maschinelle Verarbeitung durch entsprechende Praxissoftware sind diese Daten im LDT-Format."
+    },
+    {
+      "code": "LDT-Befund",
+      "display": "Der Labordatentransfer (LDT) sichert eine schnelle Kommunikation zwischen Fachärzten für Laboratoriumsmedizin, Mikrobiologie, Transfusionsserologie, Zytologie oder Pathologie und den an sie überweisenden Ärzten. Beim LDT 3-Befund werden die Befunde nach Abschluss der Laboruntersuchungen an den Auftrag gebenden Arzt bzw. Praxis elektronisch übermittelt. Für die maschinelle Verarbeitung durch entsprechende Praxissoftware sind diese Daten im LDT-Format."
+    },
+    {
+      "code": "MIO",
+      "display": "Die Anwendung dient der Übermittlung von Nachrichten mit einem angehängten MIO über den sicheren Kommunikationsdienst KIM (Kommunikation im Medizinwesen). Dabei werden nur MIOs abgebildet, die von der KBV auf Basis von § 355 Abs.1 SGB V festgelegt wurden. MIOs wurden vor allem für die Speicherung in der elektronischen Patientenakte (ePA) spezifiziert, können aber auch in anderen Kontexten genutzt werden."
+    },
+    {
+      "code": "QSPB",
+      "display": "Mit der Anwendung QSPB (Qualitätssicherung und Programmbeurteilung) steht eine Möglichkeit zur sicheren Übertragung von QS-Daten und Programmbeurteilungen an die jeweils zuständige Datenannahmestelle (bspw. die jeweils zuständige KV) bereit, wobei die zu übermittelnden Daten im Rahmen der Vorgaben der IQTIG standardisiert erstellt und gesammelt werden. Eine Weiterverarbeitung, sowie der Weiterversand der Daten an nachlagernde Stellen, wie z.B. die Vertrauensstelle (VST) bzw. Bundesauswertungsstelle (BAS), wird über andere Systeme gelöst."
+    },
+    {
+      "code": "UTeilnahme",
+      "display": "Die Anwendung U-Teilnahme dient der Übermittlung von Früherkennungsmeldungen als elektronische Datensätze an die KVen und erfasst damit elektronisch durchgeführte Kinder-Früherkennungsuntersuchungen."
+    },
+    {
+      "code": "1ClickAbrechnung",
+      "display": "Die 1ClickAbrechung ist eine sichere Übermittlungsmöglichkeit von Online-Quartalsabrechnungen an die KV. Version 2.0 ermöglicht es zudem, Testabrechnungen und signierte Sammelerklärungen zu versenden, sofern die KV dies anbietet."
+    }
+  ],
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "caseSensitive": true,
+  "count": 31
+}
