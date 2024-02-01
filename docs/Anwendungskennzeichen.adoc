@@ -1,0 +1,28 @@
+= Anwendungskennzeichen
+
+In der TI verwenden viele Anwendungen KIM (und zukünftig TIM) als sicheren Transport von Daten zwischen Sender und Empfänger. Die Daten werden unterstützt durch Clientsysteme erzeugt und beim Empfänger unterstützt durch Clientsysteme angezeigt oder automatisch beim Empfänger verarbeitet. Um die Aufbereitung oder automatische Verarbeitung der Daten zu ermöglichen wurden neue Metadaten eingeführt. Diese sind:
+
+- die Dienstkennung
+- das Anwendungskennzeichen
+- der ServiceIdentifier
+
+== Dienstkennung
+
+Die Dienstkennung wird im Mail Header-Element X-KIM-Dienstkennung transportiert und ermöglicht dem Empfänger anhand des Headers zu erkennen wie die Daten in der Nachricht weiterverarbeitet werden können.
+Die Dienstkennung besteht aus drei Teilen, die durch ein Semikolon (";") getrennt sind:
+<Anwendungsname>;<Vorgangstyp>;<Version>
+
+Beispiel (Lieferung eines Laborbefunds): LDT-Befund;Lieferung;V1.0
+
+== Anwendungskennzeichen
+
+Das Anwendungskennzeichen ist ein appTag an der KIM-Adresse des Empfängers im Verzeichnisdienst der TI. Anhand dieses Tags kann das Clientsystem, das die Nachricht erstellt, erkennen, welche Mail-Adresse der Empfänger für die Verarbeitung der Nachricht vorgesehen hat und somit die korrekte Empfänger-Mail-Adresse automatisch auswählen. Dies ist insbesondere für automatisch verarbeitende Systeme hilfreich, wenn mehrere Mail-Adressen verwendet werden.
+Das Anwendungskennzeichen wird im Verzeichnisdienst im Attribut kimData mit der Mail-Adresse und der KIM-Version verknüpft. Mehrere Anwendungskennzeichen werden durch Pipe ("|") getrennt.
+
+<Mail-Adresse>,<KIM-Version>,<Anwendungskennzeichen1>|<Anwendungskennzeichen2>
+
+Beispiel (Attribut kimData in einem Eintrag im Verzeichnisdienst): ebz@krankenkasse.telematik,1.5,EBZ
+
+== ServiceIdentifier
+
+Der ServiceIdentifier dient dazu innerhalb der transportierten Daten die Verarbeitung beim Empfänger zu unterstützen.
