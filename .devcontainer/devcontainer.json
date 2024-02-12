@@ -1,0 +1,20 @@
+{
+	"name": "Ubuntu for FHIR Development",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"gematikde.codfsh",
+				"MITRE-Health.vscode-language-fsh",
+				"ms-azuretools.vscode-docker",
+				"asciidoctor.asciidoctor-vscode"
+			],
+			"settings": {
+				"codfsh.HapiValidator.Executable": "/home/vscode/.fhir/validators/validator_cli.jar",
+				"codfsh.HapiValidator.Settings.SettingsFile": "/home/vscode/.fhir/settings/codfsh-config.yaml"
+			}
+		}
+	}
+}
