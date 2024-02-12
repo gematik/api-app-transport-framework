@@ -5,7 +5,7 @@
   "version": "1.0",
   "name": "ATFMessageIDEX",
   "title": "ATF Message ID EX",
-  "status": "draft",
+  "status": "active",
   "experimental": false,
   "publisher": "gematik GmbH",
   "description": "Extension zur Darstellung einer MessageID",

@@ -1,6 +1,6 @@
 {
   "resourceType": "CodeSystem",
-  "status": "draft",
+  "status": "active",
   "content": "complete",
   "name": "ServiceIdentifierCS",
   "id": "service-identifier-cs",
@@ -57,8 +57,8 @@
       "display": "Fehlermeldung bzgl. der Ermittlung der Daten des Versicherten"
     },
     {
-      "code": "Selbsttest;Lieferung",
-      "display": "Diese Dienstkennung dient ausschließlich der Einrichtung des Kontos innerhalb eines PVS und des Testes, ob Nachrichten versendet und empfangen werden können. Diese Dienstkennung wird im PVS bei der normalen Abholung von Nachrichten ignoriert."
+      "code": "atf;Selbsttest",
+      "display": "Dieses Anwendungskennzeichen dient ausschließlich der Einrichtung des Kontos innerhalb eines PVS und des Testes, ob Nachrichten versendet und empfangen werden können. Dieses Anwendungskennzeichen wird im PVS bei der normalen Abholung von Nachrichten ignoriert."
     }
   ],
   "experimental": false,
