@@ -5,7 +5,7 @@
   "version": "1.0",
   "name": "ATFOperationOutcome",
   "title": "ATF Operation Outcome",
-  "status": "draft",
+  "status": "active",
   "experimental": false,
   "publisher": "gematik GmbH",
   "description": "Antwort auf eine eingegangene ATF Anfrage",

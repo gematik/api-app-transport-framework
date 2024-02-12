@@ -5,7 +5,7 @@
   "version": "1.0",
   "name": "IdentifierAddressTIM",
   "title": "TIM-Adresse Identifier",
-  "status": "draft",
+  "status": "active",
   "experimental": false,
   "publisher": "gematik GmbH",
   "description": "Identifier zur Angabe der TIM-Adresse",
