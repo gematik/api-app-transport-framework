@@ -7,13 +7,7 @@ Description: "MessageHeader des MessageBundles"
 
 * event[x] from ServiceIdentifierVS (required)
 
-* meta.profile 1..* MS
-* meta.profile ^slicing.discriminator.type = #value
-* meta.profile ^slicing.discriminator.path = "$this"
-* meta.profile ^slicing.rules = #openAtEnd
-
-* meta.profile contains atf-profile 1..1
-* meta.profile[atf-profile] = "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport"
+* meta.profile MS
 
 * id 1..1 MS
   * ^short = "Eindeutige ID der Nachricht, anzugeben als UUID"
