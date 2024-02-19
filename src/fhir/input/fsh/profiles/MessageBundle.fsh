@@ -7,13 +7,7 @@ Description: "Bundle zum Zusammenfasssen der FHIR-Instanzen, welche in innerhalb
 
 * obeys resolve-references-in-bundle
 
-* meta.profile 1..* MS
-* meta.profile ^slicing.discriminator.type = #value
-* meta.profile ^slicing.discriminator.path = "$this"
-* meta.profile ^slicing.rules = #openAtEnd
-
-* meta.profile contains atf-profile 1..1
-* meta.profile[atf-profile] = "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework"
+* meta.profile MS
 
 * identifier 1..
 * identifier.system 1..

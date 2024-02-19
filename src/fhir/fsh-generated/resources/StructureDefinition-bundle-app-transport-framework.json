@@ -55,25 +55,7 @@
       {
         "id": "Bundle.meta.profile",
         "path": "Bundle.meta.profile",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "$this"
-            }
-          ],
-          "rules": "openAtEnd"
-        },
-        "min": 1,
         "mustSupport": true
-      },
-      {
-        "id": "Bundle.meta.profile:atf-profile",
-        "path": "Bundle.meta.profile",
-        "sliceName": "atf-profile",
-        "min": 1,
-        "max": "1",
-        "patternCanonical": "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework"
       },
       {
         "id": "Bundle.identifier",

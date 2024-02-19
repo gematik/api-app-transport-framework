@@ -7,4 +7,4 @@ Die erste Ziffer X bezeichnet ein Major-Release und regelt die Gültigkeit von R
 | Datum | Version | Kommentar |
 |---|---|---|
 |XXX| 1.0.0 | Initialer Release |
-| 21.02.2024 | 1.0.4 | <ul><li>verpflichtende Angabe von</li><ul><li>`MessageHeader.id`</li><li>`MessageHeader.source`</li><li>`MessageHeader.source.name`</li><li>`MessageHeader.source.software`</li><li>`MessageHeader.source.version`</li><li>`MessageHeader.source.contact`</li><li>`MessageHeader.meta.profile:atf-profile` = `https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport`</li></ul></ul><br> |
+| 21.02.2024 | 1.0.4 | <ul><li>verpflichtende Angabe von</li><ul><li>`MessageHeader.id`</li><li>`MessageHeader.source`</li><li>`MessageHeader.source.name`</li><li>`MessageHeader.source.software`</li><li>`MessageHeader.source.version`</li><li>`MessageHeader.source.contact`</li></ul></ul><br> |
