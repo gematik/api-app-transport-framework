@@ -22,7 +22,15 @@
   "context": [
     {
       "type": "element",
-      "expression": "Element"
+      "expression": "OperationOutcome"
+    },
+    {
+      "type": "element",
+      "expression": "MessageHeader"
+    },
+    {
+      "type": "element",
+      "expression": "Bundle"
     }
   ],
   "type": "Extension",
