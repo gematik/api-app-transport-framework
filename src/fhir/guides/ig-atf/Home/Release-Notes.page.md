@@ -7,3 +7,4 @@ Die erste Ziffer X bezeichnet ein Major-Release und regelt die Gültigkeit von R
 | Datum | Version | Kommentar |
 |---|---|---|
 |XXX| 1.0.0 | Initialer Release |
+| XXX | 1.0.4 | |
