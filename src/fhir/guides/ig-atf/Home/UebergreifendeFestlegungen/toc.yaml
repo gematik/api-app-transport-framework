@@ -2,3 +2,5 @@
   filename: Methodik.page.md
 - name: Nachrichtenaustausch
   filename: Handshake.page.md
+- name: Versionierung
+  filename: Versionierung.page.md
