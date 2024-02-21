@@ -33,12 +33,16 @@ Description: "MessageHeader des MessageBundles"
 
 * source MS
   * ^short = "Angabe der Informationen des Absendenden Systems"
+  * ^comment = "Diese Infomation ist verpflichtend"
   * name 1..1 MS
     * ^short = "Name des Softwareherstellers"
+    * ^comment = "Diese Infomation ist verpflichtend, um das sendende System identifizieren zu können"
   * software 1..1 MS
     * ^short = "Name der Software"
+    * ^comment = "Diese Infomation ist verpflichtend, um das sendende System identifizieren zu können"
   * version 1..1 MS
     * ^short = "Version der Software"
+    * ^comment = "Diese Infomation ist verpflichtend, um das sendende System identifizieren zu können"
   * contact 1..1 MS
     * ^short = "Kontaktinformation zum Hersteller"
     * ^comment = "Es ist mindestens eine Email anzugeben, um Kontakt mit dem Hersteller herzustellen"

@@ -2,13 +2,13 @@
 topic: Nachrichtenaustausch
 ---
 
-# {page-title}
+# {{page-title}}
 
 Diese Seite beschreibt das grobe Konzept für den Nachrichtenaustausch.
 
 ## Sicherstellung der Verarbeitbarkeit
 
-Je nach gewähltem Transportmedium kann zunächst überprüft werden, ob das empfangene System den Anwendungsfall unterstützt. Für KIM wäre das bspw. die Überprüfung des Verzeichnisdienstes (VZD), ob die [Dienstkennung](https://fachportal.gematik.de/toolkit/dienstkennung-kim-kom-le) von der empfangenen Adresse unterstützt wird. Weitere Informationen zu KIM finden sich im [Fachportal](https://fachportal.gematik.de/anwendungen/kommunikation-im-medizinwesen)
+Je nach gewähltem Transportmedium kann zunächst überprüft werden, ob das empfangene System den Anwendungsfall unterstützt. Für KIM wäre das bspw. die Überprüfung des Verzeichnisdienstes (VZD), ob der [AppTag](https://simplifier.net/app-transport-framework/app-tags-cs) von der empfangenen Adresse unterstützt wird. Weitere Informationen zu KIM finden sich im [Fachportal](https://fachportal.gematik.de/anwendungen/kommunikation-im-medizinwesen)
 Beispielnachrichten für KIM befinden sich unter {{pagelink:Home/KimMessages}}.
 
 Nach der Prüfung kann die Nachricht dann zusammengestellt werden.
