@@ -7,8 +7,6 @@ Description: "Bundle zum Zusammenfasssen der FHIR-Instanzen, welche in innerhalb
 
 * obeys resolve-references-in-bundle
 
-* meta.profile MS
-
 * identifier 1..
 * identifier.system 1..
 * identifier.system = "urn:ietf:rfc:3986" (exactly)

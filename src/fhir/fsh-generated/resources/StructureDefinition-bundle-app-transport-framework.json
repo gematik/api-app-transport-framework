@@ -53,11 +53,6 @@
         ]
       },
       {
-        "id": "Bundle.meta.profile",
-        "path": "Bundle.meta.profile",
-        "mustSupport": true
-      },
-      {
         "id": "Bundle.identifier",
         "path": "Bundle.identifier",
         "min": 1
