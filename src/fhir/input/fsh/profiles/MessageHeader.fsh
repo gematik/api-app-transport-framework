@@ -7,8 +7,6 @@ Description: "MessageHeader des MessageBundles"
 
 * event[x] from ServiceIdentifierVS (required)
 
-* meta.profile MS
-
 * id 1..1 MS
   * ^short = "Eindeutige ID der Nachricht, anzugeben als UUID"
 

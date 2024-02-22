@@ -42,11 +42,6 @@
         "mustSupport": true
       },
       {
-        "id": "MessageHeader.meta.profile",
-        "path": "MessageHeader.meta.profile",
-        "mustSupport": true
-      },
-      {
         "id": "MessageHeader.event[x]",
         "path": "MessageHeader.event[x]",
         "binding": {
