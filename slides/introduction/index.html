@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Einführung in das App-Transport-Framework</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/simple.css" id="theme">
+    <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/a11y-light.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300,400,500|Work+Sans:400,700">
+    <link rel="stylesheet" href="../public/css/slides.css">
+    <link rel="stylesheet" href="../public/css/images.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section class="heading-only">
+                <h3>Einführung in das App-Transport-Framework</h3>
+                <div class="image-shadow">
+                    <img src="atf_logo.png" alt="ATF Logo" style="max-height:300px; display: block; margin: 20px auto;">
+                </div>
+                <div class="navigation-tips" style="font-size:0.75em; margin-top: 50px;">
+                    <p>Tips for navigating the slides:</p>
+                    <ul>
+                        <li>Press O or Escape for overview mode.</li>
+                        <li>Visit <a href="?print-pdf" target="_blank">this link</a> for a printable version.</li>
+                        <li>Press the copy icon on the upper right of code blocks to copy the code.</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h3>Was ist das ATF?</h3>
+                <div style="font-size:0.75em; margin-top:0px; flex: 1; margin-left: 20px;">
+                    <p><strong>Das App-Transport-Framework (ATF)</strong> ist ein Framework, das speziell entwickelt
+                        wurde für:</p>
+                    <ul>
+                        <li><strong>strukturierter Datenaustausch:</strong> Es ermöglicht den Austausch von komplexen
+                            strukturierten Daten, die auf FHIR (Fast Healthcare Interoperability Resources) basieren,
+                            und fördert somit eine nahtlose und standardisierte Kommunikation.</li>
+                        <li><strong>Unterstützung definierter Use Cases:</strong> ATF bildet die Basis für klar
+                            definierte
+                            Use Cases, die spezifische Anforderungen und Rahmenbedingungen für die Datenübertragung
+                            festlegen.</li>
+                        <li><strong>Medienunabhängigkeit:</strong> Seine Funktionalität ist bewusst unabhängig vom
+                            Übertragungsmedium gestaltet, was eine flexible Integration in verschiedenste technologische
+                            Umgebungen ermöglicht.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h3>Wofür wird das ATF verwendet?</h3>
+                <div style="font-size:0.75em; margin-top:0px; flex: 1; margin-left: 20px;">
+                    <p>Das <strong>App-Transport-Framework (ATF)</strong> spielt eine zentrale Rolle in der
+                        Maschine-zu-Maschine-Kommunikation, mit dem Ziel, eine effiziente und sichere Datenübertragung
+                        zwischen Systemen zu ermöglichen. Es ist speziell konzipiert für:</p>
+                    <ul>
+                        <li><strong>Automatisierte Kommunikation:</strong> Ermöglicht direkten Datenaustausch zwischen
+                            datenhaltenden Systemen, ohne dass menschliche Benutzer in den Prozess involviert sind. Dies
+                            führt zu einer vollautomatischen Zusammenstellung, Versand, Empfang und Weiterverarbeitung
+                            der
+                            Daten.</li>
+                        <li><strong>Gerichteter Versand:</strong> Unterstützt gezielte Übermittlung von Informationen,
+                            wobei
+                            die Systeme nicht in permanentem Austausch stehen müssen, was die Effizienz und
+                            Zielgenauigkeit
+                            der Kommunikation erhöht.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h3>Welches Problem löst das ATF?</h3>
+                <div style="font-size:0.75em; margin-top:0px; flex: 1; margin-left: 20px;">
+                    <p><strong>Herausforderung der Validierung in Peer-to-Peer Netzwerken</strong></p>
+                    <p>Im Gegensatz zu zentralisierten Systemen, wo ein zentraler Server die Validierung eingehender
+                        Informationen übernimmt, fehlt in Peer-to-Peer Netzwerken ein solcher zentraler Kontrollpunkt.
+                        Dies führt zu spezifischen Herausforderungen:</p>
+                    <ul>
+                        <li><strong>Dezentrale Validierung:</strong> Jeder Teilnehmer muss die Informationen
+                            selbstständig validieren, klare Kommunikationsprotokolle zu aufgetretenen Fehlern und deren
+                            Lösung
+                            müssen definiert sein.</li>
+                        </li>
+                        <li><strong>Standardisierter Austausch:</strong> Das ATF schafft einen Rahmen, innerhalb dessen
+                            Sender und Empfänger Informationen über die Validität und den Verarbeitungsstatus von
+                            Nachrichten austauschen können.</li>
+                        <li><strong>Lösung von Konflikten:</strong> Das Framework ermöglicht es, auf effiziente Weise
+                            festzustellen, ob Nachrichten korrekt verarbeitet wurden und bei Problemen den Ursprung
+                            schnell
+                            zu identifizieren.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+
+                <section>
+                    <h3>Wie funktioniert das ATF?</h3>
+                    <div style="font-size:0.75em; margin-top:0px; flex: 1; margin-left: 20px;">
+                        <p><strong>Kernfunktionen und Prozesse:</strong></p>
+                        <p>Das ATF nutzt standardisierte Prozesse für die Systemkommunikation, die speziell auf einzelne
+                            Anwendungsfälle zugeschnitten sind:</p>
+                        <ul>
+                            <li><strong>Anwendungsfall-Repräsentation:</strong> Jeder <a
+                                    href="https://simplifier.net/app-transport-framework/app-tags-cs"
+                                    target="_blank">Anwendungsfall wird durch ein CodeSystem</a> repräsentiert, um
+                                Eindeutigkeit in Identifizierung und Verarbeitung sicherzustellen.</li>
+                            <li><strong>Verzeichnisdienst (VZD):</strong> Im VZD wird für (KIM)-Adressen definiert,
+                                welche
+                                Anwendungsfälle unterstützt werden, um eine zielgerichtete Kommunikation zu ermöglichen.
+                            </li>
+                            <li><strong>Nachrichten-Repräsentation:</strong> Jede <a
+                                    href="https://simplifier.net/app-transport-framework/service-identifier-cs"
+                                    target="_blank">ATF-Nachrichten verwendet ein CodeSystem</a> zur Klärung ihres
+                                Anwendungsfalls und Zwecks, was eine effiziente Verarbeitung ermöglicht.</li>
+                            <li><strong>Kapselung der Anwendungsfalldaten:</strong> Das ATF fasst die FHIR-Ressourcen
+                                eines Anwendungsfalls in einer übergeordneten Ressource zusammen und integriert die für
+                                den Anwendungsfall wichtigen Metadaten im Kopfbereich dieser übergeordneten Ressource.
+                            </li>
+                            <li><strong>Empfangsbestätigungen:</strong> Jede Nachricht erhält automatisch eine
+                                standardisierte Bestätigung, die über erfolgreiche Verarbeitung oder Fehler berichtet
+                                und so die Sicherheit und Qualität der Kommunikation verstärkt.</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h3>Beispiel: Ablauf Rezeptanforderung und -übermittlung - "Happy Case"</h3>
+                    <div style="font-size:0.75em; margin-top:0px; flex: 1; margin-left: 20px;">
+                        <div class="fragment" data-fragment-index="0">
+                            <p><strong>Schritt 1:</strong> Das Primärsystem der Pflegeeinrichtung (PSP) sendet eine
+                                Rezeptanforderung an das Praxisverwaltungssystem (PVS) des Arztes.</p>
+                        </div>
+                        <div class="fragment" data-fragment-index="1">
+                            <p><strong>Schritt 2:</strong> Das PVS des Arztes schickt eine ATF-Empfangsbestätigung an
+                                das PSP und bestätigt, dass die Daten erfolgreich verarbeitet werden konnten.</p>
+                        </div>
+                        <div class="fragment" data-fragment-index="2">
+                            <p><strong>Schritt 3:</strong> Das PSP interpretiert die erfolgreiche
+                                ATF-Empfangsbestätigung und informiert den Nutzer, dass es keine technischen Probleme
+                                bei der Verarbeitung der Anfrage gab.</p>
+                        </div>
+                        <div class="fragment" data-fragment-index="3">
+                            <p><strong>Schritt 4:</strong> Der Arzt stellt das Rezept aus und übermittelt sowohl die
+                                Rezeptanforderung als auch das Rezept über das PVS an das PSP der Pflegeeinrichtung.</p>
+                        </div>
+                        <div class="fragment" data-fragment-index="4">
+                            <p><strong>Schritt 5:</strong> Das PSP schickt eine ATF-Empfangsbestätigung an das PVS und
+                                bestätigt, dass die Daten erfolgreich verarbeitet werden konnten.</p>
+                        </div>
+                        <div class="fragment" data-fragment-index="5">
+                            <p><strong>Schritt 6:</strong> Das PVS interpretiert die erfolgreiche
+                                ATF-Empfangsbestätigung und informiert den Nutzer, dass es keine technischen Probleme
+                                bei der Verarbeitung der Anfrage gab.</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h3>Beispiel: Korrektur einer fehlerhaften Rezeptanforderung</h3>
+                    <div style="font-size:0.75em; margin-top:0px; flex: 1; margin-left: 20px;">
+                        <div class="fragment" data-fragment-index="0">
+                            <p><strong>Schritt 1:</strong> Das Primärsystem der Pflegeeinrichtung (PSP) sendet
+                                versehentlich
+                                eine fehlerhafte Rezeptanforderung an das Praxisverwaltungssystem (PVS) des Arztes.</p>
+                        </div>
+                        <div class="fragment" data-fragment-index="1">
+                            <p><strong>Schritt 2:</strong> Beim Versuch, die Anforderung zu verarbeiten, stellt das PVS
+                                des
+                                Arztes durch die FHIR-Validierung fest, dass ein Fehler in der Anforderung vorliegt.</p>
+                        </div>
+                        <div class="fragment" data-fragment-index="2">
+                            <p><strong>Schritt 3:</strong> Das PVS sendet automatisch eine Empfangsbestätigung an das
+                                PSP,
+                                die auf den spezifischen Fehler in der Rezeptanforderung hinweist.</p>
+                        </div>
+                        <div class="fragment" data-fragment-index="3">
+                            <p><strong>Schritt 4:</strong> Der Nutzer des PSP erkennt den Fehler durch die
+                                Empfangsbestätigung und korrigiert die Rezeptanforderung entsprechend.</p>
+                        </div>
+                        <div class="fragment" data-fragment-index="4">
+                            <p><strong>Schritt 5:</strong> Die korrigierte Rezeptanforderung wird erneut an das PVS des
+                                Arztes gesendet.</p>
+                        </div>
+                        <div class="fragment" data-fragment-index="5">
+                            <p><strong>Schritt 6:</strong> Das PVS verarbeitet die korrigierte Anforderung erfolgreich
+                                und
+                                sendet eine Bestätigung über die erfolgreiche Verarbeitung zurück an das PSP.</p>
+                        </div>
+                        <div class="fragment" data-fragment-index="6">
+                            <p><strong>Schritt 7:</strong> Die Rezeptanforderung und das ausgestellte Rezept werden ohne
+                                weiteres Eingreifen des Arztes an die Pflegeeinrichtung übermittelt.</p>
+                        </div>
+                    </div>
+                </section>
+
+
+            </section>
+
+
+            </section>
+
+            <section>
+                <section>
+                    <h3>Entwicklung und Optimierung durch kollaborative Netzwerkinteraktion</h3>
+                    <div style="font-size:0.75em; margin-top:0px; flex: 1; margin-left: 20px;">
+                        <p><strong>Entwicklung einer gemeinschaftlichen und qualitätsorientierten Umgebung:</strong></p>
+                        <p>Das Teilen von Adressen durch "First Mover" in Entwicklungsumgebungen erlaubt es
+                            Entwicklern, ihre Systeme durch Tests und Anpassungen kontinuierlich zu verbessern,
+                            was die Nachrichtenqualität im Netzwerk stetig erhöht.</p>
+                        <ul>
+                            <li><strong>Transparenz und Zugänglichkeit:</strong> Jede Nachricht im ATF-Netzwerk muss
+                                klar das sendende Softwaresystem ausweisen sowie Informationen darüber bereitstellen,
+                                wie die
+                                Entwickler dieses Systems erreicht werden können.</li>
+                            <li><strong>Qualitätssteigerung durch Feedback:</strong> Die Möglichkeit, direkt Feedback zu
+                                geben und zu erhalten, fördert die schnelle Behebung von Problemen und Unklarheiten und
+                                trägt
+                                so zur Qualitätssteigerung der gesamten Netzwerkkommunikation bei.</li>
+                            <li><strong>Kollaborative Optimierung:</strong> Durch die frühzeitige Integration und das
+                                Testen gegen Erstimplementierungen entsteht ein kollaborativer Prozess, der die
+                                Entwicklung
+                                robuster und effizienter Kommunikationsstandards fördert.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Weitere Beispiele für Protokolle mit erweiterter Verarbeitungsvalidierung</h3>
+                    <div style="font-size:0.75em; margin-top:0px; flex: 1; margin-left: 20px;">
+                        <p>Die folgenden Protokolle und Technologien ermöglichen die Kommunikation über die bloße
+                            Nachrichtenzustellung hinaus, indem sie Informationen über die Unterstützung und
+                            Verarbeitungsfähigkeit spezifischer Anforderungen austauschen:</p>
+                        <ul>
+                            <li><strong>FHIR (Fast Healthcare Interoperability Resources):</strong> Ermöglicht
+                                detailliertes Feedback über die Verarbeitung von gesundheitsbezogenen
+                                Datenanforderungen.</li>
+                            <li><strong>oAuth 2.0 und OpenID Connect (OIDC):</strong> Unterstützen die Entdeckung und
+                                Überprüfung der Fähigkeiten eines Servers für Authentifizierung und Autorisierung.</li>
+                            <li><strong>WSDL (Web Services Description Language) und SOAP:</strong> Bieten eine formale
+                                Beschreibung der Web-Service-Fähigkeiten und -Operationen für SOA-Umgebungen.</li>
+                            <li><strong>GraphQL:</strong> Ermöglicht Clients, präzise Datenanforderungen zu stellen und
+                                vom Server zu erfahren, ob diese erfüllt werden können.</li>
+                            <li><strong>AMQP (Advanced Message Queuing Protocol):</strong> Ein Messaging-Protokoll, das
+                                erweiterte Szenarien wie Zustellbestätigungen und Verarbeitungskapazitäten unterstützt.
+                            </li>
+                        </ul>
+                        <p>Diese Technologien tragen maßgeblich zur Entwicklung interoperabler Systeme bei, die komplexe
+                            Anforderungen in verteilten Umgebungen effizient bewältigen können.</p>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <h3>Welche Verbreitung hat das ATF aktuell?</h3>
+                <div style="font-size:0.75em; margin-top:0px; flex: 1; margin-left: 20px;">
+                    <p>Das <strong>App-Transport-Framework (ATF)</strong> findet aktuelle Anwendung in verschiedenen
+                        Schlüsselprojekten und -anwendungen, die die Bedeutung und den Einfluss des Frameworks in der
+                        digitalen Gesundheitslandschaft unterstreichen:</p>
+                    <ul>
+                        <li><strong>E-Rezept ServiceRequest für Pflege und Parenterale Zubereitung (in
+                                Umsetzung):</strong>
+                            Das ATF wird für die <a href="https://simplifier.net/erezept-servicerequest/~guides"
+                                target="_blank">Rezeptanforderung in den Bereichen Pflege und parenterale
+                                Zubereitung</a>
+                            eingesetzt, um die Prozesse in diesen Anwendungsfällen zu standardisieren.</li>
+                        <li><strong>E-Rezept ServiceRequest für E-BTM Notfallverordnungen (in Planung):</strong> In
+                            Abstimmung mit dem BMG wird eine Implementierung basierend auf dem ATF favorisiert, um die
+                            Nachreichung von BTM-Notfallverordnungen effizient zu unterstützen.</li>
+                    </ul>
+                    <p>Diese Einsatzgebiete verdeutlichen das Potenzial des ATF, zukunftsweisende Lösungen in der
+                        Gesundheitsversorgung zu ermöglichen und die Interoperabilität sowie die Kommunikationseffizienz
+                        zu steigern.</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>Wo erfahre ich mehr über das ATF?</h3>
+                <div style="font-size:0.75em; margin-top:0px; flex: 1; margin-left: 20px;">
+                    <p>Das <strong>App-Transport-Framework (ATF)</strong> ist wie folgt dokumentiert:</p>
+                    <ul>
+                        <li><a href="https://simplifier.net/app-transport-framework" target="_blank">Simplifier
+                                Projekt</a>: Der Ort zur Begutachtung der FHIR Ressourcen und Pakete.</li>
+                        <li><a href="https://simplifier.net/guide/atf-implementation-guide?version=current"
+                                target="_blank">Implementation Guide (IG)</a>:
+                            Die detaillierte Beschreibung für Implementierer und Spezifizierer, die auf dem ATF aufbauen
+                            wollen.</li>
+                        <li><a href="https://github.com/gematik/api-app-transport-framework/tree/main/src/poc"
+                                target="_blank">Proof of Concept</a>: Beispielimplementierung einer ATF Bibliothek in
+                            Python, welche in den Beispielimplmentierungen den Anwenungsfällen des ServiceRequest
+                            verwendet wird.</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h3>Vielen Dank für Ihre Aufmerksamkeit!</h3>
+                <div style="font-size:0.75em; margin-top:0px; flex: 1; margin-left: 20px;">
+                    <p>Ich hoffe, dass ich Ihnen einen guten Überblick über das App-Transport-Framework geben konnte.
+                        Wenn Sie Fragen haben, stehe ich Ihnen gerne zur Verfügung.</p>
+                </div>
+                <div class="image-shadow">
+                    <img src="atf_logo.png" alt="ATF Logo" style="max-height:400px; display: block; margin: 20px auto;">
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlightjs-badge@0.1.9/highlightjs-badge.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js-menu@2.1.0/menu.js"></script>
+    <script>
+        Reveal.initialize({
+            width: 1280,
+            height: 720,
+            hash: true,
+            center: false,
+            slideNumber: true,
+            showNotes: false,
+            margin: 0.1,
+            preloadIframes: true,
+            autoPlayMedia: true,
+            plugins: [RevealHighlight, RevealMenu],
+            pdfSeparateFragments: true
+        });
+        window.highlightJsBadge();
+    </script>
+</body>
+
+</html>
