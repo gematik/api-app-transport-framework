@@ -2,10 +2,10 @@
 import base64
 from uuid import uuid4
 
-from fhir.resources.fhirtypes import ReferenceType, ContactPointType
-from fhir.resources.identifier import Identifier
-from fhir.resources.messageheader import MessageHeaderSource
-from fhir.resources.communication import Communication
+from fhir.resources.R4B.fhirtypes import ReferenceType, ContactPointType
+from fhir.resources.R4B.identifier import Identifier
+from fhir.resources.R4B.messageheader import MessageHeaderSource
+from fhir.resources.R4B.communication import Communication
 from app_transport_framework_library.atf_bundle_processor import ATF_BundleProcessor
 from app_transport_framework_library.models.bundle_content import BundleContent
 from app_transport_framework_library.models.empfangsbestaetigung import Empfangsbestaetigung

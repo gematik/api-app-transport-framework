@@ -1,6 +1,6 @@
-from fhir.resources.operationoutcome import OperationOutcome, OperationOutcomeIssue
-from fhir.resources.meta import Meta
-from fhir.resources.extension import Extension
+from fhir.resources.R4B.operationoutcome import OperationOutcome, OperationOutcomeIssue
+from fhir.resources.R4B.meta import Meta
+from fhir.resources.R4B.extension import Extension
 from uuid import uuid4
 
 

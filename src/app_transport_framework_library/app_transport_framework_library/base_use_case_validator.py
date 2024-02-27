@@ -1,9 +1,9 @@
 from abc import ABC, abstractmethod
 from typing import List, Tuple
-from fhir.resources.messageheader import MessageHeader, MessageHeaderSource
-from fhir.resources.bundle import Bundle, BundleEntry
-from fhir.resources.fhirtypes import ReferenceType
-from fhir.resources.operationoutcome import OperationOutcomeIssue
+from fhir.resources.R4B.messageheader import MessageHeader, MessageHeaderSource
+from fhir.resources.R4B.bundle import Bundle, BundleEntry
+from fhir.resources.R4B.fhirtypes import ReferenceType
+from fhir.resources.R4B.operationoutcome import OperationOutcomeIssue
 from app_transport_framework_library.models.event import Event
 
 class BaseUseCaseValidator(ABC):

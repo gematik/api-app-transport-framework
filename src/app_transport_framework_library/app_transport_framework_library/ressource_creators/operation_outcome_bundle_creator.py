@@ -1,7 +1,7 @@
-from fhir.resources.bundle import Bundle, BundleEntry
-from fhir.resources.messageheader import MessageHeaderDestination, MessageHeaderSource
-from fhir.resources.fhirtypes import ReferenceType
-from fhir.resources.operationoutcome import OperationOutcome
+from fhir.resources.R4B.bundle import Bundle, BundleEntry
+from fhir.resources.R4B.messageheader import MessageHeaderDestination, MessageHeaderSource
+from fhir.resources.R4B.fhirtypes import ReferenceType
+from fhir.resources.R4B.operationoutcome import OperationOutcome
 from typing import List
 from uuid import uuid4
 

@@ -1,11 +1,11 @@
 from typing import List, Tuple
-from fhir.resources.messageheader import MessageHeader
-from fhir.resources.bundle import Bundle
-from fhir.resources.bundle import Bundle
-from fhir.resources.operationoutcome import OperationOutcome, OperationOutcomeIssue
-from fhir.resources.messageheader import MessageHeader
-from fhir.resources.communication import Communication
-from fhir.resources.bundle import BundleEntry
+from fhir.resources.R4B.messageheader import MessageHeader
+from fhir.resources.R4B.bundle import Bundle
+from fhir.resources.R4B.bundle import Bundle
+from fhir.resources.R4B.operationoutcome import OperationOutcome, OperationOutcomeIssue
+from fhir.resources.R4B.messageheader import MessageHeader
+from fhir.resources.R4B.communication import Communication
+from fhir.resources.R4B.bundle import BundleEntry
 from app_transport_framework_library.base_use_case_validator import BaseUseCaseValidator
 
 class SelbsttestLieferungValidator(BaseUseCaseValidator):

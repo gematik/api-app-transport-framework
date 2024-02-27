@@ -1,6 +1,6 @@
-from fhir.resources.bundle import BundleEntry
+from fhir.resources.R4B.bundle import BundleEntry
 from typing import List
-from service_identifier import ServiceIdentifier
+from .service_identifier import ServiceIdentifier
 
 
 class BundleContent:
