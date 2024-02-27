@@ -22,6 +22,11 @@ RUN apk add --no-cache nodejs npm
 # Install Java (OpenJDK)
 RUN apk add --no-cache openjdk11
 
+# Install Python
+RUN apk add --no-cache python3
+RUN python3 -m ensurepip
+RUN pip3 install -U pip
+
 # Install Firely Terminal as vscode user
 # Switch to the vscode user
 USER vscode
