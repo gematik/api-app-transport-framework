@@ -1,0 +1,12 @@
+{
+    "fhirVersions": [
+        "4.0.1"
+    ],
+    "name": "de.gematik.fhir.atf",
+    "version": "1.0.4",
+    "description": "A framework for applications that use KIM or TI-Messenger for end to end data transport",
+    "author": "gematik",
+    "dependencies": {
+        "hl7.fhir.r4.core": "4.0.1"
+    }
+}
