@@ -1,9 +1,9 @@
 from uuid import uuid4
-from fhir.resources.messageheader import MessageHeaderDestination, MessageHeaderSource
-from fhir.resources.bundle import BundleEntry
-from fhir.resources.communication import Communication, CommunicationPayload
-from fhir.resources.fhirtypes import ReferenceType, CodeableConceptType
-from fhir.resources.attachment import Attachment
+from fhir.resources.R4B.messageheader import MessageHeaderDestination, MessageHeaderSource
+from fhir.resources.R4B.bundle import BundleEntry
+from fhir.resources.R4B.communication import Communication, CommunicationPayload
+from fhir.resources.R4B.fhirtypes import ReferenceType, CodeableConceptType
+from fhir.resources.R4B.attachment import Attachment
 from app_transport_framework_library.ressource_creators.message_bundle_creator import MessageBundleCreator
 
 from app_transport_framework_library.ressource_creators.message_header_creator import MessageHeaderCreator

@@ -1,5 +1,5 @@
-from fhir.resources.bundle import Bundle
-from fhir.resources.operationoutcome import OperationOutcomeIssue
+from fhir.resources.R4B.bundle import Bundle
+from fhir.resources.R4B.operationoutcome import OperationOutcomeIssue
 
 
 class Empfangsbestaetigung:

@@ -1,4 +1,4 @@
-from fhir.resources.bundle import Bundle
+from fhir.resources.R4B.bundle import Bundle
 
 
 class MessageToSend:

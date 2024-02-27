@@ -1,9 +1,9 @@
 from datetime import datetime, timezone
 from typing import List
-from fhir.resources.meta import Meta
-from fhir.resources.bundle import Bundle, BundleEntry
-from fhir.resources.messageheader import MessageHeader
-from fhir.resources.fhirtypes import IdentifierType, Instant
+from fhir.resources.R4B.meta import Meta
+from fhir.resources.R4B.bundle import Bundle, BundleEntry
+from fhir.resources.R4B.messageheader import MessageHeader
+from fhir.resources.R4B.fhirtypes import IdentifierType, Instant
 from uuid import uuid4
 
 

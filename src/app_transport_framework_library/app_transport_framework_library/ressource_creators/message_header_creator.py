@@ -1,7 +1,7 @@
-from fhir.resources.meta import Meta
-from fhir.resources.messageheader import MessageHeader, MessageHeaderDestination, MessageHeaderSource
-from fhir.resources.fhirtypes import ReferenceType
-from fhir.resources.coding import Coding
+from fhir.resources.R4B.meta import Meta
+from fhir.resources.R4B.messageheader import MessageHeader, MessageHeaderDestination, MessageHeaderSource
+from fhir.resources.R4B.fhirtypes import ReferenceType
+from fhir.resources.R4B.coding import Coding
 from typing import List
 
 

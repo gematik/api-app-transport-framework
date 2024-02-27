@@ -1,9 +1,9 @@
 import logging
 from json import JSONDecodeError
-from fhir.resources.bundle import Bundle
-from fhir.resources.messageheader import MessageHeader, MessageHeaderSource, MessageHeaderDestination
-from fhir.resources.operationoutcome import OperationOutcomeIssue
-from fhir.resources.fhirtypes import ReferenceType
+from fhir.resources.R4B.bundle import Bundle
+from fhir.resources.R4B.messageheader import MessageHeader, MessageHeaderSource, MessageHeaderDestination
+from fhir.resources.R4B.operationoutcome import OperationOutcomeIssue
+from fhir.resources.R4B.fhirtypes import ReferenceType
 from app_transport_framework_library.base_use_case_validator import BaseUseCaseValidator
 from app_transport_framework_library.models.bundle_content import BundleContent
 from app_transport_framework_library.models.event import Event

@@ -68,11 +68,11 @@ Abonnieren Sie das 'focus_Ressource_to_process_event', um die inhaltlichen Resso
 
 ```python
 from app_transport_framework_library.models.bundle_focus_content import BundleFocusContent
-from fhir.resources.communication import Communication
+from fhir.resources.R4B.communication import Communication
 
 def on_focus_Ressource_to_process(bundle_content: BundleFocusContent):
     from app_transport_framework_library.models.bundle_focus_content import BundleFocusContent
-from fhir.resources.communication import Communication
+from fhir.resources.R4B.communication import Communication
 
 def on_focus_Ressource_to_process(bundle_content: BundleFocusContent):
     print(f"Verarbeitung des Bundles mit Fokus auf '{bundle_content.code}'")
