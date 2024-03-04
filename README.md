@@ -7,6 +7,9 @@ Ressources are published on https://simplifier.net/app-transport-framework
 ## About The Project
 This Repo contains the fsh files to the later published App-Transport-Framework files on simplifier.net.
 
+### Background about the Project
+For content and background information regarding this project check out the [presentation slides](./slides/introduction/index.html) for the ATF.
+
 ## Contributing
 
 If you want to contribute, please check our [CONTRIBUTING.md](./CONTRIBUTING.md).
