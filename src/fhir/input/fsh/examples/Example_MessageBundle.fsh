@@ -18,7 +18,6 @@ Usage: #example
 Title: "Example MessageHeader"
 Description: "Example MessageHeader for Selbsttest"
 * eventCoding = ServiceIdentifierCS#atf;Selbsttest
-* source.endpoint = "https://sender.example.com/endpoint"
 * sender.identifier = ExampleKimAddress
 * sender.display = "Sender Example"
 * destination.endpoint = "mailto:receiver@example.klaus.kim.telematik"
@@ -28,7 +27,7 @@ Description: "Example MessageHeader for Selbsttest"
 * source.name = "TopDoc Systems"
 * source.software = "TopDoc TI"
 * source.version = "2.4.5"
-* source.endpoint = "https://topdoc-systems.de"
+* source.endpoint = "mailto:sender@example.peter.kim.telematik"
 * source.contact
   * system = #email
   * value = "support@topdoc-systems.de"

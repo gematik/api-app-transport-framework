@@ -26,16 +26,6 @@
           "code": "atf;Selbsttest",
           "system": "https://gematik.de/fhir/atf/CodeSystem/service-identifier-cs"
         },
-        "source": {
-          "endpoint": "https://topdoc-systems.de",
-          "name": "TopDoc Systems",
-          "software": "TopDoc TI",
-          "version": "2.4.5",
-          "contact": {
-            "system": "email",
-            "value": "support@topdoc-systems.de"
-          }
-        },
         "sender": {
           "identifier": {
             "system": "http://gematik.de/fhir/sid/KIM-Adresse",
@@ -59,7 +49,17 @@
           {
             "reference": "urn:uuid:86a87254-ce15-11ed-afa1-0242ac120004"
           }
-        ]
+        ],
+        "source": {
+          "name": "TopDoc Systems",
+          "software": "TopDoc TI",
+          "version": "2.4.5",
+          "endpoint": "mailto:sender@example.peter.kim.telematik",
+          "contact": {
+            "system": "email",
+            "value": "support@topdoc-systems.de"
+          }
+        }
       }
     },
     {
