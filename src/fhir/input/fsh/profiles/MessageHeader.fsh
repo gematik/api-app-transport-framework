@@ -51,4 +51,3 @@ Description: "MessageHeader des MessageBundles"
     * ^comment = "Die FHIR Ressource sieht hier eine URL vor, die als KIM-Adresse genutzt werden kann. Diese beginnt mit 'mailto:', da der Datentyp url ist."
 
 //TODO Für IG und Instances: Referenzpunkt display als Anzeigename
-//TODO Für IG und Instances: Im source.endpoint und destination.endpoint 1..1, sollten diese als KIM Adresse genutzt werden! Diese müssten mit "mailto:" beginnen, da der Datentyp url ist.
