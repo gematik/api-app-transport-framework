@@ -44,7 +44,7 @@ Description: "MessageHeader des MessageBundles"
     * ^short = "Version der Software"
     * ^comment = "Diese Infomation ist verpflichtend, um das sendende System identifizieren zu können"
   * contact 1..1 MS
-    * ^short = "Kontaktinformation zum Hersteller" //TODO: Mit Robert klären, ob E-Mail verpflichtend anzugeben ist
+    * ^short = "Kontaktinformation zum Hersteller"
     * ^comment = "Es muss eine Kontaktmöglichkeit zum Hersteller angegeben werden"
   * endpoint MS
     * ^short = "KIM-Adresse des Absenders"
