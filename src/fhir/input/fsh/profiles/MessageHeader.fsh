@@ -10,19 +10,27 @@ Description: "MessageHeader des MessageBundles"
 * id 1..1 MS
   * ^short = "Eindeutige ID der Nachricht, anzugeben als UUID"
 
+// Sender
 * sender 1..1 MS
 * sender.identifier 1..1 MS
-* sender.identifier only IdentifierAddressKIM or IdentifierAddressTIM
+* sender.identifier only $telematik-id
 * sender.display 0..1 MS
-  * ^short = "Anzeigename der Absender Adresse"
+  * ^short = "Anzeigename des Senders"
+
+// Empfänger
 * destination 1..* MS
 * destination.receiver 1..1
 * destination.receiver.identifier 1..1 MS
-* destination.receiver.identifier only IdentifierAddressKIM or IdentifierAddressTIM
+* destination.receiver.identifier only $telematik-id
 * destination.receiver.display 0..1 MS
-  * ^short = "Anzeigename der Empfänger Adresse"
+  * ^short = "Anzeigename des Empfängers"
+* destination.endpoint MS
+  * ^short = "KIM-Adresse des Empfängers"
+  * ^comment = "Die FHIR Ressource sieht hier eine URL vor, die als KIM-Adresse genutzt werden kann. Diese beginnt mit 'mailto:', da der Datentyp url ist."
+
 * focus 1..*
 
+// Quelle der Nachricht
 * source MS
   * ^short = "Angabe der Informationen des Absendenden Systems"
   * ^comment = "Diese Infomation ist verpflichtend"
@@ -36,8 +44,11 @@ Description: "MessageHeader des MessageBundles"
     * ^short = "Version der Software"
     * ^comment = "Diese Infomation ist verpflichtend, um das sendende System identifizieren zu können"
   * contact 1..1 MS
-    * ^short = "Kontaktinformation zum Hersteller"
-    * ^comment = "Es ist mindestens eine Email anzugeben, um Kontakt mit dem Hersteller herzustellen"
+    * ^short = "Kontaktinformation zum Hersteller" //TODO: Mit Robert klären, ob E-Mail verpflichtend anzugeben ist
+    * ^comment = "Es muss eine Kontaktmöglichkeit zum Hersteller angegeben werden"
+  * endpoint MS
+    * ^short = "KIM-Adresse des Absenders"
+    * ^comment = "Die FHIR Ressource sieht hier eine URL vor, die als KIM-Adresse genutzt werden kann. Diese beginnt mit 'mailto:', da der Datentyp url ist."
 
 //TODO Für IG und Instances: Referenzpunkt display als Anzeigename
 //TODO Für IG und Instances: Im source.endpoint und destination.endpoint 1..1, sollten diese als KIM Adresse genutzt werden! Diese müssten mit "mailto:" beginnen, da der Datentyp url ist.

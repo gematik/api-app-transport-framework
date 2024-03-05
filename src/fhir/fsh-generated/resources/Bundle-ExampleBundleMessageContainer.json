@@ -45,11 +45,11 @@
         },
         "destination": [
           {
-            "endpoint": "https://receiver.example.com/endpoint",
+            "endpoint": "mailto:receiver@example.klaus.kim.telematik",
             "receiver": {
               "identifier": {
-                "system": "http://gematik.de/fhir/sid/KIM-Adresse",
-                "value": "receiver@example.klaus.kim.telematik"
+                "system": "https://gematik.de/fhir/sid/telematik-id",
+                "value": "3-test-receiver"
               },
               "display": "Receiver Example"
             }

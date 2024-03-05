@@ -21,9 +21,8 @@ Description: "Example MessageHeader for Selbsttest"
 * source.endpoint = "https://sender.example.com/endpoint"
 * sender.identifier = ExampleKimAddress
 * sender.display = "Sender Example"
-* destination.endpoint = "https://receiver.example.com/endpoint"
-* destination.receiver.identifier.system = $kim
-* destination.receiver.identifier.value = "receiver@example.klaus.kim.telematik"
+* destination.endpoint = "mailto:receiver@example.klaus.kim.telematik"
+* destination.receiver.identifier = ExampleTelematikIdIdentifier
 * destination.receiver.display = "Receiver Example"
 * focus.reference = "urn:uuid:86a87254-ce15-11ed-afa1-0242ac120004"
 * source.name = "TopDoc Systems"
@@ -33,6 +32,12 @@ Description: "Example MessageHeader for Selbsttest"
 * source.contact
   * system = #email
   * value = "support@topdoc-systems.de"
+
+Instance: ExampleTelematikIdIdentifier
+InstanceOf: $telematik-id
+Usage: #inline
+Title: "Example Identifier with TelematikID"
+* value = "3-test-receiver"
 
 Instance: ExampleCommunication
 InstanceOf: Communication
