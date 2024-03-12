@@ -56,8 +56,16 @@
         "mustSupport": true
       },
       {
+        "id": "MessageHeader.destination.endpoint",
+        "path": "MessageHeader.destination.endpoint",
+        "short": "Bspw. KIM- oder TIM-Adresse des Empfängers",
+        "comment": "Die FHIR Ressource sieht hier eine URL vor. Bspw. kann hier eine KIM-Adresse genutzt werden. Diese beginnt mit 'mailto:', da der Datentyp url ist.",
+        "mustSupport": true
+      },
+      {
         "id": "MessageHeader.destination.receiver",
         "path": "MessageHeader.destination.receiver",
+        "short": "Telematik-ID des Empfängers",
         "min": 1
       },
       {
@@ -68,8 +76,7 @@
           {
             "code": "Identifier",
             "profile": [
-              "https://gematik.de/fhir/atf/StructureDefinition/identifier-address-kim",
-              "https://gematik.de/fhir/atf/StructureDefinition/identifier-address-tim"
+              "http://fhir.de/StructureDefinition/identifier-telematik-id"
             ]
           }
         ],
@@ -78,7 +85,7 @@
       {
         "id": "MessageHeader.destination.receiver.display",
         "path": "MessageHeader.destination.receiver.display",
-        "short": "Anzeigename der Empfänger Adresse",
+        "short": "Anzeigename des Empfängers",
         "mustSupport": true
       },
       {
@@ -90,13 +97,13 @@
       {
         "id": "MessageHeader.sender.identifier",
         "path": "MessageHeader.sender.identifier",
+        "short": "Telematik-ID des Absenders",
         "min": 1,
         "type": [
           {
             "code": "Identifier",
             "profile": [
-              "https://gematik.de/fhir/atf/StructureDefinition/identifier-address-kim",
-              "https://gematik.de/fhir/atf/StructureDefinition/identifier-address-tim"
+              "http://fhir.de/StructureDefinition/identifier-telematik-id"
             ]
           }
         ],
@@ -105,7 +112,7 @@
       {
         "id": "MessageHeader.sender.display",
         "path": "MessageHeader.sender.display",
-        "short": "Anzeigename der Absender Adresse",
+        "short": "Anzeigename des Absenders",
         "mustSupport": true
       },
       {
@@ -142,15 +149,28 @@
       {
         "id": "MessageHeader.source.contact",
         "path": "MessageHeader.source.contact",
-        "short": "Kontaktinformation zum Hersteller",
-        "comment": "Es ist mindestens eine Email anzugeben, um Kontakt mit dem Hersteller herzustellen",
+        "short": "E-Mail Kontaktmöglichkeit zum Hersteller",
+        "comment": "Es ist mindestens eine E-Mail anzugeben, um Kontakt mit dem Hersteller herstellen zu können",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "MessageHeader.source.contact.system",
+        "path": "MessageHeader.source.contact.system",
+        "fixedCode": "email"
+      },
+      {
+        "id": "MessageHeader.source.endpoint",
+        "path": "MessageHeader.source.endpoint",
+        "short": "Bspw. KIM- oder TIM-Adresse des Absenders",
+        "comment": "Die FHIR Ressource sieht hier eine URL vor. Bspw. kann hier eine KIM-Adresse genutzt werden. Diese beginnt mit 'mailto:', da der Datentyp url ist.",
         "mustSupport": true
       },
       {
         "id": "MessageHeader.focus",
         "path": "MessageHeader.focus",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       }
     ]
   }

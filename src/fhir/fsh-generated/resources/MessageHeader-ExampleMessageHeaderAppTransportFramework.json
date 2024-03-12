@@ -6,19 +6,19 @@
       "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport"
     ]
   },
-  "eventCoding": {
-    "code": "atf;Selbsttest",
-    "system": "https://gematik.de/fhir/atf/CodeSystem/service-identifier-cs"
-  },
   "source": {
-    "endpoint": "https://topdoc-systems.de",
-    "name": "TopDoc Systems",
-    "software": "TopDoc TI",
-    "version": "2.4.5",
     "contact": {
       "system": "email",
       "value": "support@topdoc-systems.de"
-    }
+    },
+    "name": "TopDoc Systems",
+    "software": "TopDoc TI",
+    "version": "2.4.5",
+    "endpoint": "mailto:sender@example.peter.kim.telematik"
+  },
+  "eventCoding": {
+    "code": "atf;Selbsttest",
+    "system": "https://gematik.de/fhir/atf/CodeSystem/service-identifier-cs"
   },
   "sender": {
     "identifier": {
@@ -29,11 +29,11 @@
   },
   "destination": [
     {
-      "endpoint": "https://receiver.example.com/endpoint",
+      "endpoint": "mailto:receiver@example.klaus.kim.telematik",
       "receiver": {
         "identifier": {
-          "system": "http://gematik.de/fhir/sid/KIM-Adresse",
-          "value": "receiver@example.klaus.kim.telematik"
+          "system": "https://gematik.de/fhir/sid/telematik-id",
+          "value": "3-test-receiver"
         },
         "display": "Receiver Example"
       }
