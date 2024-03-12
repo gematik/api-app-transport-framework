@@ -58,13 +58,14 @@
       {
         "id": "MessageHeader.destination.endpoint",
         "path": "MessageHeader.destination.endpoint",
-        "short": "KIM-Adresse des Empfängers",
-        "comment": "Die FHIR Ressource sieht hier eine URL vor, die als KIM-Adresse genutzt werden kann. Diese beginnt mit 'mailto:', da der Datentyp url ist.",
+        "short": "Bspw. KIM- oder TIM-Adresse des Empfängers",
+        "comment": "Die FHIR Ressource sieht hier eine URL vor. Bspw. kann hier eine KIM-Adresse genutzt werden. Diese beginnt mit 'mailto:', da der Datentyp url ist.",
         "mustSupport": true
       },
       {
         "id": "MessageHeader.destination.receiver",
         "path": "MessageHeader.destination.receiver",
+        "short": "Telematik-ID des Empfängers",
         "min": 1
       },
       {
@@ -96,6 +97,7 @@
       {
         "id": "MessageHeader.sender.identifier",
         "path": "MessageHeader.sender.identifier",
+        "short": "Telematik-ID des Absenders",
         "min": 1,
         "type": [
           {
@@ -110,7 +112,7 @@
       {
         "id": "MessageHeader.sender.display",
         "path": "MessageHeader.sender.display",
-        "short": "Anzeigename des Senders",
+        "short": "Anzeigename des Absenders",
         "mustSupport": true
       },
       {
@@ -155,14 +157,15 @@
       {
         "id": "MessageHeader.source.endpoint",
         "path": "MessageHeader.source.endpoint",
-        "short": "KIM-Adresse des Absenders",
-        "comment": "Die FHIR Ressource sieht hier eine URL vor, die als KIM-Adresse genutzt werden kann. Diese beginnt mit 'mailto:', da der Datentyp url ist.",
+        "short": "Bspw. KIM- oder TIM-Adresse des Absenders",
+        "comment": "Die FHIR Ressource sieht hier eine URL vor. Bspw. kann hier eine KIM-Adresse genutzt werden. Diese beginnt mit 'mailto:', da der Datentyp url ist.",
         "mustSupport": true
       },
       {
         "id": "MessageHeader.focus",
         "path": "MessageHeader.focus",
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       }
     ]
   }

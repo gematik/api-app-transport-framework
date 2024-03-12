@@ -13,22 +13,24 @@ Description: "MessageHeader des MessageBundles"
 // Sender
 * sender 1..1 MS
 * sender.identifier 1..1 MS
+  * ^short = "Telematik-ID des Absenders"
 * sender.identifier only $telematik-id
 * sender.display 0..1 MS
-  * ^short = "Anzeigename des Senders"
+  * ^short = "Anzeigename des Absenders"
 
 // Empfänger
 * destination 1..* MS
 * destination.receiver 1..1
+  * ^short = "Telematik-ID des Empfängers"
 * destination.receiver.identifier 1..1 MS
 * destination.receiver.identifier only $telematik-id
 * destination.receiver.display 0..1 MS
   * ^short = "Anzeigename des Empfängers"
 * destination.endpoint MS
-  * ^short = "KIM-Adresse des Empfängers"
-  * ^comment = "Die FHIR Ressource sieht hier eine URL vor, die als KIM-Adresse genutzt werden kann. Diese beginnt mit 'mailto:', da der Datentyp url ist."
+  * ^short = "Bspw. KIM- oder TIM-Adresse des Empfängers"
+  * ^comment = "Die FHIR Ressource sieht hier eine URL vor. Bspw. kann hier eine KIM-Adresse genutzt werden. Diese beginnt mit 'mailto:', da der Datentyp url ist."
 
-* focus 1..*
+* focus 1..* MS
 
 // Quelle der Nachricht
 * source MS
@@ -47,7 +49,7 @@ Description: "MessageHeader des MessageBundles"
     * ^short = "Kontaktinformation zum Hersteller"
     * ^comment = "Es muss eine Kontaktmöglichkeit zum Hersteller angegeben werden"
   * endpoint MS
-    * ^short = "KIM-Adresse des Absenders"
-    * ^comment = "Die FHIR Ressource sieht hier eine URL vor, die als KIM-Adresse genutzt werden kann. Diese beginnt mit 'mailto:', da der Datentyp url ist."
+    * ^short = "Bspw. KIM- oder TIM-Adresse des Absenders"
+    * ^comment = "Die FHIR Ressource sieht hier eine URL vor. Bspw. kann hier eine KIM-Adresse genutzt werden. Diese beginnt mit 'mailto:', da der Datentyp url ist."
 
 //TODO Für IG und Instances: Referenzpunkt display als Anzeigename
