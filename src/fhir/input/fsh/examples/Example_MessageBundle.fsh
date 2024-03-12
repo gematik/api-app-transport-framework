@@ -1,5 +1,3 @@
-Alias: $loinc = http://loinc.org
-
 Instance: ExampleBundleMessageContainer
 InstanceOf: BundleAppTransportFramework
 Usage: #example
@@ -10,18 +8,18 @@ Description: "Request sent to a patient to confirm the completion of a self-test
 * entry[MessageHeader].fullUrl = "urn:uuid:86a87254-ce15-11ed-afa1-0242ac120003"
 * entry[MessageHeader].resource = ExampleMessageHeaderAppTransportFramework
 * entry[1].fullUrl = "urn:uuid:86a87254-ce15-11ed-afa1-0242ac120004"
-* entry[1].resource = ExampleCommunication
+* entry[1].resource = SuccessOperationOutcome
 
 Instance: ExampleMessageHeaderAppTransportFramework
 InstanceOf: MessageHeaderAppTransportFramework
 Usage: #example
 Title: "Example MessageHeader"
 Description: "Example MessageHeader for Selbsttest"
-* eventCoding = ServiceIdentifierCS#atf;Selbsttest
-* sender.identifier = ExampleKimAddress
+* eventCoding = OperationIdentifierCS#atf;Empfangsbestaetigung
+* sender.identifier = ExampleTelematikIdIdentifierPractitioner
 * sender.display = "Sender Example"
 * destination.endpoint = "mailto:receiver@example.klaus.kim.telematik"
-* destination.receiver.identifier = ExampleTelematikIdIdentifier
+* destination.receiver.identifier = ExampleTelematikIdIdentifierPharmacy
 * destination.receiver.display = "Receiver Example"
 * focus.reference = "urn:uuid:86a87254-ce15-11ed-afa1-0242ac120004"
 * source.name = "TopDoc Systems"
@@ -32,26 +30,24 @@ Description: "Example MessageHeader for Selbsttest"
   * system = #email
   * value = "support@topdoc-systems.de"
 
-Instance: ExampleTelematikIdIdentifier
+Instance: ExampleTelematikIdIdentifierPharmacy
 InstanceOf: $telematik-id
 Usage: #inline
-Title: "Example Identifier with TelematikID"
-* value = "3-test-receiver"
+Title: "Example Identifier with TelematikID for pharmacy"
+* value = "3-test-telematik-id"
 
-Instance: ExampleCommunication
-InstanceOf: Communication
+Instance: ExampleTelematikIdIdentifierPractitioner
+InstanceOf: $telematik-id
+Usage: #inline
+Title: "Example Identifier with TelematikID for practitioner"
+* value = "1-test-telematik-id"
+
+Instance: SuccessOperationOutcome
+InstanceOf: OperationOutcome
 Usage: #example
-Title: "Example Communication for Selbsttest"
-Description: "Communication to confirm the completion of a self-test"
-* status = #completed
-* category[0].coding[0].system = $loinc
-* category[0].coding[0].code = #45012-6
-* category[0].coding[0].display = "Communication regarding test results"
-* priority = #routine
-* subject.display = "Max Mustermann"
-* sender.display = "Dr. Anna Schmidt"
-* payload[0].contentAttachment.title = "Selbsttest Bestätigung"
-* payload[0].contentAttachment.contentType = #text/plain
-* payload[0].contentAttachment.data = "U2VsYnN0dGVzdCBhYnNjaGxpZXNzZW4uIEJpdHRlIGtsYXJlbiBTaWUgZGllIFRlc3RlcmdlYm5pc3NlIGFiLg=="
-* sent = "2023-03-29T13:28:17.239+02:00"
-* received = "2023-03-29T13:30:00.000+02:00"
+Title: "Success Operation Outcome"
+Description: "Example for success operation outcome"
+* issue
+  * severity = #information
+  * code = #informational
+  * diagnostics = "Anfrage erfolgreich entgegengenommen"

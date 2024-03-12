@@ -17,13 +17,13 @@
     "endpoint": "mailto:sender@example.peter.kim.telematik"
   },
   "eventCoding": {
-    "code": "atf;Selbsttest",
-    "system": "https://gematik.de/fhir/atf/CodeSystem/service-identifier-cs"
+    "code": "atf;Empfangsbestaetigung",
+    "system": "https://gematik.de/fhir/atf/CodeSystem/operation-identifier-cs"
   },
   "sender": {
     "identifier": {
-      "system": "http://gematik.de/fhir/sid/KIM-Adresse",
-      "value": "example@gematik.kim.telematik"
+      "system": "https://gematik.de/fhir/sid/telematik-id",
+      "value": "1-test-telematik-id"
     },
     "display": "Sender Example"
   },
@@ -33,7 +33,7 @@
       "receiver": {
         "identifier": {
           "system": "https://gematik.de/fhir/sid/telematik-id",
-          "value": "3-test-receiver"
+          "value": "3-test-telematik-id"
         },
         "display": "Receiver Example"
       }
