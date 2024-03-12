@@ -33,13 +33,13 @@
           "endpoint": "mailto:sender@example.peter.kim.telematik"
         },
         "eventCoding": {
-          "code": "atf;Selbsttest",
-          "system": "https://gematik.de/fhir/atf/CodeSystem/service-identifier-cs"
+          "code": "atf;Empfangsbestaetigung",
+          "system": "https://gematik.de/fhir/atf/CodeSystem/operation-identifier-cs"
         },
         "sender": {
           "identifier": {
-            "system": "http://gematik.de/fhir/sid/KIM-Adresse",
-            "value": "example@gematik.kim.telematik"
+            "system": "https://gematik.de/fhir/sid/telematik-id",
+            "value": "1-test-telematik-id"
           },
           "display": "Sender Example"
         },
@@ -49,7 +49,7 @@
             "receiver": {
               "identifier": {
                 "system": "https://gematik.de/fhir/sid/telematik-id",
-                "value": "3-test-receiver"
+                "value": "3-test-telematik-id"
               },
               "display": "Receiver Example"
             }
@@ -65,38 +65,15 @@
     {
       "fullUrl": "urn:uuid:86a87254-ce15-11ed-afa1-0242ac120004",
       "resource": {
-        "resourceType": "Communication",
-        "id": "ExampleCommunication",
-        "status": "completed",
-        "category": [
+        "resourceType": "OperationOutcome",
+        "id": "SuccessOperationOutcome",
+        "issue": [
           {
-            "coding": [
-              {
-                "system": "http://loinc.org",
-                "code": "45012-6",
-                "display": "Communication regarding test results"
-              }
-            ]
+            "severity": "information",
+            "code": "informational",
+            "diagnostics": "Anfrage erfolgreich entgegengenommen"
           }
-        ],
-        "priority": "routine",
-        "subject": {
-          "display": "Max Mustermann"
-        },
-        "sender": {
-          "display": "Dr. Anna Schmidt"
-        },
-        "payload": [
-          {
-            "contentAttachment": {
-              "title": "Selbsttest Bestätigung",
-              "contentType": "text/plain",
-              "data": "U2VsYnN0dGVzdCBhYnNjaGxpZXNzZW4uIEJpdHRlIGtsYXJlbiBTaWUgZGllIFRlc3RlcmdlYm5pc3NlIGFiLg=="
-            }
-          }
-        ],
-        "sent": "2023-03-29T13:28:17.239+02:00",
-        "received": "2023-03-29T13:30:00.000+02:00"
+        ]
       }
     }
   ],

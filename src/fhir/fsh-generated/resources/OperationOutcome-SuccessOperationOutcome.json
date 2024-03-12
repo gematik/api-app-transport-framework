@@ -1,0 +1,11 @@
+{
+  "resourceType": "OperationOutcome",
+  "id": "SuccessOperationOutcome",
+  "issue": [
+    {
+      "severity": "information",
+      "code": "informational",
+      "diagnostics": "Anfrage erfolgreich entgegengenommen"
+    }
+  ]
+}
