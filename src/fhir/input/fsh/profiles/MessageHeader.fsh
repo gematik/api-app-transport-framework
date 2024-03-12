@@ -46,8 +46,9 @@ Description: "MessageHeader des MessageBundles"
     * ^short = "Version der Software"
     * ^comment = "Diese Infomation ist verpflichtend, um das sendende System identifizieren zu können"
   * contact 1..1 MS
-    * ^short = "Kontaktinformation zum Hersteller"
-    * ^comment = "Es muss eine Kontaktmöglichkeit zum Hersteller angegeben werden"
+    * ^short = "E-Mail Kontaktmöglichkeit zum Hersteller"
+    * ^comment = "Es ist mindestens eine E-Mail anzugeben, um Kontakt mit dem Hersteller herstellen zu können"
+    * system = #email (exactly)
   * endpoint MS
     * ^short = "Bspw. KIM- oder TIM-Adresse des Absenders"
     * ^comment = "Die FHIR Ressource sieht hier eine URL vor. Bspw. kann hier eine KIM-Adresse genutzt werden. Diese beginnt mit 'mailto:', da der Datentyp url ist."
