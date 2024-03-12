@@ -60,4 +60,4 @@ Hier beispielhaft ein Nachrichtenaustausch im Anwendungsfall ["E-Rezept Rezeptan
 
 ## Fehlerhandling
 
-Im MessageHeader ist unter .source anzugeben welche Software den Request abgesetzt hat. Falls die ankommenden Daten nicht validiert oder verarbeitet werden können, MUSS an dieser Stelle mindestens eine Kontaktmöglichkeit angegeben werden. So kann im Fehlerfall möglichst automatisiert ein Fehlerbericht an das sendende System übermittelt werden. Der Nutzer SOLL dann auch benachrichtigt werden, dass es zu einem Fehler kam und dass der Hersteller entsprechend informiert wurde.
+Im MessageHeader ist unter .source anzugeben welche Software den Request abgesetzt hat. Falls die ankommenden Daten nicht validiert oder verarbeitet werden können, soll es hier die Möglichkeit geben mindestens eine E-Mail anzugeben. So kann im Fehlerfall möglichst automatisiert ein Fehlerbericht an das sendende System übermittelt werden. Der Nutzer SOLL dann auch benachrichtigt werden, dass es zu einem Fehler kam und der Hersteller entsprechend informiert wurde.
