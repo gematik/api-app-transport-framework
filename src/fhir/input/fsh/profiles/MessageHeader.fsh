@@ -20,11 +20,11 @@ Description: "MessageHeader des MessageBundles"
 
 // Empfänger
 * destination 1..* MS
-* destination.receiver 1..1
-  * ^short = "Telematik-ID des Empfängers"
-* destination.receiver.identifier 1..1 MS
-* destination.receiver.identifier only $telematik-id
-* destination.receiver.display 0..1 MS
+* destination ^short = "Angaben zum Empfänger der Nachricht"
+* destination.receiver.identifier MS
+  * ^short = "Identifier des Empfängers"
+  * ^comment = "Wenn möglich muss hier die Telematik-ID angegeben werden"
+* destination.receiver.display MS
   * ^short = "Anzeigename des Empfängers"
 * destination.endpoint MS
   * ^short = "Bspw. KIM- oder TIM-Adresse des Empfängers"
