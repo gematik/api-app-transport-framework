@@ -21,6 +21,8 @@ Description: "MessageHeader des MessageBundles"
 // Empfänger
 * destination 1..* MS
 * destination ^short = "Angaben zum Empfänger der Nachricht"
+* destination.receiver 1..1 MS
+* destination.receiver obeys app-transport-message-header-1
 * destination.receiver.identifier MS
   * ^short = "Identifier des Empfängers"
   * ^comment = "Wenn möglich muss hier die Telematik-ID angegeben werden"
@@ -54,3 +56,8 @@ Description: "MessageHeader des MessageBundles"
     * ^comment = "Die FHIR Ressource sieht hier eine URL vor. Bspw. kann hier eine KIM-Adresse genutzt werden. Diese beginnt mit 'mailto:', da der Datentyp url ist."
 
 //TODO Für IG und Instances: Referenzpunkt display als Anzeigename
+
+Invariant: app-transport-message-header-1
+Description: "Als Empfänger muss eine Referenz, Displaywert oder Identifier angegeben werden"
+Expression: "reference.exists() or display.exists() or identifier.exists()"
+Severity: #error

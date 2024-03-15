@@ -14,7 +14,7 @@ Instance: ExampleMessageHeaderAppTransportFramework
 InstanceOf: MessageHeaderAppTransportFramework
 Usage: #example
 Title: "Example MessageHeader"
-Description: "Example MessageHeader for Selbsttest"
+Description: "Example MessageHeader for Empfangsbestätigung"
 * eventCoding = OperationIdentifierCS#atf;Empfangsbestaetigung
 * sender.identifier = ExampleTelematikIdIdentifierPractitioner
 * sender.display = "Sender Example"

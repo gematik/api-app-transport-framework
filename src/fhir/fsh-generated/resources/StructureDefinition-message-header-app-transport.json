@@ -64,6 +64,21 @@
         "mustSupport": true
       },
       {
+        "id": "MessageHeader.destination.receiver",
+        "path": "MessageHeader.destination.receiver",
+        "min": 1,
+        "constraint": [
+          {
+            "key": "app-transport-message-header-1",
+            "severity": "error",
+            "human": "Als Empfänger muss eine Referenz, Displaywert oder Identifier angegeben werden",
+            "expression": "reference.exists() or display.exists() or identifier.exists()",
+            "source": "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "MessageHeader.destination.receiver.identifier",
         "path": "MessageHeader.destination.receiver.identifier",
         "short": "Identifier des Empfängers",
