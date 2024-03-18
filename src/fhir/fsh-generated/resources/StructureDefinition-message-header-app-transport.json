@@ -81,7 +81,7 @@
         "id": "MessageHeader.destination.receiver.identifier",
         "path": "MessageHeader.destination.receiver.identifier",
         "short": "Identifier des Empfängers der Nachricht",
-        "comment": "Wenn möglich muss hier die Telematik-ID angegeben werden",
+        "comment": "Bspw. kann hier die Telematik-ID des Empfängers angegeben werden",
         "mustSupport": true
       },
       {
@@ -99,13 +99,15 @@
       {
         "id": "MessageHeader.sender.reference",
         "path": "MessageHeader.sender.reference",
+        "short": "Ressource des Absenders der Nachricht",
+        "comment": "Hier kann eine FHIR-Ressource referenziert werden, die den Absender der Nachricht repräsentiert. Bspw. ein Practitioner oder eine Organization.",
         "mustSupport": true
       },
       {
         "id": "MessageHeader.sender.identifier",
         "path": "MessageHeader.sender.identifier",
         "short": "Business Identifer des Absenders der Nachricht",
-        "comment": "Wenn möglich muss hier die Telematik-ID angegeben werden",
+        "comment": "Bspw. kann hier die Telematik-ID des Absenders angegeben werden",
         "mustSupport": true
       },
       {
