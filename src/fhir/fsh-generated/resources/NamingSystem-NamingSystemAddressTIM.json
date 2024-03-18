@@ -1,0 +1,28 @@
+{
+  "resourceType": "NamingSystem",
+  "id": "NamingSystemAddressTIM",
+  "description": "Namingsystem für das Profil IdentifierAddressTIM",
+  "name": "NamingSystemAddressTIM",
+  "status": "active",
+  "kind": "identifier",
+  "date": "2023-02-01",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.gematik.de/"
+        }
+      ]
+    }
+  ],
+  "responsible": "gematik GmbH",
+  "uniqueId": [
+    {
+      "type": "uri",
+      "value": "http://gematik.de/fhir/sid/TIM-Adresse",
+      "preferred": true
+    }
+  ]
+}
