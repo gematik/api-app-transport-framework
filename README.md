@@ -4,8 +4,14 @@
 The profiles are intended to serve as a basis for various use cases in which medical data is exchanged via messaging services such as KIM and TIM.
 Ressources are published on https://simplifier.net/app-transport-framework
 
+## Information
+Information about the ATF (App-Transport-Framework) can be gathered from the following presentations:
+
+* [Short Slide Deck](https://gematik.github.io/api-app-transport-framework/slides/atf-presentation/ATF_Presentation_Short.html)
+* [Detailed Slide Deck](https://gematik.github.io/api-app-transport-framework/slides/atf-presentation/ATF_Presentation_Detail.html)
+
 ## About The Project
-This Repo contains the fsh files to the later published App-Transport-Framework files on simplifier.net.
+This Repo contains the fsh files to the later published ATF files on simplifier.net.
 
 ## Contributing
 
