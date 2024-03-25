@@ -1,0 +1,6 @@
+ 
+  .image-shadow img {
+    border-radius: 20px; /* Match container's border-radius if img is not filling the div */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjust for desired shadow effect */
+  }
+  

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Änderungen des App-Transport-Framework</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/simple.css" id="theme">
+    <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/a11y-light.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:300,400,500|Work+Sans:400,700">
+    <link rel="stylesheet" href="../public/css/slides.css">
+    <link rel="stylesheet" href="../public/css/images.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section class="heading-only">
+                <h3>Änderungen des App-Transport-Framework</h3>
+                <h5>von 0.9.4-beta zu 1.0.4</h5>
+                <div class="image-shadow">
+                    <img src="atf_logo.png" alt="ATF Logo" style="max-height:300px; display: block; margin: 20px auto;">
+                </div>
+                <div class="navigation-tips" style="font-size:0.75em; margin-top: 50px;">
+                    <p>Tips for navigating the slides:</p>
+                    <ul>
+                        <li>Press O or Escape for overview mode.</li>
+                        <li>Visit <a href="?print-pdf" target="_blank">this link</a> for a printable version.</li>
+                        <li>Press the copy icon on the upper right of code blocks to copy the code.</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h3>Was hat sich geändert?</h3>
+                <div style="font-size:0.75em; margin-top:0px; flex: 1; margin-left: 20px;">
+                    <p><strong>Verpflichtende Angaben für den Absender einer Nachricht:</strong></p>
+                    <ul>
+                        <li><strong><code>MessageHeader.id</code></strong>: Eine eindeutige ID der Nachricht, anzugeben
+                            als UUID, die die Referenzierung in der Empfangsbestätigung sicherstellt.</li>
+                        <li><strong><code>MessageHeader.source</code></strong>: Informationen über das absendende
+                            System, die die Identifikation des Absenders und damit eine Kontaktaufnahme ermöglichen,
+                            einschließlich:
+                            <ul>
+                                <li><strong><code>MessageHeader.source.name</code></strong>: Name des Systems,</li>
+                                <li><strong><code>MessageHeader.source.software</code></strong>: Software des sendenden
+                                    Systems,</li>
+                                <li><strong><code>MessageHeader.source.version</code></strong>: Version der sendenden
+                                    Software,</li>
+                                <li><strong><code>MessageHeader.source.contact</code></strong>: Kontaktinformation
+                                    (E-Mail-Adresse) zum Hersteller der sendenden Software.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h3>Erinnerung: Verpflichtendes Versenden einer Empfangsbestätigung</h3>
+                <div style="font-size:0.75em; margin-top:0px; flex: 1; margin-left: 20px;">
+                    <p>Nach Empfang einer Nachricht ist eine Bestätigung erforderlich, die die erfolgreiche
+                        Interpretation und Verarbeitbarkeit der FHIR-Ressourcen bestätigt. Diese Validierung prüft, ob
+                        alle erforderlichen Inhalte vorhanden sind.</p>
+                    <p>Die Empfangsbestätigung beinhaltet eine <code>OperationOutcome</code>-Ressource, die mittels der
+                        <code>.issue</code>-Eigenschaft Auskunft gibt:
+                    </p>
+                    <ul>
+                        <li><code>OperationOutcome.issue.severity = "warning"</code> oder <code>"information"</code>
+                            bedeuten, dass die Verarbeitung erfolgreich war.</li>
+                        <li><code>OperationOutcome.issue.severity = "error"</code> oder <code>"fatal"</code>
+                            signalisieren, dass ein Problem vorlag und die Anfrage abgebrochen wurde.</li>
+                    </ul>
+                </div>
+                <div>
+                    <p><a href="https://simplifier.net/app-transport-framework/~resources?category=Example&exampletype=OperationOutcome&sortBy=RankScore_desc"
+                            target="_blank">Beispiele für OperationOutcome auf Simplifier.net</a></p>
+                </div>
+            </section>
+
+            <section>
+                <h3>Änderungen am ServiceRequest</h3>
+                <div style="font-size:0.75em; margin-top:0px; flex: 1; margin-left: 20px;">
+                    <p>Die ATF-Abhängigkeit wurde auf Version 1.0.4 aktualisiert. Zudem wurden Einschränkungen für
+                        Referenzen entfernt, mit Empfehlungen, die im Implementation Guide (IG) dargelegt sind:</p>
+                    <ul>
+                        <li><strong>ERPServiceRequestMedicationRequest:</strong>
+                            <ul>
+                                <li><code>medicationReference</code></li>
+                                <li><code>subject</code></li>
+                                <li><code>requester</code></li>
+                                <li><code>insurance</code></li>
+                            </ul>
+                        </li>
+                        <li><strong>ERPServiceRequestPrescriptionRequest:</strong>
+                            <ul>
+                                <li><code>subject</code></li>
+                                <li><code>requester</code></li>
+                                <li><code>performer</code></li>
+                            </ul>
+                        </li>
+                        <li><strong>ERPServiceRequestDispenseRequest:</strong>
+                            <ul>
+                                <li><code>subject</code></li>
+                                <li><code>supportingInfo: AbgabeDaten</code></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlightjs-badge@0.1.9/highlightjs-badge.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js-menu@2.1.0/menu.js"></script>
+    <script>
+        Reveal.initialize({
+            width: 1280,
+            height: 720,
+            hash: true,
+            center: false,
+            slideNumber: true,
+            showNotes: false,
+            margin: 0.1,
+            preloadIframes: true,
+            autoPlayMedia: true,
+            plugins: [RevealHighlight, RevealMenu],
+            pdfSeparateFragments: true
+        });
+        window.highlightJsBadge();
+    </script>
+</body>
+
+</html>
