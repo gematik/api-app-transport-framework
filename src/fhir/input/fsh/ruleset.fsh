@@ -1,23 +1,21 @@
-RuleSet: Meta (profileName)
+// General rule for to handle versions for all structure definitions
+RuleSet: Versioning
 * ^status = #active
 * ^experimental = false
 * ^publisher = "gematik GmbH"
-* ^url = "https://gematik.de/fhir/atf/StructureDefinition/{profileName}"
 * ^version = "1.0"
+
+RuleSet: Meta (profileName)
+* insert Versioning
+* ^url = "https://gematik.de/fhir/atf/StructureDefinition/{profileName}"
 
 RuleSet: MetaValueSet(profileName)
-* ^status = #active
-* ^experimental = false
-* ^publisher = "gematik GmbH"
+* insert Versioning
 * ^url = "https://gematik.de/fhir/atf/ValueSet/{profileName}"
-* ^version = "1.0"
 
 RuleSet: MetaCodeSystem(profileName)
-* ^status = #active
-* ^experimental = false
-* ^publisher = "gematik GmbH"
+* insert Versioning
 * ^url = "https://gematik.de/fhir/atf/CodeSystem/{profileName}"
-* ^version = "1.0"
 
 RuleSet: MetaInstance(profileName)
 * meta.profile = "https://gematik.de/fhir/atf/StructureDefinition/{profileName}"
