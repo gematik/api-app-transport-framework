@@ -1,12 +1,12 @@
 {
   "resourceType": "CodeSystem",
-  "status": "draft",
+  "status": "active",
   "content": "complete",
   "name": "ATFUseCasesCS",
   "id": "atf-use-cases-cs",
   "title": "ATF UseCases (CS)",
   "description": "CodeSystem zur Auflistung der Anwendungsfälle, die das ATF unterstützt.",
-  "version": "1.3.0",
+  "version": "1.0",
   "url": "https://gematik.de/fhir/atf/CodeSystem/atf-use-cases-cs",
   "concept": [
     {
@@ -18,5 +18,8 @@
       "display": "Rezeptanforderung an einen Arzt ein E-Rezept auszustellen"
     }
   ],
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "caseSensitive": true,
   "count": 2
 }
