@@ -17,8 +17,6 @@ Description: "CodeSystem für die Nutzung im Attribut PayloadType in FHIR-Endpoi
 * #eRezept_Zuweisung "Austausch von Zugriffsinformationen von E-Rezepten (z.B. anwendungsfertige Zytostatika Zubereitungen) zwischen Praxis, Apotheke, Krankenhäusern und Pflegeeinrichtungen."
 * #eRezept_Kommunikation "Austausch von Zugriffsinformationen von E-Rezepten (z.B. anwendungsfertige Zytostatika Zubereitungen) zwischen Praxis, Apotheke, Krankenhäusern und Pflegeeinrichtungen."
 * #atf "Strukturierte Rezeptanforderung an einen Arzt, initiiert durch eine Apotheke nach dem Start der Zubereitung einer parenteralen Zubereitung"
-* #eRezept_ParenteraleZubereitung "Strukturierte Rezeptanforderung an einen Arzt, initiiert durch eine Apotheke nach dem Start der Zubereitung einer parenteralen Zubereitung"
-* #eRezept_Rezeptanforderung "Anfrage an einen Arzt ein Rezept auszustellen"
 * #eAU "Elektronische Arbeitsunfähigkeitsbescheinigung"
 * #Arztbrief "Der elektronische Arztbrief (=eArztbrief) ermöglicht sowohl einen schnellen und sicheren Austausch von Informationen zwischen Ärzten als auch eine effiziente maschinelle Weiterverarbeitung im Softwaresystem des empfangenden Arztes. Basierend auf dem VHitG-Leitfaden (Version 2006) werden diese Informationen zusätzlich als PDF-Datei verschickt und optionale Anhänge wie Laborbefunde können strukturiert angehängt werden."
 * #EBZ "Elektronische Beantragung und Genehmigung zahnärztlicher Leistungen."

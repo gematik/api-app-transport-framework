@@ -1,0 +1,22 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "ATFUseCasesCS",
+  "id": "atf-use-cases-cs",
+  "title": "ATF UseCases (CS)",
+  "description": "CodeSystem zur Auflistung der Anwendungsfälle, die das ATF unterstützt.",
+  "version": "1.3.0",
+  "url": "https://gematik.de/fhir/atf/CodeSystem/atf-use-cases-cs",
+  "concept": [
+    {
+      "code": "atf_eRezept_AnwendungsfertigeZytostatikaZubereitungen",
+      "display": "Rezeptanforderung an einen Arzt ein E-Rezept für eine anwendungsfertige Zytostatikazubereitung auszustellen"
+    },
+    {
+      "code": "atf_eRezept_Rezeptanforderung",
+      "display": "Rezeptanforderung an einen Arzt ein E-Rezept auszustellen"
+    }
+  ],
+  "count": 2
+}
