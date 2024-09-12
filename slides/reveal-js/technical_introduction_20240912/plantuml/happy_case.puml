@@ -1,0 +1,34 @@
+@startuml
+skinparam defaultTextAlignment center
+<style>
+title {
+  backgroundColor SkyBlue
+  borderColor Gray
+}
+activityDiagram {
+  diamond {
+    BackgroundColor #Business
+  }
+}
+legend {
+  backgroundColor White
+}
+</style>
+actor Pflegeeinrichtung as PSP
+actor PVS as PVS
+actor VZD
+
+title Ablauf Rezeptanforderung und -übermittlung - "Happy Case"
+
+PSP -> VZD: Schritt 1: Ermittlung der KIM-Adresse(n) des Arztes, welches das ATF unterstützen 
+PSP -> PVS: Schritt 2: Senden der CapabilityRequest-Message an die ATF-Adresse(n) der Arzt-Praxis
+PVS -> PSP: Schritt 3: Antwort einer CapabilityResponse-Message mit den unterstützen Use Cases und Signal für Rezeptanforderung
+PSP -> PSP: Schritt 4: Prüfen ob der gewünschte Anwendungsfall unterstützt wird
+PSP -> PVS: Schritt 5: Senden der Rezeptanforderung an das PVS des Arztes
+PVS -> PSP: Schritt 6: ATF-Empfangsbestätigung an das PSP (erfolgreiche Verarbeitung)
+PSP -> PSP: Schritt 7: Interpretation der ATF-Empfangsbestätigung (keine technischen Probleme)
+PVS -> PSP: Schritt 8: Arzt stellt Rezept aus und übermittelt Rezeptanforderung und Rezept
+PSP -> PVS: Schritt 9: ATF-Empfangsbestätigung an das PVS (erfolgreiche Verarbeitung)
+PVS -> PVS: Schritt 10: Interpretation der ATF-Empfangsbestätigung (keine technischen Probleme)
+
+@enduml

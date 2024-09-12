@@ -1,0 +1,34 @@
+@startuml
+skinparam defaultTextAlignment center
+<style>
+title {
+  backgroundColor LightCoral
+  borderColor Gray
+}
+activityDiagram {
+  diamond {
+    BackgroundColor #Error
+  }
+}
+legend {
+  backgroundColor White
+}
+</style>
+actor Pflegeeinrichtung as PSP
+actor PVS as PVS
+actor VZD
+
+title Ablauf Rezeptanforderung und -übermittlung - Fehlerfall
+
+PSP -> VZD: Schritt 1: Ermittlung der KIM-Adresse(n) des Arztes
+PSP -> PVS: Schritt 2: Senden der CapabilityRequest-Message an die ATF-Adresse(n) der Arzt-Praxis
+PVS -> PSP: Schritt 3: Antwort einer CapabilityResponse-Message mit den unterstützen Use Cases und Signal für Rezeptanforderung
+PSP -> PVS: Schritt 4: Fehlerhafte Rezeptanforderung wird an das PVS des Arztes gesendet (z.B. Pflichtfeld nicht befüllt)
+PVS -> PSP: Schritt 5: FHIR-Validierung stellt fest, dass ein Fehler in der Anforderung vorliegt
+PVS -> PSP: Schritt 6: Empfangsbestätigung mit Fehlermeldung wird an das PSP gesendet. 
+PSP -> PSP: Schritt 7: Bewertung des Fehlers und Korrektur der Rezeptanforderung (ggf. durch Mitwirken des Anfordenden)
+PSP -> PVS: Schritt 8: Korrigierte Rezeptanforderung wird erneut an das PVS gesendet
+PVS -> PSP: Schritt 9: Erfolgreiche Verarbeitung der Anforderung, Bestätigung an das PSP
+PVS -> PSP: Schritt 10: Übermittlung der Rezeptanforderung und des ausgestellten Rezepts an die Pflegeeinrichtung
+
+@enduml
