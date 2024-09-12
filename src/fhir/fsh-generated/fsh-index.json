@@ -21,7 +21,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/ATFUseCasesCS.fsh",
     "startLine": 1,
-    "endLine": 6
+    "endLine": 8
   },
   {
     "outputFile": "CodeSystem-operation-identifier-cs.json",
