@@ -82,7 +82,6 @@
                         </ul>
                     </div>
                 </section>
-
             </section>
 
             <section>
@@ -102,10 +101,10 @@
                             Informationen zur Validität und zum Verarbeitungsstatus von Nachrichten zwischen Sender und
                             Empfänger. Zusätzlich werden die Kontaktinformationen der verantwortlichen Implementierer
                             bereitgestellt, um eine effiziente Fehlerbehebung zu ermöglichen.</li>
-                        <li><strong>Zentrale Fehlerkommunikation und Eskalation:</strong> Die Gematik unterstützt sowohl
-                            bei der Entwicklung und dem Testen bzw. der Zulassung von ATF-Anwendungsfällen als auch bei
-                            der technischen Bewertung von Fehlern, die nicht zwischen Sender- und Empfängersystemen
-                            gelöst werden können (z. B. über AtfFind-Tickets).</li>
+                        <li><strong>Zentrale Fehlerkommunikation und Eskalation:</strong> Der Herausgeber des jeweiligen
+                            Use Cases (z. B. die Gematik) stellt und pflegt eine Plattform, um Implementierer zu
+                            vernetzen, sodass sie sich bei der Entwicklung und dem Testen des jeweiligen Anwendungsfalls
+                            gegenseitig unterstützen können.</li>
                     </ul>
                 </div>
             </section>
@@ -140,7 +139,8 @@
                             <li><strong>Zuordenbarkeit:</strong> Jede Nachricht kann einer sendenden Software und einem
                                 Hersteller zugeordnet werden, der über eine angegebene Adresse kontaktiert werden kann.
                             </li>
-                            <li><strong>Fallback-Szenario:</strong> Jeder Nachrichtentyp kann über eine XSLT-Definition
+                            <li><strong>Fallback-Szenario:</strong> Jeder Nachrichtentyp kann (wenn im Use Case
+                                definiert) über eine XSLT-Definition
                                 in ein HTML überführt werden, um den Nachrichteninhalt menschenlesbar zu machen. Der
                                 Anhang wird neben dem FHIR-Datensatz bereitgestellt.</li>
                         </ul>
