@@ -1,0 +1,19 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "ATFUseCasesVS",
+  "id": "atf-use-cases-vs",
+  "title": "ATF UseCases (VS)",
+  "description": "ValueSet zur Auflistung der Anwendungsfälle, die das ATF unterstützt.",
+  "version": "1.0",
+  "url": "https://gematik.de/fhir/atf/ValueSet/atf-use-cases-vs",
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "compose": {
+    "include": [
+      {
+        "system": "https://gematik.de/fhir/atf/CodeSystem/atf-use-cases-cs"
+      }
+    ]
+  }
+}
