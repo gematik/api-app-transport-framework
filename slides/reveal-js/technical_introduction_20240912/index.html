@@ -21,7 +21,7 @@
             <section class="heading-only">
                 <h3>Einführung in das App-Transport-Framework</h3>
                 <div>Ziel: Überzeugung zukünftiger Implementierer zu den Vorteilen eines Frameworks für die dezentrale
-                    Kommunikation</div>
+                    Kommunikation in der TI</div>
                 <div class="image-shadow">
                     <img src="atf_logo.png" alt="ATF Logo" style="max-height:300px; display: block; margin: 20px auto;">
                 </div>
@@ -66,7 +66,8 @@
                         <p>Die dezentrale Kommunikation bietet folgende Vorteile:</p>
                         <ul>
                             <li><strong>Bessere Kommunikation (vor dem Versand):</strong> Der Sender einer Nachricht
-                                erhält vom Empfänger die Bestätigung, dass die Nachricht verarbeitet wird und der Use
+                                erhält vom Empfänger die Bestätigung, dass die Nachricht verarbeitet werden kann und der
+                                Use
                                 Case unterstützt wird.</li>
                             <li><strong>Bessere Kommunikation (nach dem Versand):</strong> Der Sender erhält vom
                                 Empfänger die Bestätigung, dass die Nachricht gelesen und verarbeitet wurde.</li>
@@ -88,25 +89,28 @@
                 <h3>Welches Problem löst das ATF?</h3>
                 <div style="font-size:0.75em; margin-top:0px; flex: 1; margin-left: 20px;">
                     <p><strong>Herausforderung der Validierung in Peer-to-Peer Netzwerken</strong></p>
-                    <p>Im Gegensatz zu zentralisierten Systemen, wo ein zentraler Server die Validierung eingehender
-                        Informationen übernimmt, fehlt in Peer-to-Peer Netzwerken ein solcher zentraler Kontrollpunkt.
-                        Dies führt zu spezifischen Herausforderungen:</p>
+                    <p>In zentralisierten Systemen übernimmt ein zentraler Server die Validierung eingehender
+                        Informationen. In Peer-to-Peer Netzwerken fehlt ein solcher Kontrollpunkt, was spezifische
+                        Herausforderungen mit sich bringt:</p>
                     <ul>
-                        <li><strong>Dezentrale Validierung:</strong> Jeder Teilnehmer muss die Informationen
-                            selbstständig validieren, klare Kommunikationsprotokolle zu aufgetretenen Fehlern und deren
-                            Lösung
-                            müssen definiert sein.</li>
-                        </li>
-                        <li><strong>Standardisierter Austausch:</strong> Das ATF schafft einen Rahmen, innerhalb dessen
-                            Sender und Empfänger Informationen über die Validität und den Verarbeitungsstatus von
-                            Nachrichten austauschen können.</li>
-                        <li><strong>Lösung von Konflikten:</strong> Das Framework ermöglicht es, auf effiziente Weise
-                            festzustellen, ob Nachrichten korrekt verarbeitet wurden und bei Problemen den Ursprung
-                            schnell
-                            zu identifizieren.</li>
+                        <li><strong>Dezentrale Validierung:</strong> Der Empfänger einer Nachricht fungiert als
+                            validierende Instanz für den Sender. Das ATF unterstützt den Empfänger dabei,
+                            Validierungsfehler über ein klares Protokoll zu kommunizieren, um eine schnelle
+                            Fehlererkennung und -behebung zu ermöglichen.</li>
+                        <li><strong>Fehlerkommunikation:</strong> Fehler müssen verständlich an die richtigen Adressaten
+                            übermittelt werden. Das ATF schafft einen strukturierten Rahmen für den Austausch von
+                            Informationen zur Validität und zum Verarbeitungsstatus von Nachrichten zwischen Sender und
+                            Empfänger. Zusätzlich werden die Kontaktinformationen der verantwortlichen Implementierer
+                            bereitgestellt, um eine effiziente Fehlerbehebung zu ermöglichen.</li>
+                        <li><strong>Zentrale Fehlerkommunikation und Eskalation:</strong> Die Gematik unterstützt sowohl
+                            bei der Entwicklung und dem Testen bzw. der Zulassung von ATF-Anwendungsfällen als auch bei
+                            der technischen Bewertung von Fehlern, die nicht zwischen Sender- und Empfängersystemen
+                            gelöst werden können (z. B. über AtfFind-Tickets).</li>
                     </ul>
                 </div>
             </section>
+
+
 
             <section>
 
@@ -117,18 +121,16 @@
                         <p>Das ATF nutzt standardisierte Prozesse für die Systemkommunikation, die speziell auf einzelne
                             Anwendungsfälle zugeschnitten sind:</p>
                         <ul>
-                            <li><strong>Anwendungsfall-Repräsentation:</strong> Jeder <a
-                                    href="https://simplifier.net/app-transport-framework/app-tags-cs"
-                                    target="_blank">Anwendungsfall wird durch ein CodeSystem</a> repräsentiert, um
-                                Eindeutigkeit in Identifizierung und Verarbeitung sicherzustellen.</li>
                             <li><strong>Verzeichnisdienst (VZD):</strong> Im VZD wird hinterlegt, welche KIM-Adressen
                                 das ATF unterstützen.</li>
                             <li><strong>Capability-Message:</strong> Der Sender einer Nachricht kann automatisiert beim
-                                Empfänger nachfragen, ob der gewünschte Use Case unterstützt wird.</li>
-                            <li><strong>Nachrichten-Repräsentation:</strong> Jede <a
-                                    href="https://simplifier.net/app-transport-framework/service-identifier-cs"
-                                    target="_blank">ATF-Nachricht verwendet ein CodeSystem</a>, um ihren Anwendungsfall
-                                und Zweck zu klären.</li>
+                                Empfänger nachfragen, ob der gewünschte Use Case unterstützt wird. Hierbei wird ein
+                                CodeSystem zur Anzeige der unterstützen Anwendungsfälle <a
+                                    href="https://simplifier.net/app-transport-framework/atf-use-cases-cs"
+                                    target="_blank"> verwendet.</a></li>
+                            <li><strong>Nachrichten-Repräsentation:</strong> Jede ATF-Nachricht verwendet ein im Use
+                                Case definiertes CodeSystem</a>, um die spezielle Nachricht des Anwendungsfalls zu
+                                repräsentieren.</li>
                             <li><strong>Kapselung der Anwendungsfalldaten:</strong> Das ATF fasst die FHIR-Ressourcen
                                 eines Anwendungsfalls in einer übergeordneten Ressource (FHIR Bundle) zusammen und
                                 integriert relevante Metadaten im Kopfbereich dieser Ressource.</li>
@@ -138,9 +140,9 @@
                             <li><strong>Zuordenbarkeit:</strong> Jede Nachricht kann einer sendenden Software und einem
                                 Hersteller zugeordnet werden, der über eine angegebene Adresse kontaktiert werden kann.
                             </li>
-                            <li><strong>Fallback-Szenario:</strong> Für jede Nachricht eines Use Cases kann eine HTML-
-                                und XSLT-Repräsentation hinterlegt werden, die es ermöglicht, den wesentlichen Inhalt
-                                menschenlesbar darzustellen.</li>
+                            <li><strong>Fallback-Szenario:</strong> Jeder Nachrichtentyp kann über eine XSLT-Definition
+                                in ein HTML überführt werden, um den Nachrichteninhalt menschenlesbar zu machen. Der
+                                Anhang wird neben dem FHIR-Datensatz bereitgestellt.</li>
                         </ul>
                     </div>
                 </section>
@@ -152,16 +154,16 @@
                         <div class="fragment" data-fragment-index="0">
                             <p><strong>Schritt 1:</strong> Das Primärsystem der Pflegeeinrichtung (PSP) ermittelt die
                                 Information,
-                                welche Addresse des Arztes im VZD das ATF unterstützt.</p>
+                                welche KIM-Adresse des Arztes im VZD das ATF unterstützt.</p>
                         </div>
                         <div class="fragment" data-fragment-index="1">
                             <p><strong>Schritt 2:</strong> Das PSP sendet eine Capability-Message an die ATF-Adresse der
                                 Arzt-Praxis,
-                                um die Unterstützen UseCases zu ermitteln.</p>
+                                um die Unterstützen Use Cases zu ermitteln.</p>
                         </div>
                         <div class="fragment" data-fragment-index="2">
                             <p><strong>Schritt 3:</strong> Das Praxisverwaltungssystem (PVS) antwortet mit den
-                                unterstützen UseCases und signalisiert, dass es die Rezeptanforderung unterstützt.</p>
+                                unterstützen Use Cases und signalisiert, dass es die Rezeptanforderung unterstützt.</p>
                         </div>
                         <div class="fragment" data-fragment-index="3">
                             <p><strong>Schritt 4:</strong> Das PSP sendet eine
@@ -196,7 +198,7 @@
                     <div style="font-size:0.75em; margin-top:0px; flex: 1; margin-left: 20px;">
                         <div class="fragment" data-fragment-index="0">
                             <p><strong>Schritt 1-3:</strong> Die Schritte zur Ermittlung der Adresse und des
-                                unterstützen Usecases bleiben identisch</p>
+                                unterstützen Use Cases bleiben identisch</p>
                         </div>
                         <div class="fragment" data-fragment-index="1">
                             <p><strong>Schritt 4:</strong> Das Primärsystem der Pflegeeinrichtung (PSP) sendet
@@ -227,17 +229,12 @@
                                 sendet eine Bestätigung über die erfolgreiche Verarbeitung zurück an das PSP.</p>
                         </div>
                         <div class="fragment" data-fragment-index="7">
-                            <p><strong>Schritt 10:</strong> Die Rezeptanforderung und das ausgestellte Rezept werden
-                                ohne
-                                weiteres Eingreifen des Arztes an die Pflegeeinrichtung übermittelt.</p>
+                            <p><strong>Schritt 10:</strong> Die Rezeptanforderung und das ausgestellte Rezept werden an
+                                die Pflegeeinrichtung übermittelt.</p>
                         </div>
                     </div>
                 </section>
-
-
             </section>
-
-
             <section>
                 <h3>Entwicklung und Optimierung durch kollaborative Netzwerkinteraktion</h3>
                 <div style="font-size:0.75em; margin-top:0px; flex: 1; margin-left: 20px;">
@@ -265,16 +262,16 @@
             <section>
                 <h3>Welche UsesCases sind für das ATF geplant?</h3>
                 <div style="font-size:0.75em; margin-top:0px; flex: 1; margin-left: 20px;">
-                    <p>Das <strong>App-Transport-Framework (ATF)</strong> soll bei den folgenden UseCases Anwendung
+                    <p>Das <strong>App-Transport-Framework (ATF)</strong> soll bei den folgenden Use Cases Anwendung
                         finden:</p>
                     <ul>
-                        <li><strong>E-Rezept ServiceRequest für Pflege und anwendungsfertige Zytostatikazubereitung
+                        <li><strong>E-Rezept Rezeptanforderung für Pflege und anwendungsfertige Zytostatikazubereitung
                                 :</strong>
                             Das ATF wird für die <a href="https://simplifier.net/erezept-servicerequest/~guides"
                                 target="_blank">Rezeptanforderung in den Bereichen Pflege und anwendungsfertige
                                 Zytostatikazubereitung</a>
                             eingesetzt werden, um die Prozesse in diesen Anwendungsfällen zu standardisieren.</li>
-                        <li><strong>E-Rezept ServiceRequest für E-BTM Notfallverordnungen (in Planung):</strong> In
+                        <li><strong>E-Rezept Rezeptanforderung für E-BTM Notfallverordnungen (in Planung):</strong> In
                             Abstimmung mit dem BMG wird eine Implementierung basierend auf dem ATF favorisiert, um
                             die
                             Nachreichung von BTM-Notfallverordnungen effizient zu unterstützen.</li>
