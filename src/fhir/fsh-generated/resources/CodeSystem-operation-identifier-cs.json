@@ -12,10 +12,14 @@
     {
       "code": "atf;Empfangsbestaetigung",
       "display": "Empfangsbestätigung und Auskunft über FHIR Interpretierbarkeit der Nachricht"
+    },
+    {
+      "code": "atf;Selbsttest",
+      "display": "Dieses Anwendungskennzeichen dient ausschließlich der Einrichtung des Kontos innerhalb eines PVS und des Testes, ob Nachrichten versendet und empfangen werden können. Dieses Anwendungskennzeichen wird im PVS bei der normalen Abholung von Nachrichten ignoriert."
     }
   ],
   "experimental": false,
   "publisher": "gematik GmbH",
   "caseSensitive": true,
-  "count": 1
+  "count": 2
 }

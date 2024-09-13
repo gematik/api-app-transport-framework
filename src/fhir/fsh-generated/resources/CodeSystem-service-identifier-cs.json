@@ -15,7 +15,11 @@
     },
     {
       "code": "eRezept_Rezeptanforderung;Rezeptanfrage_Storno",
-      "display": "Abbruch der Rezeptanfrage"
+      "display": "Stornierung der Rezeptanfrage"
+    },
+    {
+      "code": "eRezept_Rezeptanforderung;Rezeptanfrage_Ablehnung",
+      "display": "Ablehnung der Rezeptanfrage"
     },
     {
       "code": "eRezept_Rezeptanforderung;Rezeptbestaetigung",
@@ -26,24 +30,24 @@
       "display": "Anfrage zur Erfüllung eines Rezeptes und Abgabe des Medikaments"
     },
     {
-      "code": "eRezept_Rezeptanforderung;Abgabeanfrage_Storno",
-      "display": "Abbruch der Abgabeanfrage"
-    },
-    {
       "code": "eRezept_Rezeptanforderung;Abgabebestaetigung",
       "display": "Bestätigung der Erfüllung und Abgabe eines Medikamentes"
     },
     {
+      "code": "eRezept_Rezeptanforderung;NachrichtKopie",
+      "display": "Kopie einer Nachricht innerhalb des Prozesses der Rezeptanforderung"
+    },
+    {
       "code": "eRezept_ParenteraleZubereitung;Rezeptanfrage",
-      "display": "Rezeptanfrage für eine parenterale Zubereitung"
+      "display": "Rezeptanfrage für eine anwendungsfertige Zytostatikazubereitung"
     },
     {
       "code": "eRezept_ParenteraleZubereitung;Rezeptanfrage_Storno",
-      "display": "Abbruch der Rezeptanfrage für eine parenterale Zubereitung"
+      "display": "Abbruch der Rezeptanfrage für eine anwendungsfertige Zytostatikazubereitung"
     },
     {
       "code": "eRezept_ParenteraleZubereitung;Rezeptbestaetigung",
-      "display": "Bestätigung und Übermittlung eines ausgestellten Rezeptes für eine parenterale Zubereitung"
+      "display": "Bestätigung und Übermittlung eines ausgestellten Rezeptes für eine anwendungsfertige Zytostatikazubereitung"
     },
     {
       "code": "eEB;Anfrage",
@@ -56,10 +60,6 @@
     {
       "code": "eEB;Fehler",
       "display": "Fehlermeldung bzgl. der Ermittlung der Daten des Versicherten"
-    },
-    {
-      "code": "atf;Selbsttest",
-      "display": "Dieses Anwendungskennzeichen dient ausschließlich der Einrichtung des Kontos innerhalb eines PVS und des Testes, ob Nachrichten versendet und empfangen werden können. Dieses Anwendungskennzeichen wird im PVS bei der normalen Abholung von Nachrichten ignoriert."
     }
   ],
   "experimental": false,
