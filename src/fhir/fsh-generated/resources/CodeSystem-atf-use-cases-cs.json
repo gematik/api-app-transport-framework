@@ -10,7 +10,7 @@
   "url": "https://gematik.de/fhir/atf/CodeSystem/atf-use-cases-cs",
   "concept": [
     {
-      "code": "atf_eRezept_AnwendungsfertigeZytostatikaZubereitungen",
+      "code": "atf_eRezept_ParenteraleZubereitung",
       "display": "Rezeptanforderung an einen Arzt ein E-Rezept für eine anwendungsfertige Zytostatikazubereitung auszustellen"
     },
     {
