@@ -26,10 +26,6 @@
       "display": "Anfrage zur Erfüllung eines Rezeptes und Abgabe des Medikaments"
     },
     {
-      "code": "eRezept_Rezeptanforderung;Abgabeanfrage_Storno",
-      "display": "Abbruch der Abgabeanfrage"
-    },
-    {
       "code": "eRezept_Rezeptanforderung;Abgabebestaetigung",
       "display": "Bestätigung der Erfüllung und Abgabe eines Medikamentes"
     },
@@ -65,5 +61,5 @@
   "experimental": false,
   "publisher": "gematik GmbH",
   "caseSensitive": true,
-  "count": 13
+  "count": 12
 }
