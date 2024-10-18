@@ -5,7 +5,7 @@
   "version": "1.0",
   "name": "BundleAppTransportFramework",
   "title": "MessageBundle für den Nachrichtentransport",
-  "status": "active",
+  "status": "draft",
   "experimental": false,
   "publisher": "gematik GmbH",
   "description": "Bundle zum Zusammenfasssen der FHIR-Instanzen, welche in innerhalb dieses UseCases zusammengefasst werden sollen.",

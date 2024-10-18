@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "status": "active",
+  "status": "draft",
   "name": "OperationIdentifierVS",
   "id": "operation-identifier-vs",
   "title": "Verarbeitungsidentifier (VS)",
