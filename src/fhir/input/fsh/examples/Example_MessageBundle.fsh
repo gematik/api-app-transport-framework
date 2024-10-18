@@ -31,13 +31,13 @@ Description: "Example MessageHeader for Empfangsbestätigung"
   * value = "support@topdoc-systems.de"
 
 Instance: ExampleTelematikIdIdentifierPharmacy
-InstanceOf: $telematik-id
+InstanceOf: IdentifierTelematikId
 Usage: #inline
 Title: "Example Identifier with TelematikID for pharmacy"
 * value = "3-test-telematik-id"
 
 Instance: ExampleTelematikIdIdentifierPractitioner
-InstanceOf: $telematik-id
+InstanceOf: IdentifierTelematikId
 Usage: #inline
 Title: "Example Identifier with TelematikID for practitioner"
 * value = "1-test-telematik-id"
