@@ -25,7 +25,7 @@
             "key": "resolve-references-in-bundle",
             "severity": "error",
             "human": "Alle Referenzen innerhalb eines Bundles müssen aufgelöst werden können",
-            "expression": "Bundle.entry.resource.descendants().reference.where($this.startsWith('#').not()).all((%resource.entry.fullUrl.join('|') + '|').contains($this + '|'))",
+            "expression": "Bundle.entry.resource.children().reference.where($this.startsWith('#').not()).all((%resource.entry.fullUrl.join('|') + '|').contains($this + '|'))",
             "source": "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework"
           }
         ]
