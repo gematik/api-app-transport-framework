@@ -28,6 +28,5 @@ Description: "Bundle zum Zusammenfasssen der FHIR-Instanzen, welche in innerhalb
 // Invariante zum Auflösen der Referenzen
 Invariant: resolve-references-in-bundle
 Description: "Alle Referenzen innerhalb eines Bundles müssen aufgelöst werden können"
-//TODO: this needs to be corrected
-Expression: "Bundle.entry.resource.children().reference.where($this.startsWith('#').not()).all((%resource.entry.fullUrl.join('|') + '|').contains($this + '|'))"
+Expression: "Bundle.entry.resource.where(resourceType != 'Bundle').descendants().ofType(Reference).reference.where($this.startsWith('#').not()).all((%resource.entry.fullUrl.join('|') + '|').contains($this + '|'))"
 Severity: #error
