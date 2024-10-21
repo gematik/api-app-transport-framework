@@ -4,7 +4,7 @@ Usage: #example
 Title: "Example Selbsttest"
 Description: "Request sent to a patient to confirm the completion of a self-test"
 * identifier.value = "urn:uuid:86a87254-ce15-11ed-afa1-0242ac120002"
-* timestamp.value = "2023-03-29T13:28:17.239+02:00"
+* timestamp = "2023-03-29T13:28:17+02:00"
 * entry[MessageHeader].fullUrl = "urn:uuid:86a87254-ce15-11ed-afa1-0242ac120003"
 * entry[MessageHeader].resource = ExampleMessageHeaderAppTransportFramework
 * entry[1].fullUrl = "urn:uuid:86a87254-ce15-11ed-afa1-0242ac120004"
