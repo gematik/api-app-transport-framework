@@ -11,3 +11,4 @@ Die erste Ziffer X bezeichnet ein Major-Release und regelt die Gültigkeit von R
 | 12.03.2024 | 1.1.0 | Änderung des MessageHeaders zur Angabe von KIM-Adresse und TelematikID in `MessageHeader.source` und `MessageHeader.destination` |
 | 18.03.2024 | 1.2.0 | Öffnen der Angaben zu `MessageHeader.destination.receiver`. Damit muss sich der Sender maximal ausweisen und minimal eine Angabe zum Empfänger machen |
 | 19.03.2024 | 1.3.0 | Hinzufügen von KIM und TIM-Address Identifiern |
+| 29.11.2025 | 1.3.0 | Verbesserung der Readme und Beschreibung der schrittweise Einführung des ATF |
