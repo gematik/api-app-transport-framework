@@ -8,7 +8,7 @@ topic: Einfuehrung
 
 FHIR etabliert sich zunehmend als Standard für den Austausch medizinischer Informationen im deutschen Gesundheitswesen. Parallel dazu bietet [KIM](https://www.gematik.de/anwendungen/kim) (Kommunikation im Gesundheitswesen) bereits ein sicheres Kommunikationsprotokoll für den medizinischen Datenaustausch.
 
-Mit dieser Spezifikation wird der strukturierte Datenaustausch auf Basis von FHIR weiterentwickelt und ermöglicht die flexible Nutzung über verschiedene Austauschplattformen und -protokolle wie KIM und TIM. Ziel ist es, eine einheitliche, interoperable Lösung für den sicheren, effizienten Datenaustausch zu schaffen.
+Mit dieser Spezifikation wird der strukturierte Datenaustausch auf Basis von FHIR weiterentwickelt und ermöglicht die flexible Nutzung über verschiedene Austauschplattformen und dezentrale Protokolle wie KIM und TIM. Ziel ist es, eine einheitliche, interoperable Lösung für den sicheren, effizienten Datenaustausch zu schaffen.
 
 ## Wie funktioniert das ATF?
 
@@ -18,11 +18,13 @@ Im FHIR Bundle befindet sich ein **MessageHeader**, der wichtige Informationen w
 
 ### Empfangsbestätigung
 
-Nach dem Senden der Nachricht erhält der Absender eine automatisierte **Empfangsbestätigung** vom Empfänger. Der Anhang der Antwort umfasst ein weiteres FHIR Bundle mit einem MessageHeader, der neben den üblichen Absender- und Empfängerinformationen auch die ID der ursprünglichen Nachricht enthält, die bestätigt wird.
+Hinweis: Das verpflichtende Senden einer Empfangsbestätigung ist erst mit ATF in Stufe 2 festgelegt.
+
+Nach dem Senden der Nachricht erhält der Absender (wenn vom empfangenen System implementiert) eine automatisierte **Empfangsbestätigung** vom Empfänger. Der Anhang der Antwort umfasst ein weiteres FHIR Bundle mit einem MessageHeader, der neben den üblichen Absender- und Empfängerinformationen auch die ID der ursprünglichen Nachricht enthält, die bestätigt wird.
 
 Zusätzlich enthält die Antwort das Ergebnis der Nachrichtenauswertung. Dies gibt an, ob die Nachricht erfolgreich verarbeitet wurde oder ob ein Fehler aufgetreten ist. Bei einem Fehler wird eine detaillierte Fehlermeldung zurückgesendet, damit das Problem identifiziert und behoben werden kann.
 
-{{render:guides/ig-atf/images/ATF-Message-Flow.png}}
+{{render:src/fhir/guides/ig-atf/images/ATF-Message-Flow.png}}
 
 Durch diesen standardisierten Prozess wird sichergestellt, dass der Nachrichtenaustausch strukturiert und nachvollziehbar erfolgt. Der Sender hat stets die Sicherheit, dass die Nachricht angekommen und korrekt verarbeitet wurde, was die Effizienz und Zuverlässigkeit der Kommunikation im Gesundheitswesen deutlich verbessert.
 
@@ -70,7 +72,7 @@ Die erste Stufe des App-Transport-Frameworks (ATF) etabliert wichtige Grundlagen
 - **Sicherheit und Effizienz**: Die Einführung einer automatisierten **Empfangsbestätigung** gewährleistet, dass jede Nachricht korrekt empfangen und verarbeitet wurde. Der Absender erhält Rückmeldung über das Ergebnis der Verarbeitung, was die Effizienz des Kommunikationsprozesses verbessert und Fehler schnell identifiziert.
 
 
-Als nächster Schritt wird das App-Transport-Framework um **Capability-Nachrichten** erweitert. Diese Nachrichten ermöglichen eine **machine-to-machine-Aushandlung** zwischen Sender und Empfänger, um zu verhandeln, welche Use Cases sie unterstützen und wie die Kommunikation ablaufen soll. Diese Erweiterung wird jedoch nur spezifiziert, wenn aus der Industrie oder von Anwendern eine klare Notwendigkeit dafür signalisiert wird. Das Framework bleibt somit anpassungsfähig und wird entsprechend den Anforderungen der Praxis erweitert.
+- **Capability-Nachrichten**: Diese Nachrichten ermöglichen eine **machine-to-machine-Aushandlung** zwischen Sender und Empfänger, um zu verhandeln, welche Use Cases sie unterstützen und wie die Kommunikation ablaufen soll. Diese Erweiterung wird jedoch nur spezifiziert, wenn aus der Industrie oder von Anwendern eine klare Notwendigkeit dafür signalisiert wird. Das Framework bleibt somit anpassungsfähig und wird entsprechend den Anforderungen der Praxis erweitert.
 
 ## Implementierung des Proof of Concept
 
