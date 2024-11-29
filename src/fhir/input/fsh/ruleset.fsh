@@ -1,6 +1,6 @@
 // General rule for to handle versions for all structure definitions
 RuleSet: Versioning
-* ^status = #active
+* ^status = #draft
 * ^experimental = false
 * ^publisher = "gematik GmbH"
 * ^version = "1.0"

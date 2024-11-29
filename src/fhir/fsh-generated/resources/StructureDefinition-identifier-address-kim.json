@@ -5,7 +5,7 @@
   "version": "1.0",
   "name": "IdentifierAddressKIM",
   "title": "KIM-Adresse Identifier",
-  "status": "active",
+  "status": "draft",
   "experimental": false,
   "publisher": "gematik GmbH",
   "description": "Identifier zur Angabe der KIM-Adresse",

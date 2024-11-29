@@ -11,6 +11,7 @@
     "system": "urn:ietf:rfc:3986",
     "value": "urn:uuid:86a87254-ce15-11ed-afa1-0242ac120002"
   },
+  "timestamp": "2023-03-29T13:28:17+02:00",
   "entry": [
     {
       "fullUrl": "urn:uuid:86a87254-ce15-11ed-afa1-0242ac120003",
@@ -76,8 +77,5 @@
         ]
       }
     }
-  ],
-  "_timestamp": {
-    "value": "2023-03-29T13:28:17.239+02:00"
-  }
+  ]
 }

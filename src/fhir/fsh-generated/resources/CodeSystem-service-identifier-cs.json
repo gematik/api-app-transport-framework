@@ -1,6 +1,6 @@
 {
   "resourceType": "CodeSystem",
-  "status": "active",
+  "status": "draft",
   "content": "complete",
   "name": "ServiceIdentifierCS",
   "id": "service-identifier-cs",
@@ -10,56 +10,78 @@
   "url": "https://gematik.de/fhir/atf/CodeSystem/service-identifier-cs",
   "concept": [
     {
-      "code": "eRezept_Rezeptanforderung;Rezeptanfrage",
-      "display": "Anfrage an einen Arzt ein Rezept auszustellen"
+      "code": "eRezept_Rezeptanforderung",
+      "display": "Codes für den Anwendungsfall Rezeptanforderung an einen Arzt ein E-Rezept auszustellen",
+      "concept": [
+        {
+          "code": "eRezept_Rezeptanforderung;Rezeptanfrage",
+          "display": "Anfrage an einen Arzt ein Rezept auszustellen"
+        },
+        {
+          "code": "eRezept_Rezeptanforderung;Rezeptanfrage_Storno",
+          "display": "Stornierung der Rezeptanfrage"
+        },
+        {
+          "code": "eRezept_Rezeptanforderung;Rezeptanfrage_Ablehnung",
+          "display": "Ablehnung der Rezeptanfrage"
+        },
+        {
+          "code": "eRezept_Rezeptanforderung;Rezeptbestaetigung",
+          "display": "Bestätigung und Übermittlung eines ausgestellten Rezeptes"
+        },
+        {
+          "code": "eRezept_Rezeptanforderung;Abgabeanfrage",
+          "display": "Anfrage zur Erfüllung eines Rezeptes und Abgabe des Medikaments"
+        },
+        {
+          "code": "eRezept_Rezeptanforderung;Abgabebestaetigung",
+          "display": "Bestätigung der Erfüllung und Abgabe eines Medikamentes"
+        },
+        {
+          "code": "eRezept_Rezeptanforderung;NachrichtKopie",
+          "display": "Kopie einer Nachricht innerhalb des Prozesses der Rezeptanforderung"
+        }
+      ]
     },
     {
-      "code": "eRezept_Rezeptanforderung;Rezeptanfrage_Storno",
-      "display": "Abbruch der Rezeptanfrage"
+      "code": "eRezept_ParenteraleZubereitung",
+      "display": "Codes für den Anwendungsfall Rezeptanfrage für eine anwendungsfertige Zytostatikazubereitung",
+      "concept": [
+        {
+          "code": "eRezept_ParenteraleZubereitung;Rezeptanfrage",
+          "display": "Rezeptanfrage für eine anwendungsfertige Zytostatikazubereitung"
+        },
+        {
+          "code": "eRezept_ParenteraleZubereitung;Rezeptanfrage_Storno",
+          "display": "Abbruch der Rezeptanfrage für eine anwendungsfertige Zytostatikazubereitung"
+        },
+        {
+          "code": "eRezept_ParenteraleZubereitung;Rezeptbestaetigung",
+          "display": "Bestätigung und Übermittlung eines ausgestellten Rezeptes für eine anwendungsfertige Zytostatikazubereitung"
+        }
+      ]
     },
     {
-      "code": "eRezept_Rezeptanforderung;Rezeptbestaetigung",
-      "display": "Bestätigung und Übermittlung eines ausgestellten Rezeptes"
-    },
-    {
-      "code": "eRezept_Rezeptanforderung;Abgabeanfrage",
-      "display": "Anfrage zur Erfüllung eines Rezeptes und Abgabe des Medikaments"
-    },
-    {
-      "code": "eRezept_Rezeptanforderung;Abgabebestaetigung",
-      "display": "Bestätigung der Erfüllung und Abgabe eines Medikamentes"
-    },
-    {
-      "code": "eRezept_ParenteraleZubereitung;Rezeptanfrage",
-      "display": "Rezeptanfrage für eine parenterale Zubereitung"
-    },
-    {
-      "code": "eRezept_ParenteraleZubereitung;Rezeptanfrage_Storno",
-      "display": "Abbruch der Rezeptanfrage für eine parenterale Zubereitung"
-    },
-    {
-      "code": "eRezept_ParenteraleZubereitung;Rezeptbestaetigung",
-      "display": "Bestätigung und Übermittlung eines ausgestellten Rezeptes für eine parenterale Zubereitung"
-    },
-    {
-      "code": "eEB;Anfrage",
-      "display": "Anfragedaten zum Erhalt von Versichertendaten"
-    },
-    {
-      "code": "eEB;Bescheinigung",
-      "display": "Versichertendaten in verschiedenen Ausprägungen"
-    },
-    {
-      "code": "eEB;Fehler",
-      "display": "Fehlermeldung bzgl. der Ermittlung der Daten des Versicherten"
-    },
-    {
-      "code": "atf;Selbsttest",
-      "display": "Dieses Anwendungskennzeichen dient ausschließlich der Einrichtung des Kontos innerhalb eines PVS und des Testes, ob Nachrichten versendet und empfangen werden können. Dieses Anwendungskennzeichen wird im PVS bei der normalen Abholung von Nachrichten ignoriert."
+      "code": "eEB",
+      "display": "Codes für den Anwendungsfall Elektronische Ersatzbescheinigung",
+      "concept": [
+        {
+          "code": "eEB;Anfrage",
+          "display": "Anfragedaten zum Erhalt von Versichertendaten"
+        },
+        {
+          "code": "eEB;Bescheinigung",
+          "display": "Versichertendaten in verschiedenen Ausprägungen"
+        },
+        {
+          "code": "eEB;Fehler",
+          "display": "Fehlermeldung bzgl. der Ermittlung der Daten des Versicherten"
+        }
+      ]
     }
   ],
   "experimental": false,
   "publisher": "gematik GmbH",
   "caseSensitive": true,
-  "count": 12
+  "count": 16
 }
