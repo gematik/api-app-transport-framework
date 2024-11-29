@@ -6,13 +6,6 @@ topic: Nachrichtenaustausch
 
 Diese Seite beschreibt das grobe Konzept für den Nachrichtenaustausch.
 
-## Sicherstellung der Verarbeitbarkeit
-
-Je nach gewähltem Transportmedium kann zunächst überprüft werden, ob das empfangene System den Anwendungsfall unterstützt. Für KIM wäre das bspw. die Überprüfung des Verzeichnisdienstes (VZD), ob der [AppTag](https://simplifier.net/app-transport-framework/app-tags-cs) von der empfangenen Adresse unterstützt wird. Weitere Informationen zu KIM finden sich im [Fachportal](https://fachportal.gematik.de/anwendungen/kommunikation-im-medizinwesen)
-Beispielnachrichten für KIM befinden sich unter {{pagelink:Home/KimMessages}}.
-
-Nach der Prüfung kann die Nachricht dann zusammengestellt werden.
-
 ## Komposition der Nachricht
 
 Das MessageBundle dient als Container, der alle für den Anwendungsfall relevanten Ressourcen enthält. Ein Constraint fordert hierbei, dass alle im Bundle angegebenen Ressourcen und Referenzen auflösbar sein müssen. D.h. es dürfen keine Referenzen angegeben werden, deren Zielressource sich nicht im Bundle befindet.
@@ -35,7 +28,7 @@ Das fertiggestellte Bundle kann nun mit einem Übertragungsmedium der Wahl über
 
 ## Empfangsbestätigung
 
-Wenn Nachrichten mit dem ATF ausgetauscht werden, muss dem sendenden System rückgemeldet werden, ob der empfangene Auftrag technisch verarbeitet werden konnte. Hierzu wurde ein {{pagelink:Home/Datenobjekte/OperationOutcome}} modelliert, um entsprechende Auskunft darüber zu geben.
+Wenn Nachrichten mit dem ATF ausgetauscht werden, muss (ab ATF Stufe 2) dem sendenden System rückgemeldet werden, ob der empfangene Auftrag technisch verarbeitet werden konnte. Hierzu wurde ein {{pagelink:Home/Datenobjekte/OperationOutcome}} modelliert, um entsprechende Auskunft darüber zu geben.
 
 ### Struktur der Empfangsbestätigung
 
@@ -45,7 +38,7 @@ MessageHeader.eventCode ist hierbei "atf;Empfangsbestaetigung". Der OperationOut
 
 ### Senden der Empfangsbestätigung
 
-Nachdem eine Nachricht im System angekommen ist SOLL das System mit einer Bestätigung antworten. Diese Bestätigung enthält die Information, ob die übermittelten FHIR-Ressourcen interpretiert werden konnten und eine weiterverarbeitung im empfangenden System möglich ist.
+Nachdem eine Nachricht im System angekommen ist SOLL das System (ab ATF Stufe 2) mit einer Bestätigung antworten. Diese Bestätigung enthält die Information, ob die übermittelten FHIR-Ressourcen interpretiert werden konnten und eine weiterverarbeitung im empfangenden System möglich ist.
 Das bedeutet, dass das empfangende System bei Eingang einer Nachricht die Ressourcen validieren und feststellen soll, ob alle Inhalte für die Weiterverarbeitung vorhanden sind.
 
 Unter .issue können dem sendenden System als Antwort mehrere Einträge übermittelt werden. Enthalten alle Einträge nur issues mit OperationOutcome.issue.severity = "warning" oder "information" ist davon auszugehen, dass die Nachricht wie gewünscht verarbeitet werden kann. Das sendende System geht dann davon aus, dass die Nachricht verstanden wurde und die Übertragung erfolgreich war.
