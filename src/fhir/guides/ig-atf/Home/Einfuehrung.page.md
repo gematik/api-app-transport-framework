@@ -12,15 +12,17 @@ Mit dieser Spezifikation wird der strukturierte Datenaustausch auf Basis von FHI
 
 ## Wie funktioniert das ATF?
 
-Das App-Transport-Framework (ATF) ermöglicht eine strukturierte Kommunikation zwischen einem Sender und einem Empfänger, basierend auf standardisierten FHIR-Ressourcen. Die gesendete Nachricht enthält einen Betreff, der den Nachrichtentyp im jeweiligen Anwendungsfall festlegt, und einen Nachrichtentext, der bei Bedarf über XSLT generiert werden kann. Ein FHIR Bundle wird als Anhang hinzugefügt, das die eigentlichen Daten der Nachricht enthält.
+Das App-Transport-Framework (ATF) ermöglicht eine strukturierte Kommunikation zwischen einem Sender und einem Empfänger. Die Nachricht enthält einen Betreff, der den Nachrichtentyp im jeweiligen Anwendungsfall definiert, sowie einen optionalen Nachrichtentext. Die FHIR-Ressourcen, die die eigentlichen Daten der Nachricht enthalten, werden als Anhang in Form eines FHIR-Bundles transportiert. Es besteht die Möglichkeit, den Nachrichtentext mithilfe von Transformationsmethoden wie XSLT zu erstellen, sofern dies von den Spezifikateuren eines Anwendungsfalls vorgesehen ist.
 
-Im FHIR Bundle befindet sich ein **MessageHeader**, der wichtige Informationen wie die Absenderadresse, das sendende System und den Code des Anwendungsfalls enthält. Dieser Code gibt an, um welche Art von Nachricht es sich handelt (z.B. Rezeptanforderung oder Befund). Die konkrete medizinische Information, die übertragen wird, ist in den **FHIR-Ressourcen des Anwendungsfalls** enthalten. Sollte eine maschinelle Verarbeitung nicht möglich sein, kann optional ein menschenlesbares PDF erstellt werden, das aus den FHIR-Ressourcen mithilfe eines XSLT-Stylesheets generiert wird.
+Im FHIR Bundle befindet sich ein **MessageHeader**, der wichtige Informationen wie die Absenderadresse, das sendende System und den Code des Anwendungsfalls enthält. Dieser Code gibt an, um welche Art von Nachricht es sich handelt (z.B. Rezeptanforderung oder Befund). Die konkrete medizinische Information, die übertragen wird, ist in den **FHIR-Ressourcen des Anwendungsfalls** enthalten. 
+
+### Empfangsbestätigung
 
 Nach dem Senden der Nachricht erhält der Absender eine automatisierte **Empfangsbestätigung** vom Empfänger. Der Anhang der Antwort umfasst ein weiteres FHIR Bundle mit einem MessageHeader, der neben den üblichen Absender- und Empfängerinformationen auch die ID der ursprünglichen Nachricht enthält, die bestätigt wird.
 
 Zusätzlich enthält die Antwort das Ergebnis der Nachrichtenauswertung. Dies gibt an, ob die Nachricht erfolgreich verarbeitet wurde oder ob ein Fehler aufgetreten ist. Bei einem Fehler wird eine detaillierte Fehlermeldung zurückgesendet, damit das Problem identifiziert und behoben werden kann.
 
-![ATF Message Flow](src/fhir/guides/ig-atf/images/ATF-Message-Flow.png)
+{{render:guides/ig-atf/images/ATF-Message-Flow.png}}
 
 Durch diesen standardisierten Prozess wird sichergestellt, dass der Nachrichtenaustausch strukturiert und nachvollziehbar erfolgt. Der Sender hat stets die Sicherheit, dass die Nachricht angekommen und korrekt verarbeitet wurde, was die Effizienz und Zuverlässigkeit der Kommunikation im Gesundheitswesen deutlich verbessert.
 
@@ -59,13 +61,14 @@ Die erste Stufe des App-Transport-Frameworks (ATF) etabliert wichtige Grundlagen
 
 - **Nachvollziehbarkeit und Verantwortlichkeit**: Durch die **eindeutige Benennung des Absenders und des implementierenden Systems** wird die Transparenz im Nachrichtenaustausch erhöht. Dies schafft eine klare Identifikation aller Teilnehmer und fördert die Sicherheit sowie die Verantwortlichkeit im Kommunikationsprozess.
 
-- **Sicherheit und Effizienz**: Die Einführung einer automatisierten **Empfangsbestätigung** gewährleistet, dass jede Nachricht korrekt empfangen und verarbeitet wurde. Der Absender erhält Rückmeldung über das Ergebnis der Verarbeitung, was die Effizienz des Kommunikationsprozesses verbessert und Fehler schnell identifiziert.
-
 - **Fehlertoleranz**: Durch das **Fallback-Szenario mit XSLT-Stylesheets** können Nachrichten bei Bedarf als menschenlesbare PDF-Dokumente übermittelt werden, falls technische Probleme die maschinelle Verarbeitung verhindern. Dies erhöht die Ausfallsicherheit und stellt sicher, dass der Inhalt der Nachricht dennoch zugänglich bleibt.
 
 **Zusammenfassung**: Stufe 1 legt die Grundlage für eine strukturierte, transparente und fehlertolerante Kommunikation im medizinischen Umfeld. Standardisierte Use Cases, klare Benennung der Systeme, automatisierte Empfangsbestätigungen und Fallback-Mechanismen verbessern die Sicherheit und Effizienz des Nachrichtenaustauschs erheblich.
 
-### Outlook: Automatisierter Use Case-Abgleich
+### Preview Stufe 2: Automatisierter Use Case-Abgleich
+
+- **Sicherheit und Effizienz**: Die Einführung einer automatisierten **Empfangsbestätigung** gewährleistet, dass jede Nachricht korrekt empfangen und verarbeitet wurde. Der Absender erhält Rückmeldung über das Ergebnis der Verarbeitung, was die Effizienz des Kommunikationsprozesses verbessert und Fehler schnell identifiziert.
+
 
 Als nächster Schritt wird das App-Transport-Framework um **Capability-Nachrichten** erweitert. Diese Nachrichten ermöglichen eine **machine-to-machine-Aushandlung** zwischen Sender und Empfänger, um zu verhandeln, welche Use Cases sie unterstützen und wie die Kommunikation ablaufen soll. Diese Erweiterung wird jedoch nur spezifiziert, wenn aus der Industrie oder von Anwendern eine klare Notwendigkeit dafür signalisiert wird. Das Framework bleibt somit anpassungsfähig und wird entsprechend den Anforderungen der Praxis erweitert.
 
