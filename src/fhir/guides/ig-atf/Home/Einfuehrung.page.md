@@ -8,7 +8,7 @@ topic: Einfuehrung
 
 FHIR etabliert sich zunehmend als Standard für den Austausch medizinischer Informationen im deutschen Gesundheitswesen. Parallel dazu bietet [KIM](https://www.gematik.de/anwendungen/kim) (Kommunikation im Gesundheitswesen) bereits ein sicheres Kommunikationsprotokoll für den medizinischen Datenaustausch.
 
-Mit dieser Spezifikation wird der strukturierte Datenaustausch auf Basis von FHIR weiterentwickelt und ermöglicht die flexible Nutzung über verschiedene Austauschplattformen und dezentrale -protokolle wie KIM und TIM. Ziel ist es, eine einheitliche, interoperable Lösung für den sicheren, effizienten Datenaustausch zu schaffen.
+Mit dieser Spezifikation wird der strukturierte Datenaustausch auf Basis von FHIR weiterentwickelt und ermöglicht die flexible Nutzung über verschiedene Austauschplattformen und dezentrale Protokolle wie KIM und TIM. Ziel ist es, eine einheitliche, interoperable Lösung für den sicheren, effizienten Datenaustausch zu schaffen.
 
 ## Wie funktioniert das ATF?
 
