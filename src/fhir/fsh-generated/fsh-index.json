@@ -37,7 +37,7 @@
     "fshType": "CodeSystem",
     "fshFile": "codesystems/ServiceIdentifierCS.fsh",
     "startLine": 1,
-    "endLine": 26
+    "endLine": 18
   },
   {
     "outputFile": "MessageHeader-ExampleMessageHeaderAppTransportFramework.json",
