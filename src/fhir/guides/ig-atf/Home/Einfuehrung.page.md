@@ -1,41 +1,79 @@
 ---
-topic: Einfuehung
+topic: Einfuehrung
 ---
 
 # {{page-title}}
 
 ## Motivation und Hintergrund
 
-Im deutschen Gesundheitswesen etabliert sich FHIR als Standard für den Austausch medizinischer Informationen. Zusätzlich existiert bereits mit [KIM](https://www.gematik.de/anwendungen/kim) (Kommunikation im Gesundheitswesen) ein Kommunikationsprotokoll, um den sicheren Austausch von medizinischen Informationen zu gewährleisten.
+FHIR etabliert sich zunehmend als Standard für den Austausch medizinischer Informationen im deutschen Gesundheitswesen. Parallel dazu bietet [KIM](https://www.gematik.de/anwendungen/kim) (Kommunikation im Gesundheitswesen) bereits ein sicheres Kommunikationsprotokoll für den medizinischen Datenaustausch.
 
-Diese Spezifikation soll den Austausch von strukturierten Daten basierend auf FHIR für diverse Austauschplattformen und -protokolle ermöglichen.
+Mit dieser Spezifikation wird der strukturierte Datenaustausch auf Basis von FHIR weiterentwickelt und ermöglicht die flexible Nutzung über verschiedene Austauschplattformen und -protokolle wie KIM und TIM. Ziel ist es, eine einheitliche, interoperable Lösung für den sicheren, effizienten Datenaustausch zu schaffen.
 
-## Konzept
+## Wie funktioniert das ATF?
 
-Diese Spezifikation basiert auf dem "Messaging"-Konzept von FHIR. Dafür gibt es die Profile `BundleAppTransportFramework` (MessageBundle) und `MessageHeaderAppTransportFramework` (MessageBundle).
+Das App-Transport-Framework (ATF) ermöglicht eine strukturierte Kommunikation zwischen einem Sender und einem Empfänger. Die Nachricht enthält einen Betreff, der den Nachrichtentyp im jeweiligen Anwendungsfall definiert, sowie einen optionalen Nachrichtentext. Die FHIR-Ressourcen, die die eigentlichen Daten der Nachricht enthalten, werden als Anhang in Form eines FHIR-Bundles transportiert. Es besteht die Möglichkeit, den Nachrichtentext mithilfe von Transformationsmethoden wie XSLT zu erstellen, sofern dies von den Spezifikateuren eines Anwendungsfalls vorgesehen ist.
 
-Das Bundle stellt hierbei den Container für den Nachrichtenaustausch bereit und referenziert in .entry auf einen MessageHeader. Dieser MessageHeader hält die Informationen von Sender und Empfänger, analog zur Kommunikation via E-Mail, sowie unter .eventCoding einen Code der angibt, zu welchem Anwendungsfall die gesendete Nachricht zuzuordnen ist.
+Im FHIR Bundle befindet sich ein **MessageHeader**, der wichtige Informationen wie die Absenderadresse, das sendende System und den Code des Anwendungsfalls enthält. Dieser Code gibt an, um welche Art von Nachricht es sich handelt (z.B. Rezeptanforderung oder Befund). Die konkrete medizinische Information, die übertragen wird, ist in den **FHIR-Ressourcen des Anwendungsfalls** enthalten. 
 
-Derzeit sind KIM und TIM als Austauschmedien angedacht, was sich in Zukunft noch erweitern lässt.
+### Empfangsbestätigung
 
-Das Feld `.focus` im MessageHeader verweist dann auf eine oder mehrere Ressourcen, die im Fokus des jeweiligen Anwendungsfalls stehen. Dies variiert und wird dann von den Projekten festgelegt, die diese Spezifikation umsetzen.
+Nach dem Senden der Nachricht erhält der Absender eine automatisierte **Empfangsbestätigung** vom Empfänger. Der Anhang der Antwort umfasst ein weiteres FHIR Bundle mit einem MessageHeader, der neben den üblichen Absender- und Empfängerinformationen auch die ID der ursprünglichen Nachricht enthält, die bestätigt wird.
+
+Zusätzlich enthält die Antwort das Ergebnis der Nachrichtenauswertung. Dies gibt an, ob die Nachricht erfolgreich verarbeitet wurde oder ob ein Fehler aufgetreten ist. Bei einem Fehler wird eine detaillierte Fehlermeldung zurückgesendet, damit das Problem identifiziert und behoben werden kann.
+
+{{render:guides/ig-atf/images/ATF-Message-Flow.png}}
+
+Durch diesen standardisierten Prozess wird sichergestellt, dass der Nachrichtenaustausch strukturiert und nachvollziehbar erfolgt. Der Sender hat stets die Sicherheit, dass die Nachricht angekommen und korrekt verarbeitet wurde, was die Effizienz und Zuverlässigkeit der Kommunikation im Gesundheitswesen deutlich verbessert.
+
+## Technisches Konzept
+
+Die Spezifikation basiert auf dem **"Messaging"-Konzept** von FHIR. Dabei kommen die Profile `BundleAppTransportFramework` (MessageBundle) und `MessageHeaderAppTransportFramework` (MessageHeader) zum Einsatz.
+
+- **Bundle**: Dient als Container für den Nachrichtenaustausch und referenziert in `.entry` auf einen **MessageHeader**.
+- **MessageHeader**: Enthält die Informationen zu Sender und Empfänger, vergleichbar mit einer E-Mail. Zudem wird über `.eventCoding` festgelegt, zu welchem Anwendungsfall die Nachricht gehört.
+
+Derzeit sind **KIM** und **TIM** als primäre Austauschmedien vorgesehen, wobei eine Erweiterung auf weitere Protokolle in der Zukunft möglich ist.
+
+Im MessageHeader verweist das Feld `.focus` auf eine oder mehrere Ressourcen, die den jeweiligen Anwendungsfall betreffen. Die genaue Definition variiert je nach Projekt, das diese Spezifikation umsetzt.
 
 ### Verwendung von MessageHeader.eventCode
 
-Historisch ist MessageHeader.eventCode ein wesentlicher Bezeichner, der angibt, wie das empfangene System die Nachricht zu verarbeiten hat. Derzeit entsprechen der .eventCode den KIM-Dienstkennungen, die auch in der Umgebenden KIM-Nachricht mit angegeben werden.
+Der **MessageHeader.eventCode** spielt eine zentrale Rolle bei der Verarbeitung der Nachricht im empfangenden System. Er gibt an, welcher Anwendungsfall behandelt wird und über welchen Übertragungsweg dies erfolgt. Aktuell orientieren sich die eventCodes an den KIM-Dienstkennungen, die ebenfalls in der umgebenden KIM-Nachricht zu finden sind.
 
-Der EventCode drückt aus, welcher Anwendungsfall und welcher Übertragungsweg innerhalb eines Anwendungsfalls behandelt wird.
+Der **eventCode** definiert somit nicht nur den Anwendungsfall, sondern auch den Übertragungsweg innerhalb eines Anwendungsfalls.
 
 ## Einordnung und Abgrenzung
 
-Diese Spezifikation beschreibt den umgebenden Container (MessageBundle) und einen Eintrag in diesem Bundle, der immer vorhanden sein muss. Die Anwendungsfälle, die von diesem Projekt abhängen werden möglicherweise weitere Einschränkungen am Bundle und MessageHeader vornehmen, aber das Kommunikationspattern übernehmen.
+Diese Spezifikation definiert den übergeordneten Container (**MessageBundle**) und einen festen Bestandteil dieses Containers, den **MessageHeader**. Während spezifische Anwendungsfälle zusätzliche Einschränkungen oder Anforderungen an das Bundle und den MessageHeader haben können, bleibt das grundlegende Kommunikationsmuster unverändert.
 
 Jede Nachricht besteht also aus einem Bundle, welches mindestens den MessageHeader und je nach Anwendungsfall weitere Ressourcen enthält.
 
-{{render:src/fhir/guides/ig-atf/images/ATF-Scope.png}}
+## Stufenweise Einführung des App-Transport-Frameworks
+
+Die Implementierung des App-Transport-Frameworks erfolgt schrittweise, um den reibungslosen Übergang und die schrittweise Optimierung der Kommunikation im medizinischen Umfeld zu gewährleisten.
+
+### Stufe 1: Standardisierung und Zuverlässigkeit
+
+Die erste Stufe des App-Transport-Frameworks (ATF) etabliert wichtige Grundlagen für die strukturierte und zuverlässige Kommunikation im medizinischen Bereich. Sie führt folgende wesentliche Verbesserungen ein:
+
+- **Standardisierung und Klarheit**: Die klare **Use-Case-Definition** über das Codesystem des Anwendungsfalls sorgt für eine präzise und einheitliche Struktur beim Austausch von medizinischen Daten. Dies ermöglicht eine nahtlose Interoperabilität zwischen verschiedenen Systemen und Anwendungen, indem jeder Anwendungsfall klar definiert wird.
+
+- **Nachvollziehbarkeit und Verantwortlichkeit**: Durch die **eindeutige Benennung des Absenders und des implementierenden Systems** wird die Transparenz im Nachrichtenaustausch erhöht. Dies schafft eine klare Identifikation aller Teilnehmer und fördert die Sicherheit sowie die Verantwortlichkeit im Kommunikationsprozess.
+
+- **Fehlertoleranz**: Durch das **Fallback-Szenario mit XSLT-Stylesheets** können Nachrichten bei Bedarf als menschenlesbare PDF-Dokumente übermittelt werden, falls technische Probleme die maschinelle Verarbeitung verhindern. Dies erhöht die Ausfallsicherheit und stellt sicher, dass der Inhalt der Nachricht dennoch zugänglich bleibt.
+
+**Zusammenfassung**: Stufe 1 legt die Grundlage für eine strukturierte, transparente und fehlertolerante Kommunikation im medizinischen Umfeld. Standardisierte Use Cases, klare Benennung der Systeme, automatisierte Empfangsbestätigungen und Fallback-Mechanismen verbessern die Sicherheit und Effizienz des Nachrichtenaustauschs erheblich.
+
+### Preview Stufe 2: Automatisierter Use Case-Abgleich
+
+- **Sicherheit und Effizienz**: Die Einführung einer automatisierten **Empfangsbestätigung** gewährleistet, dass jede Nachricht korrekt empfangen und verarbeitet wurde. Der Absender erhält Rückmeldung über das Ergebnis der Verarbeitung, was die Effizienz des Kommunikationsprozesses verbessert und Fehler schnell identifiziert.
+
+
+Als nächster Schritt wird das App-Transport-Framework um **Capability-Nachrichten** erweitert. Diese Nachrichten ermöglichen eine **machine-to-machine-Aushandlung** zwischen Sender und Empfänger, um zu verhandeln, welche Use Cases sie unterstützen und wie die Kommunikation ablaufen soll. Diese Erweiterung wird jedoch nur spezifiziert, wenn aus der Industrie oder von Anwendern eine klare Notwendigkeit dafür signalisiert wird. Das Framework bleibt somit anpassungsfähig und wird entsprechend den Anforderungen der Praxis erweitert.
 
 ## Implementierung des Proof of Concept
 
-Die exemplarische [Implementierung des App-Transport-Frameworks](https://github.com/gematik/api-app-transport-framework/blob/main/src/poc/README.md) und einer [Beispielbibliothek](https://github.com/gematik/api-app-transport-framework/blob/main/src/app_transport_framework_library/README.md) demonstriert die Anwendung in Python.
+Ein [Proof of Concept](https://github.com/gematik/api-app-transport-framework/blob/main/src/poc/README.md) sowie eine [Beispielbibliothek](https://github.com/gematik/api-app-transport-framework/blob/main/src/app_transport_framework_library/README.md) demonstrieren die praktische Anwendung des App-Transport-Frameworks in Python.
 
-Eine exemplarische Verwendung dieser Bibliothek, in der Form der Übermittlung einer Selbsttest-Nachricht, ist in einem [Beispiel](https://github.com/gematik/api-app-transport-framework/blob/main/src/poc/example.py) dargestellt.
+Ein [Beispiel-Szenario](https://github.com/gematik/api-app-transport-framework/blob/main/src/poc/example.py), das die Übermittlung einer Selbsttest-Nachricht zeigt, verdeutlicht die Verwendung der Bibliothek in der Praxis.

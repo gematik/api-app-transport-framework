@@ -1,5 +1,9 @@
 # {{page-title}}
 
-Mit dieser Spezifikation legt die gematik einen Grundstein für den strukturierten Datenaustausch medizinischer Informationen im deutschen Gesundheitswesen. 
+Die gematik legt mit dem **App-Transport-Framework (ATF)** einen wichtigen Grundstein für den strukturierten und standardisierten Datenaustausch medizinischer Informationen im deutschen Gesundheitswesen. 
 
-Die hier vorgestellten Profile sollen als Basis für diverse Anwendungsfälle dienen, in denen medizinische Daten über Nachrichtendienste wie z.B. KIM und TIM ausgetauscht werden. In der {{pagelink:Home/Einfuehrung.page.md}} wird in die Thematik eingeleitet. Das konkrete Konzept für den Nachrichtenaustausch befindet sich unter {{pagelink:Home/UebergreifendeFestlegungen/Handshake.page.md}}.
+Das ATF zielt darauf ab, die Effizienz der Kommunikation zu steigern, indem es klare Standards für den Austausch von Nachrichten über etablierte Dienste wie **KIM** und **TIM** bereitstellt. Die vorgestellten Profile dienen als flexible Grundlage für eine Vielzahl von Anwendungsfällen, in denen medizinische Daten sicher und zuverlässig übermittelt werden.
+
+Für eine Einführung in das Konzept des ATF und den strukturierten Datenaustausch finden Sie weitere Informationen in der {{pagelink:Home/Einfuehrung.page.md}}. Das detaillierte Konzept für den Nachrichtenaustausch, einschließlich des Handshake-Mechanismus, wird unter {{pagelink:Home/UebergreifendeFestlegungen/Handshake.page.md}} erläutert.
+
+Diese Spezifikation unterstützt den Aufbau einer interoperablen und teilautomatisierten Kommunikationsinfrastruktur im Gesundheitswesen und ermöglicht eine effizientere Zusammenarbeit zwischen verschiedenen Akteuren.
