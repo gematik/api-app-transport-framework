@@ -45,7 +45,7 @@ Sobald ein OperationOutcome.issue.sverity = "error" oder "fatal" enthält, ist d
 
 Hier beispielhaft ein Nachrichtenaustausch im Anwendungsfall ["E-Rezept Rezeptanforderung"](https://simplifier.net/erezept-servicerequest)
 
-{{render:src/fhir/guides/ig-atf/images/Nachrichtenaustausch.png}}
+<img src="Nachrichtenaustausch.png" alt="Nachrichtenaustausch" width="600">
 
 ### Fehlerhandling
 

@@ -1,9 +1,9 @@
 Profile: MessageHeaderAppTransportFramework
 Parent: MessageHeader
-Id: message-header-app-transport
+Id: atf-message-header
 Title: "MessageHeader"
 Description: "MessageHeader des MessageBundles"
-* insert Meta(message-header-app-transport)
+* insert Meta(atf-message-header)
 
 * event[x] from ServiceIdentifierVS (required)
 

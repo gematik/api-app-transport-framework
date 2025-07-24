@@ -15,12 +15,17 @@ applyExtensionMetadataToRoot: false
 menu:
   Home: index.html
   Einführung: einfuehrung.html
+  Anwendungsfall ATF:
+    Nachrichtenaustausch: handshake.html
+    Eingangsbestätigung: eingangsbestaetigung.html
+    Verwendung von ServiceIdentifier: serviceidentifier.html
+  Übergreifende Festlegungen:
+    Methodik: methodik.html
+    Versionierung: versionierung.html
   FHIR-Artefakte: artifacts.html
   Anhänge:
-  #   Referenzen: referenced.html
     Downloads: downloads.html
-  #   Release Notes: release-notes.html
-  #   Steckbriefe: spec-sheet.html
+    Release Notes: releasenotes.html
 
 parameters:
   path-pages:

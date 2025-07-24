@@ -1,9 +1,9 @@
 Profile: BundleAppTransportFramework
 Parent: Bundle
-Id: bundle-app-transport-framework
+Id: atf-message-bundle
 Title: "MessageBundle für den Nachrichtentransport"
 Description: "Bundle zum Zusammenfasssen der FHIR-Instanzen, welche in innerhalb dieses UseCases zusammengefasst werden sollen."
-* insert Meta(bundle-app-transport-framework)
+* insert Meta(atf-message-bundle)
 
 * obeys resolve-references-in-bundle
 

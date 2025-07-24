@@ -19,12 +19,7 @@ Extension: ATFMessageIDEX
 Id: atf-message-id-ex
 Title: "ATF Message ID EX"
 Description: "Extension zur Darstellung einer MessageID"
-* ^context[0].type = #element
-* ^context[=].expression = "OperationOutcome"
-* ^context[+].type = #element
-* ^context[=].expression = "MessageHeader"
-* ^context[+].type = #element
-* ^context[=].expression = "Bundle"
+Context: OperationOutcome, MessageHeader, Bundle
 * insert Meta (atf-message-id-ex)
 * value[x] only string
   * ^short = "Angabe der ID der Nachricht, auf die sich dieser OperationOutcome bezieht"
