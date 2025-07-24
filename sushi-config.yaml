@@ -1,0 +1,27 @@
+canonical: https://gematik.de/fhir/atf
+fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
+name: App Transport Framework
+id: de.gematik.atf
+version: 1.4.0-draft
+status: draft # draft | active | retired | unknown
+releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+copyrightYear: 2025
+
+dependencies:
+  de.basisprofil.r4: 1.5.3
+
+applyExtensionMetadataToRoot: false
+
+menu:
+  Home: index.html
+  Einführung: einfuehrung.html
+  FHIR-Artefakte: artifacts.html
+  Anhänge:
+  #   Referenzen: referenced.html
+    Downloads: downloads.html
+  #   Release Notes: release-notes.html
+  #   Steckbriefe: spec-sheet.html
+
+parameters:
+  path-pages:
+    - input/content
