@@ -20,7 +20,8 @@ Nach dem Senden der Nachricht erhält der Absender (wenn vom empfangenen System 
 
 Zusätzlich enthält die Antwort das Ergebnis der Nachrichtenauswertung. Dies gibt an, ob die Nachricht erfolgreich verarbeitet wurde oder ob ein Fehler aufgetreten ist. Bei einem Fehler wird eine detaillierte Fehlermeldung zurückgesendet, damit das Problem identifiziert und behoben werden kann.
 
-<img src="ATF-Message-Flow.png" alt="ATF-Message-Flow" width="1200">
+<img src="ATF-Message-Flow.png" alt="ATF-Message-Flow" width="1000">
+<br clear="all"/>
 
 Durch diesen standardisierten Prozess wird sichergestellt, dass der Nachrichtenaustausch strukturiert und nachvollziehbar erfolgt. Der Sender hat stets die Sicherheit, dass die Nachricht angekommen und korrekt verarbeitet wurde, was die Effizienz und Zuverlässigkeit der Kommunikation im Gesundheitswesen deutlich verbessert.
 
