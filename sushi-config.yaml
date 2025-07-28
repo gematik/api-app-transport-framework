@@ -8,7 +8,7 @@ releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | re
 copyrightYear: 2025
 
 dependencies:
-  de.basisprofil.r4: 1.5.3
+  de.basisprofil.r4: 1.5.2
 
 applyExtensionMetadataToRoot: false
 
