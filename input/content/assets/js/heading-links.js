@@ -2,7 +2,7 @@
 // === AUTO-GENERATED FILE ===
 // Do not edit by hand; edit scripts/generate-heading-links-js.sh and config.sh instead.
 
-const newIssueGithubLink = "https://github.com//issues/new?template=";
+const newIssueGithubLink = "https://github.com/gematik/api-app-transport-framework/issues/new?template=3-BUG-IG-REPORT.yml";
 // TODO: make repo and parameters configurable
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
         event.preventDefault();
         const currentUrl = window.location.href;
         const separator = newIssueGithubLink.includes('?') ? '&' : '?';
-        const extendedUrl = newIssueGithubLink + separator + '=' + encodeURIComponent(currentUrl);
+        const extendedUrl = newIssueGithubLink + separator + 'page-link=' + encodeURIComponent(currentUrl);
         window.open(extendedUrl, '_blank');
       });
 
