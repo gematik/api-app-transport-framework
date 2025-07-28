@@ -24,7 +24,7 @@ Das fertiggestellte Bundle kann nun mit einem Übertragungsmedium der Wahl über
 
 ### Empfangsbestätigung
 
-Wenn Nachrichten mit dem ATF ausgetauscht werden, muss (ab ATF Stufe 2) dem sendenden System rückgemeldet werden, ob der empfangene Auftrag technisch verarbeitet werden konnte. Hierzu wurde ein {{pagelink:Home/Datenobjekte/OperationOutcome}} modelliert, um entsprechende Auskunft darüber zu geben.
+Wenn Nachrichten mit dem ATF ausgetauscht werden, muss (ab ATF Stufe 2) dem sendenden System rückgemeldet werden, ob der empfangene Auftrag technisch verarbeitet werden konnte. Hierzu wurde ein [ATF-OperationOutcome](./StructureDefinition-atf-operation-outcome.html) modelliert, um entsprechende Auskunft darüber zu geben.
 
 #### Struktur der Empfangsbestätigung
 
