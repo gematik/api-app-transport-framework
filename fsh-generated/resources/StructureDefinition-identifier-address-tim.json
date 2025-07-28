@@ -1,0 +1,40 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "identifier-address-tim",
+  "url": "https://gematik.de/fhir/atf/StructureDefinition/identifier-address-tim",
+  "version": "1.0",
+  "name": "IdentifierAddressTIM",
+  "title": "TIM-Adresse Identifier",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "description": "Identifier zur Angabe der TIM-Adresse",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Identifier",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Identifier",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Identifier.system",
+        "path": "Identifier.system",
+        "min": 1,
+        "fixedUri": "http://gematik.de/fhir/sid/TIM-Adresse",
+        "mustSupport": true
+      },
+      {
+        "id": "Identifier.value",
+        "path": "Identifier.value",
+        "min": 1,
+        "example": [
+          {
+            "label": "General",
+            "valueString": "example@super-care.tim.telematik"
+          }
+        ]
+      }
+    ]
+  }
+}

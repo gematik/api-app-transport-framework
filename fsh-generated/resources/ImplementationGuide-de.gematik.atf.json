@@ -1,0 +1,266 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "de.gematik.atf",
+  "url": "https://gematik.de/fhir/atf/ImplementationGuide/de.gematik.atf",
+  "version": "1.4.0-draft",
+  "name": "AppTransportFramework",
+  "status": "draft",
+  "packageId": "de.gematik.atf",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "de.basisprofil.r4",
+      "version": "1.5.2",
+      "uri": "http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4",
+      "id": "de_basisprofil_r4"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "CodeSystem/service-identifier-cs"
+        },
+        "name": "Anwendungskennzeichen (CS)",
+        "description": "CodeSystem zum Anwendungskennzeichen zur Identifkation des UseCases, für welchen die FHIR-Instanzen verwendet werden",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/service-identifier-vs"
+        },
+        "name": "Anwendungskennzeichen (VS)",
+        "description": "ValueSet zum Anwendungskennzeichen zur Identifkation des UseCases, für welchen die FHIR-Instanzen verwendet werden",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/app-tags-cs"
+        },
+        "name": "App Tags (CS)",
+        "description": "CodeSystem für die Nutzung im Attribut PayloadType in FHIR-Endpoint Ressourcen und zur Kennzeichnung von KIM-Adressen im Attribut kimData im LDAP-Directory.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/atf-message-id-ex"
+        },
+        "name": "ATF Message ID EX",
+        "description": "Extension zur Darstellung einer MessageID",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/atf-operation-outcome"
+        },
+        "name": "ATF Operation Outcome",
+        "description": "Antwort auf eine eingegangene ATF Anfrage",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/atf-use-cases-cs"
+        },
+        "name": "ATF UseCases (CS)",
+        "description": "CodeSystem zur Auflistung der Anwendungsfälle, die das ATF unterstützt.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/atf-use-cases-vs"
+        },
+        "name": "ATF UseCases (VS)",
+        "description": "ValueSet zur Auflistung der Anwendungsfälle, die das ATF unterstützt.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "OperationOutcome/ExampleFailedToProcessOperationOutcome"
+        },
+        "name": "Example Failed To Process Operation Outcome",
+        "description": "Anfrage konnte nicht bearbeitet werden",
+        "exampleCanonical": "https://gematik.de/fhir/atf/StructureDefinition/atf-operation-outcome"
+      },
+      {
+        "reference": {
+          "reference": "OperationOutcome/ExampleFailedToValidateOperationOutcome"
+        },
+        "name": "Example Failed To Validate Operation Outcome",
+        "description": "FHIR Datensatz konnte nicht gelesen/ validiert werden",
+        "exampleCanonical": "https://gematik.de/fhir/atf/StructureDefinition/atf-operation-outcome"
+      },
+      {
+        "reference": {
+          "reference": "MessageHeader/ExampleMessageHeaderAppTransportFramework"
+        },
+        "name": "Example MessageHeader",
+        "description": "Example MessageHeader for Empfangsbestätigung",
+        "exampleCanonical": "https://gematik.de/fhir/atf/StructureDefinition/atf-message-header"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/ExampleBundleMessageContainer"
+        },
+        "name": "Example Selbsttest",
+        "description": "Request sent to a patient to confirm the completion of a self-test",
+        "exampleCanonical": "https://gematik.de/fhir/atf/StructureDefinition/atf-message-bundle"
+      },
+      {
+        "reference": {
+          "reference": "OperationOutcome/ExampleSuccessfulOperationOutcome"
+        },
+        "name": "Example Successful Operation Outcome",
+        "description": "Beipsiel einer erfolgreichen Antwort",
+        "exampleCanonical": "https://gematik.de/fhir/atf/StructureDefinition/atf-operation-outcome"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/issue-type-vs"
+        },
+        "name": "Issue Type VS",
+        "description": "Gibt an welche Art der Antwort auf eine Operation gegeben werden kann",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/identifier-address-kim"
+        },
+        "name": "KIM-Adresse Identifier",
+        "description": "Identifier zur Angabe der KIM-Adresse",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "NamingSystem/NamingSystemAddressKIM"
+        },
+        "name": "KIM-Adresse NamingSystem",
+        "description": "NamingSystem für eine KIM-Address",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/atf-message-bundle"
+        },
+        "name": "MessageBundle für den Nachrichtentransport",
+        "description": "Bundle zum Zusammenfasssen der FHIR-Instanzen, welche in innerhalb dieses UseCases zusammengefasst werden sollen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/atf-message-header"
+        },
+        "name": "MessageHeader",
+        "description": "MessageHeader des MessageBundles",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "OperationOutcome/SuccessOperationOutcome"
+        },
+        "name": "Success Operation Outcome",
+        "description": "Example for success operation outcome",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/identifier-address-tim"
+        },
+        "name": "TIM-Adresse Identifier",
+        "description": "Identifier zur Angabe der TIM-Adresse",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "NamingSystem/NamingSystemAddressTIM"
+        },
+        "name": "TIM-Adresse NamingSystem",
+        "description": "NamingSystem für eine TIM-Adresse",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/operation-identifier-cs"
+        },
+        "name": "Verarbeitungsidentifier (CS)",
+        "description": "CodeSystem zur Angabe der FHIR-Interpretierbarkeit unter Nutzung des App Transport Frameworks",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/operation-identifier-vs"
+        },
+        "name": "Verarbeitungsidentifier (VS)",
+        "description": "ValueSet zur Angabe der FHIR-Interpretierbarkeit unter Nutzung des App Transport Frameworks",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "downloads.html",
+          "title": "Downloads",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "einfuehrung.html",
+          "title": "Einfuehrung",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "eingangsbestaetigung.html",
+          "title": "Eingangsbestaetigung",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "handshake.html",
+          "title": "Handshake",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "methodik.html",
+          "title": "Methodik",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "releasenotes.html",
+          "title": "Releasenotes",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "serviceidentifier.html",
+          "title": "Serviceidentifier",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "versionierung.html",
+          "title": "Versionierung",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2025"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      },
+      {
+        "code": "path-pages",
+        "value": "input/content"
+      }
+    ]
+  }
+}

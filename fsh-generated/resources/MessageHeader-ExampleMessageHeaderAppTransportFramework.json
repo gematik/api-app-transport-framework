@@ -1,0 +1,47 @@
+{
+  "resourceType": "MessageHeader",
+  "id": "ExampleMessageHeaderAppTransportFramework",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/atf/StructureDefinition/atf-message-header"
+    ]
+  },
+  "source": {
+    "contact": {
+      "system": "email",
+      "value": "support@topdoc-systems.de"
+    },
+    "name": "TopDoc Systems",
+    "software": "TopDoc TI",
+    "version": "2.4.5",
+    "endpoint": "mailto:sender@example.peter.kim.telematik"
+  },
+  "eventCoding": {
+    "code": "atf;Empfangsbestaetigung",
+    "system": "https://gematik.de/fhir/atf/CodeSystem/operation-identifier-cs"
+  },
+  "sender": {
+    "identifier": {
+      "system": "https://gematik.de/fhir/sid/telematik-id",
+      "value": "1-test-telematik-id"
+    },
+    "display": "Sender Example"
+  },
+  "destination": [
+    {
+      "endpoint": "mailto:receiver@example.klaus.kim.telematik",
+      "receiver": {
+        "identifier": {
+          "system": "https://gematik.de/fhir/sid/telematik-id",
+          "value": "3-test-telematik-id"
+        },
+        "display": "Receiver Example"
+      }
+    }
+  ],
+  "focus": [
+    {
+      "reference": "urn:uuid:86a87254-ce15-11ed-afa1-0242ac120004"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "resourceType": "OperationOutcome",
+  "id": "ExampleSuccessfulOperationOutcome",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/atf/StructureDefinition/atf-operation-outcome"
+    ]
+  },
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/atf/StructureDefinition/atf-message-id-ex",
+      "valueString": "6f1882f6-22ff-4036-8f79-09a6cc14621d"
+    }
+  ],
+  "issue": [
+    {
+      "severity": "information",
+      "code": "informational",
+      "diagnostics": "Anfrage erfolgreich entgegengenommen"
+    },
+    {
+      "severity": "information",
+      "code": "informational",
+      "diagnostics": "Rezeptanfrage wurde angelegt und wartet auf Bestätigung"
+    }
+  ]
+}

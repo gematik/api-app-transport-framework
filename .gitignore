@@ -21,4 +21,6 @@ input-cache/
 template/
 temp/
 output/
-fsh-generated/
+fsh-generated/data/
+fsh-generated/includes
+fsh-generated/fsh-index.txt
