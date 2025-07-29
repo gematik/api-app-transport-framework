@@ -13,10 +13,6 @@ project.yaml
 .simplifier/project.snapshot.json
 Resources/scripts/pdf_files
 
-*.sh
-*.bat
-!_updatePublisher.sh
-!_updatePublisher.bat
 input-cache/
 template/
 temp/
