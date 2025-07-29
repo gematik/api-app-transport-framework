@@ -2,7 +2,7 @@
 
 ### Motivation und Hintergrund
 
-FHIR etabliert sich zunehmend als Standard für den Austausch medizinischer Informationen im deutschen Gesundheitswesen. Parallel dazu bietet [KIM](https://www.gematik.de/anwendungen/kim) (Kommunikation im Gesundheitswesen) bereits ein sicheres Kommunikationsprotokoll für den medizinischen Datenaustausch.
+FHIR ist Standard für den Austausch medizinischer Informationen im deutschen Gesundheitswesen. Parallel dazu bietet [KIM](https://www.gematik.de/anwendungen/kim) (Kommunikation im Gesundheitswesen) bereits ein sicheres Kommunikationsprotokoll für den medizinischen Datenaustausch.
 
 Mit dieser Spezifikation wird der strukturierte Datenaustausch auf Basis von FHIR weiterentwickelt und ermöglicht die flexible Nutzung über verschiedene Austauschplattformen und dezentrale Protokolle wie KIM und TIM. Ziel ist es, eine einheitliche, interoperable Lösung für den sicheren, effizienten Datenaustausch zu schaffen.
 
@@ -41,6 +41,7 @@ Im MessageHeader verweist das Feld `.focus` auf eine oder mehrere Ressourcen, di
 Der **MessageHeader.eventCode** spielt eine zentrale Rolle bei der Verarbeitung der Nachricht im empfangenden System. Er gibt an, welcher Anwendungsfall behandelt wird und über welchen Übertragungsweg dies erfolgt. Aktuell orientieren sich die eventCodes an den KIM-Dienstkennungen, die ebenfalls in der umgebenden KIM-Nachricht zu finden sind.
 
 Der **eventCode** definiert somit nicht nur den Anwendungsfall, sondern auch den Übertragungsweg innerhalb eines Anwendungsfalls.
+Das folgende CodeSystem enthält die derzeit definierten eventCodes: [ServiceIdentifierCS](./CodeSystem-service-identifier-cs.html).
 
 ### Einordnung und Abgrenzung
 
@@ -73,6 +74,6 @@ Die erste Stufe des App-Transport-Frameworks (ATF) etabliert wichtige Grundlagen
 
 ### Implementierung des Proof of Concept
 
-Ein [Proof of Concept](https://github.com/gematik/api-app-transport-framework/blob/main/src/poc/README.md) sowie eine [Beispielbibliothek](https://github.com/gematik/api-app-transport-framework/blob/main/src/app_transport_framework_library/README.md) demonstrieren die praktische Anwendung des App-Transport-Frameworks in Python.
+Ein [Proof of Concept](https://github.com/gematik/api-app-transport-framework/blob/main/resources/poc) sowie eine [Beispielbibliothek](https://github.com/gematik/api-app-transport-framework/blob/main/resources/app_transport_framework_library/README.md) demonstrieren die praktische Anwendung des App-Transport-Frameworks in Python.
 
-Ein [Beispiel-Szenario](https://github.com/gematik/api-app-transport-framework/blob/main/src/poc/example.py), das die Übermittlung einer Selbsttest-Nachricht zeigt, verdeutlicht die Verwendung der Bibliothek in der Praxis.
+Ein [Beispiel-Szenario](https://github.com/gematik/api-app-transport-framework/blob/main/resources/poc/example.py), das die Übermittlung einer Selbsttest-Nachricht zeigt, verdeutlicht die Verwendung der Bibliothek in der Praxis.
