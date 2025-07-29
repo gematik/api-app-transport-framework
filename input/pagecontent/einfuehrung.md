@@ -29,8 +29,13 @@ Durch diesen standardisierten Prozess wird sichergestellt, dass der Nachrichtena
 
 Die Spezifikation basiert auf dem **"Messaging"-Konzept** von FHIR. Dabei kommen die Profile `BundleAppTransportFramework` (MessageBundle) und `MessageHeaderAppTransportFramework` (MessageHeader) zum Einsatz.
 
+<div class="gem-ig-svg-container" style="--box-width: 500px;">
+    {% include atf_scopes.svg %}
+</div>
+
 - **Bundle**: Dient als Container für den Nachrichtenaustausch und referenziert in `.entry` auf einen **MessageHeader**.
 - **MessageHeader**: Enthält die Informationen zu Sender und Empfänger, vergleichbar mit einer E-Mail. Zudem wird über `.eventCoding` festgelegt, zu welchem Anwendungsfall die Nachricht gehört.
+- **FHIR Ressourcen** die fachliche Inhalte zum Anwendungsfall übertragen
 
 Derzeit sind **KIM** und **TIM** als primäre Austauschmedien vorgesehen, wobei eine Erweiterung auf weitere Protokolle in der Zukunft möglich ist.
 

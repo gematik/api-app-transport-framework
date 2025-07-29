@@ -1,0 +1,26 @@
+@startuml
+start
+
+:Validierung XML Schema;
+if (Schema gültig?) then (Ja)
+  :Auswertung eventCode;
+  if (eventCode bekannt?) then (Ja)
+    :Validierung des Datensatzes;
+    if (Datensatz gültig?) then (Ja)
+      :Übergabe an Businesslogik des Systems;
+      stop
+    else (Nein)
+      :Fehler: Datensatz ungültig;
+      :Return: OperationOutcome mit Fehlerbeschreibung;
+      stop
+    endif
+  else (Nein)
+    :Fehler: eventCode unbekannt;
+    stop
+  endif
+else (Nein)
+  :Fehler: Schema ungültig;
+  stop
+endif
+
+@enduml

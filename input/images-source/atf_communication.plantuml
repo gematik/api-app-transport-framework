@@ -1,4 +1,4 @@
-@startuml Nachrichtenaustausch
+@startuml atf_communication
 autonumber "<b>[0]"
 participant Sender as S #LightBlue
 participant Empfänger as E #LightYellow
