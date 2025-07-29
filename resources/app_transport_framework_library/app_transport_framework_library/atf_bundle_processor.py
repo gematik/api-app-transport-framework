@@ -43,8 +43,8 @@ class ATF_BundleProcessor:
         )
 
         self.register_use_case_handler(
-            "https://gematik.de/fhir/atf/CodeSystem/service-identifier-cs",
-            "Selbsttest;Lieferung",
+            "https://gematik.de/fhir/atf/CodeSystem/operation-identifier-cs",
+            "atf;Selbsttest",
             SelbsttestLieferungValidator(self.sender, self.source)
         )
 

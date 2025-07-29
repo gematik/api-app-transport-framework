@@ -60,7 +60,7 @@ class TestMessageCreator:
             source,
             destination,
             code_system="https://gematik.de/fhir/atf/CodeSystem/service-identifier-cs",
-            use_case="Selbsttest;Lieferung",
+            use_case="atf;Selbsttest",
             use_case_display="Diese Dienstkennung dient ausschließlich der Einrichtung des Kontos innerhalb eines PVS und des Testes, ob Nachrichten versendet und empfangen werden können. Diese Dienstkennung wird im PVS bei der normalen Abholung von Nachrichten ignoriert.",
             focus_reference=communication_id)
 

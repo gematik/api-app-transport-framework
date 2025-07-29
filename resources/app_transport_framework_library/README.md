@@ -76,7 +76,7 @@ from fhir.resources.R4B.communication import Communication
 
 def on_focus_Ressource_to_process(bundle_content: BundleFocusContent):
     print(f"Verarbeitung des Bundles mit Fokus auf '{bundle_content.code}'")
-    if bundle_content.code == "Selbsttest;Lieferung":
+    if bundle_content.code == "atf;Selbsttest":
         com_parsed = Communication.parse_raw(bundle_content.bundle_entries[0].json())
         decoded_message = base64.b64decode(com_parsed.payload[0].contentAttachment.data)
 

@@ -77,8 +77,8 @@ def on_receiver_received_Empfangsbestaetigung(empfangsbestaetigung: Empfangsbest
 
 def on_focus_Ressource_to_process(bundle_content: BundleContent):
     print(
-        f"Processing Bundle with focus on '{bundle_content.service_identifier.code}'")
-    if bundle_content.service_identifier.code == "Selbsttest;Lieferung":
+        f"Processing Bundle with focus on '{bundle_content.operation_identifier.code}'")
+    if bundle_content.service_identifier.code == "atf;Selbsttest":
         com_parsed = Communication.parse_raw(
             bundle_content.bundle_entries[0].json())
         decoded_message = base64.b64decode(
@@ -110,7 +110,7 @@ testbundle = TestMessageCreator.create_test_bundle(
 print(f"Sending Test-Message with message_id '{message_id}'")
 # Testnachricht "senden"
 communicator.send(receiver_address,
-                  f"Selbsttest;Lieferung", testbundle.json(indent=4, ensure_ascii=False))
+                  f"atf;Selbsttest", testbundle.json(indent=4, ensure_ascii=False))
 
 print("nachricht versendet")
 # Testnachricht (beim Empfänger) verarbeiten
