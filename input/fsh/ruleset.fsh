@@ -1,9 +1,10 @@
 // General rule for to handle versions for all structure definitions
 RuleSet: Versioning
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * ^publisher = "gematik GmbH"
-* ^version = "1.0"
+* ^version = "1.4"
+* ^date = "2025-07-29"
 
 RuleSet: Meta (profileName)
 * insert Versioning
