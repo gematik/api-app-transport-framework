@@ -50,4 +50,13 @@ Hier beispielhaft ein Nachrichtenaustausch im Anwendungsfall ["E-Rezept Rezeptan
 
 ### Fehlerhandling
 
-Im MessageHeader ist unter .source anzugeben welche Software den Request abgesetzt hat. Falls die ankommenden Daten nicht validiert oder verarbeitet werden können, soll es hier die Möglichkeit geben mindestens eine E-Mail anzugeben. So kann im Fehlerfall möglichst automatisiert ein Fehlerbericht an das sendende System übermittelt werden. Der Nutzer SOLL dann auch benachrichtigt werden, dass es zu einem Fehler kam und der Hersteller entsprechend informiert wurde.
+Im MessageHeader.source ist anzugeben, welche Software den Request initiiert hat. Es SOLL außerdem die Möglichkeit bestehen, eine E-Mail-Adresse anzugeben, über die das sendende System im Fehlerfall automatisiert benachrichtigt werden kann. So kann bei nicht validierbaren oder nicht verarbeitbaren Daten möglichst frühzeitig ein Fehlerbericht generiert und an den Hersteller übermittelt werden. Zusätzlich SOLL der Nutzer darüber informiert werden, dass ein Fehler aufgetreten ist und der Hersteller benachrichtigt wurde.
+
+Dieses Vorgehen unterstützt insbesondere in der Entwicklungs- und Einführungsphase, da der Endnutzer einer bereits ausgelieferten Software in der Regel nicht selbst auf solche Fehler reagieren oder diese beheben kann.
+
+Neben dem direkten Kontakt zwischen den Systemen können fehlerhafte UseCases auch öffentlich diskutiert oder gemeldet werden:
+- **GitHub Discussions:** Für jeden UseCase können gezielt [Discussions im GitHub-Repository](https://github.com/gematik/spec-E-Rezept-ServiceRequest/discussions) eröffnet werden, um offene Fragen oder Fehlverhalten strukturiert zu besprechen.
+- **ERP-Find Tickets:** Alternativ können Tickets im [ERP-Find-System eröffnet werden](https://service.gematik.de/secure/CreateIssue!default.jspa). Diese werden durch die gematik betreut und ggf. intern weitergeleitet oder eskaliert, um betroffene Systeme zu identifizieren und gezielt bei der Fehlerbehebung zu unterstützen.
+
+Ziel ist es, Fehlverhalten frühzeitig zu erkennen, systematisch zu klassifizieren und Herstellern eine präzise Rückmeldung zur Korrektur zu ermöglichen.
+
