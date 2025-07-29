@@ -14,7 +14,7 @@
   ],
   "issue": [
     {
-      "severity": "fatal",
+      "severity": "error",
       "code": "invalid",
       "diagnostics": "Ressourcen konnten nicht validiert werden"
     }

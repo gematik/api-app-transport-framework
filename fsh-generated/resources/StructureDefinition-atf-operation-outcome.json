@@ -58,7 +58,11 @@
         "path": "OperationOutcome.issue.code",
         "short": "Art der Antwort",
         "definition": "Gibt an, ob bei der Bearbeitung der Anfrage Fehler aufgetreten sind, oder die Anfrage erfolgreich bearbeitet wurde.\n    Wenn die Bearbeitung erfolgreich war, wird der code #informational gesetzt und eine entsprechende Beschreibung unter .diagnostics hinzugefügt.",
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/atf/ValueSet/issue-type-vs"
+        }
       },
       {
         "id": "OperationOutcome.issue.diagnostics",

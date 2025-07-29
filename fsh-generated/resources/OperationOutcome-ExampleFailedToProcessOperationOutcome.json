@@ -16,12 +16,12 @@
     {
       "severity": "error",
       "code": "processing",
-      "diagnostics": "MessageHeader verweist auf keine Ressource unter .focus"
+      "diagnostics": "Medikamentenname wurde nicht angegeben."
     },
     {
       "severity": "warning",
       "code": "processing",
-      "diagnostics": "MessageHeader.sender konnte nicht gefunden werden"
+      "diagnostics": "Sender der Nachricht konnte nicht ermittelt werden."
     }
   ]
 }

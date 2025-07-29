@@ -50,6 +50,8 @@ Unter .issue können dem sendenden System als Antwort mehrere Einträge übermit
 
 Sobald ein OperationOutcome.issue.sverity = "error" oder "fatal" enthält, ist davon auszugehen, dass der Vorgang abgebrochen wurde und die Anfrage nicht erfolgreich war.
 
+Weitere Informationen können unter [Fehlerbehandlung](./errorhandling.html) eingesehen werden.
+
 ### Darstellung des Nachrichtenaustausches
 
 Hier beispielhaft ein Nachrichtenaustausch im Anwendungsfall ["E-Rezept Rezeptanforderung"](https://simplifier.net/erezept-servicerequest)
@@ -57,16 +59,4 @@ Hier beispielhaft ein Nachrichtenaustausch im Anwendungsfall ["E-Rezept Rezeptan
 <div class="gem-ig-svg-container" style="--box-width: 700px;">
     {% include atf_communication.svg %}
 </div>
-
-### Fehlerhandling
-
-Im MessageHeader.source ist anzugeben, welche Software den Request initiiert hat. Es SOLL außerdem die Möglichkeit bestehen, eine E-Mail-Adresse anzugeben, über die das sendende System im Fehlerfall automatisiert benachrichtigt werden kann. So kann bei nicht validierbaren oder nicht verarbeitbaren Daten möglichst frühzeitig ein Fehlerbericht generiert und an den Hersteller übermittelt werden. Zusätzlich SOLL der Nutzer darüber informiert werden, dass ein Fehler aufgetreten ist und der Hersteller benachrichtigt wurde.
-
-Dieses Vorgehen unterstützt insbesondere in der Entwicklungs- und Einführungsphase, da der Endnutzer einer bereits ausgelieferten Software in der Regel nicht selbst auf solche Fehler reagieren oder diese beheben kann.
-
-Neben dem direkten Kontakt zwischen den Systemen können fehlerhafte UseCases auch öffentlich diskutiert oder gemeldet werden:
-- **GitHub Discussions:** Für jeden UseCase können gezielt [Discussions im GitHub-Repository](https://github.com/gematik/spec-E-Rezept-ServiceRequest/discussions) eröffnet werden, um offene Fragen oder Fehlverhalten strukturiert zu besprechen.
-- **ERP-Find Tickets:** Alternativ können Tickets im [ERP-Find-System eröffnet werden](https://service.gematik.de/secure/CreateIssue!default.jspa). Diese werden durch die gematik betreut und ggf. intern weitergeleitet oder eskaliert, um betroffene Systeme zu identifizieren und gezielt bei der Fehlerbehebung zu unterstützen.
-
-Ziel ist es, Fehlverhalten frühzeitig zu erkennen, systematisch zu klassifizieren und Herstellern eine präzise Rückmeldung zur Korrektur zu ermöglichen.
 
