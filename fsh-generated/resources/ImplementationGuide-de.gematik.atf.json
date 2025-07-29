@@ -207,6 +207,11 @@
           "generation": "markdown"
         },
         {
+          "nameUrl": "atf-kim.html",
+          "title": "Atf Kim",
+          "generation": "markdown"
+        },
+        {
           "nameUrl": "downloads.html",
           "title": "Downloads",
           "generation": "markdown"
@@ -217,8 +222,8 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "eingangsbestaetigung.html",
-          "title": "Eingangsbestaetigung",
+          "nameUrl": "errorhandling.html",
+          "title": "Errorhandling",
           "generation": "markdown"
         },
         {

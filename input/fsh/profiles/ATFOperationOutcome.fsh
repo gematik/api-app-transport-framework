@@ -7,7 +7,7 @@ Description: "Antwort auf eine eingegangene ATF Anfrage"
 * extension contains ATFMessageIDEX named MessageID 1..1 MS
 
 * issue MS
-  * code only IssueTypeVS
+  * code from IssueTypeVS (required)
   * code MS
     * ^short = "Art der Antwort"
     * ^definition = "Gibt an, ob bei der Bearbeitung der Anfrage Fehler aufgetreten sind, oder die Anfrage erfolgreich bearbeitet wurde.
