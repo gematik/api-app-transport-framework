@@ -1,8 +1,10 @@
-## Empfangsbestätigung
+## ATF via KIM versenden
 
-### KIM MDN (Empfangsbestätigung)
+Diese Seite dokumentiert ein Beispiel wie eine ATF Nachricht via KIM versendet wird.
 
-Eingangsbestätigungen sind als Antwort auf jeglichen Nachrichtentyp im Kontext der eRezept-Rezeptanforderung zu versenden.
+### Empfangsbestaetigung
+
+Empfangsbestaetigungen sind als Antwort auf jeglichen Nachrichtentyp im Kontext der eRezept-Rezeptanforderung zu versenden.
 
 |KIM-Header              |Inhalt                                 |verpflichtend|
 |------------------------|---------------------------------------|-------------|
@@ -11,7 +13,7 @@ Eingangsbestätigungen sind als Antwort auf jeglichen Nachrichtentyp im Kontext 
 |X-KIM-Support           |\<Support-Email-Adresse PS-Hersteller>|nein|
 |Subject                 |eNachricht-Eingangsbestaetigung|ja|
 
-Weitere Anforderungen der eNachricht-Eingangsbestätigung sind in der [Spezifikation MDN](https://partnerportal.kv-telematik.de/download/attachments/71095111/%C3%9Cbergreifende_Anforderungen_f%C3%BCr_KIM-Anwendungen_V1.0.1.pdf?version=1&modificationDate=1626757312000&api=v2) beschrieben.
+Weitere Anforderungen der eNachricht-Empfangsbestaetigung sind in der [Spezifikation MDN](https://partnerportal.kv-telematik.de/download/attachments/71095111/%C3%9Cbergreifende_Anforderungen_f%C3%BCr_KIM-Anwendungen_V1.0.1.pdf?version=1&modificationDate=1626757312000&api=v2) beschrieben.
 
 #### KIM MDN (Empfangsbestätigung) Beispielnachricht
 

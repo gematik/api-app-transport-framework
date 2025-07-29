@@ -17,8 +17,9 @@ menu:
   Einführung: einfuehrung.html
   Anwendungsfall ATF:
     Nachrichtenaustausch: handshake.html
-    Eingangsbestätigung: eingangsbestaetigung.html
+    Fehlerbehandlung: errorhandling.html
     Verwendung von ServiceIdentifier: serviceidentifier.html
+    ATF via KIM: atf-kim.html
   Übergreifende Festlegungen:
     Methodik: methodik.html
     Versionierung: versionierung.html
