@@ -1,4 +1,4 @@
-@startuml ATF-Scope
+@startuml atf_scopes
 
 skinparam rectangle {
     roundCorner<<Concept>> 25
