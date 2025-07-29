@@ -14,9 +14,18 @@ MessageHeader.id enthält hierbei eine eindeutige und einzigartige UUID, um eine
 
 MessageHeader.focus verweist auf die Ressource, die für den jeweiligen Anwendungsfall führend ist, bzw. als Trägerressource dient. Näheres dazu wird im ImplementationGuide des jeweiligen Anwendungsfalls beschrieben.
 
+<div class="gem-ig-example" data-title="MessageHeader (XML)">
+    {% fragment MessageHeader/ExampleMessageHeaderAppTransportFramework XML %}
+</div>
+
 #### MessageBundle
 
 Nachdem der MessageHeader erstellt und unter Bundle.entry hinzugefügt wurde können nun auch alle für den jeweiligen Anwendungsfall relevanten Ressourcen dem Bundle hinzugefügt werden.
+
+<div class="gem-ig-example" data-title="Bundle (XML)">
+    {% fragment Bundle/ExampleBundleMessageContainer XML %}
+</div>
+ 
 
 ### Senden der Nachricht
 
