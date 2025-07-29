@@ -1,6 +1,6 @@
 {
   "resourceType": "CodeSystem",
-  "status": "draft",
+  "status": "active",
   "content": "complete",
   "name": "OperationIdentifierCS",
   "id": "operation-identifier-cs",
@@ -19,7 +19,8 @@
   ],
   "experimental": false,
   "publisher": "gematik GmbH",
-  "version": "1.0",
+  "version": "1.4",
+  "date": "2025-07-29",
   "caseSensitive": true,
   "count": 2
 }

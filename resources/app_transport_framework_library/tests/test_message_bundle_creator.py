@@ -15,7 +15,7 @@ class TestAtf(unittest.TestCase):
         sender_display = "Sender Example"
         receiver = "receiver@example.com"
         receiver_display = "Receiver Example"
-        use_case = "Selbsttest;Lieferung"
+        use_case = "atf;Selbsttest"
 
         message_header = MessageHeaderCreator.create_message_header(
             sender, sender_display, receiver, receiver_display, use_case)

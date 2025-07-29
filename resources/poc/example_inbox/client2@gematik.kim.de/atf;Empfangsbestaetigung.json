@@ -2,7 +2,7 @@
     "id": "474bcf66-4b13-43fe-ad0f-28e7c16aae83",
     "meta": {
         "profile": [
-            "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework"
+            "https://gematik.de/fhir/atf/StructureDefinition/atf-message-bundle"
         ]
     },
     "entry": [
@@ -12,7 +12,7 @@
                 "id": "07da5e20-94ab-48be-99fb-936ba768833c",
                 "meta": {
                     "profile": [
-                        "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport"
+                        "https://gematik.de/fhir/atf/StructureDefinition/atf-message-header"
                     ]
                 },
                 "destination": [
@@ -29,7 +29,7 @@
                 ],
                 "eventCoding": {
                     "code": "atf;Empfangsbestaetigung",
-                    "display": "Empfangsbestätigung und Auskunft über FHIR Interpretierbarkeit der Nachricht",
+                    "display": "Empfangsbestï¿½tigung und Auskunft ï¿½ber FHIR Interpretierbarkeit der Nachricht",
                     "system": "https://gematik.de/fhir/atf/CodeSystem/operation-identifier-cs"
                 },
                 "focus": [
@@ -75,7 +75,7 @@
                 "issue": [
                     {
                         "code": "processing",
-                        "diagnostics": "Die empfangene Nachricht mit dem atf;Empfangsbestaetigung kann nicht verarbeitet werden, da der Use-Case nicht unterstützt wird.",
+                        "diagnostics": "Die empfangene Nachricht mit dem atf;Empfangsbestaetigung kann nicht verarbeitet werden, da der Use-Case nicht unterstï¿½tzt wird.",
                         "severity": "error"
                     }
                 ],

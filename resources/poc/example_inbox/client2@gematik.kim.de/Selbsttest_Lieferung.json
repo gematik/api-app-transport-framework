@@ -3,7 +3,7 @@
     "id": "39f8872a-9935-448c-a6bf-adef90e641b8",
     "meta": {
         "profile": [
-            "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework"
+            "https://gematik.de/fhir/atf/StructureDefinition/atf-message-bundle"
         ]
     },
     "identifier": {
@@ -20,13 +20,13 @@
                 "id": "eab45b8e-4365-4699-9b71-57dca6628101",
                 "meta": {
                     "profile": [
-                        "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport"
+                        "https://gematik.de/fhir/atf/StructureDefinition/atf-message-header"
                     ]
                 },
                 "eventCoding": {
-                    "system": "https://gematik.de/fhir/atf/CodeSystem/service-identifier-cs",
-                    "code": "Selbsttest;Lieferung",
-                    "display": "Diese Dienstkennung dient ausschließlich der Einrichtung des Kontos innerhalb eines PVS und des Testes, ob Nachrichten versendet und empfangen werden können. Diese Dienstkennung wird im PVS bei der normalen Abholung von Nachrichten ignoriert."
+                    "system": "https://gematik.de/fhir/atf/CodeSystem/operation-identifier-cs",
+                    "code": "atf;Selbsttest",
+                    "display": "Dieses Anwendungskennzeichen dient ausschließlich der Einrichtung des Kontos innerhalb eines PVS und des Testes, ob Nachrichten versendet und empfangen werden können. Dieses Anwendungskennzeichen wird im PVS bei der normalen Abholung von Nachrichten ignoriert."
                 },
                 "destination": [
                     {
