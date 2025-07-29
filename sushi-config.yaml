@@ -1,7 +1,7 @@
 canonical: https://gematik.de/fhir/atf
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 name: App Transport Framework
-id: de.gematik.atf
+id: de.gematik.fhir.atf
 version: 1.4.0
 status: active # draft | active | retired | unknown
 releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use

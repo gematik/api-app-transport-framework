@@ -1,11 +1,11 @@
 {
   "resourceType": "ImplementationGuide",
-  "id": "de.gematik.atf",
-  "url": "https://gematik.de/fhir/atf/ImplementationGuide/de.gematik.atf",
+  "id": "de.gematik.fhir.atf",
+  "url": "https://gematik.de/fhir/atf/ImplementationGuide/de.gematik.fhir.atf",
   "version": "1.4.0",
   "name": "AppTransportFramework",
   "status": "active",
-  "packageId": "de.gematik.atf",
+  "packageId": "de.gematik.fhir.atf",
   "fhirVersion": [
     "4.0.1"
   ],
