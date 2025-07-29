@@ -98,7 +98,7 @@ class ATF_BundleProcessor:
 
     def is_valid_atf_message(self, parsed_bundle: Bundle):
         bundle_codesystem = parsed_bundle.meta.profile[0]
-        if bundle_codesystem != "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework":
+        if bundle_codesystem != "https://gematik.de/fhir/atf/StructureDefinition/atf-message-bundle":
             logger.error(
                 "Die empfangene Nachricht ist keine gültige ATF-Nachricht.")
             return False

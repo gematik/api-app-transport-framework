@@ -3,7 +3,7 @@
     "id": "39f8872a-9935-448c-a6bf-adef90e641b8",
     "meta": {
         "profile": [
-            "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework"
+            "https://gematik.de/fhir/atf/StructureDefinition/atf-message-bundle"
         ]
     },
     "identifier": {
@@ -20,7 +20,7 @@
                 "id": "eab45b8e-4365-4699-9b71-57dca6628101",
                 "meta": {
                     "profile": [
-                        "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport"
+                        "https://gematik.de/fhir/atf/StructureDefinition/atf-message-header"
                     ]
                 },
                 "eventCoding": {

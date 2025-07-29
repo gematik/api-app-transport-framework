@@ -22,7 +22,7 @@ class MessageBundleCreator:
         message_bundle = Bundle(
             id=bundle_id,
             meta=Meta.construct(profile=[
-                "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework"
+                "https://gematik.de/fhir/atf/StructureDefinition/atf-message-bundle"
             ]),
             type="message",
             identifier=IdentifierType(
