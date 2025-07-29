@@ -70,3 +70,35 @@ Neben dem direkten Kontakt zwischen den Systemen können fehlerhafte UseCases au
 
 Ziel ist es, Fehlverhalten frühzeitig zu erkennen, systematisch zu klassifizieren und Herstellern eine präzise Rückmeldung zur Korrektur zu ermöglichen.
 
+#### Behandlung von Fehlern im OperationOutcome
+
+Für die Rückmeldung von Fehlern im Rahmen des Nachrichtenaustauschs ist das FHIR-Resource-Typ `OperationOutcome` zu verwenden. Dabei gelten folgende Vorgaben für den Umgang mit Fehlern:
+
+- **Severity:** Bei Fehlern MUSS `OperationOutcome.issue.severity = "error"` gesetzt werden.
+- **Code:** Es sind ausschließlich die Codes `"invalid"` oder `"processing"` zu verwenden.
+
+**Bedeutung der Codes:**
+
+- **invalid:**  
+  Dieser Code signalisiert einen technischen Fehler, beispielsweise eine ungültige Struktur oder ein nicht interpretierbares Format.  
+  - Das empfangende System DARF den Inhalt des Datensatzes dem Nutzer NICHT anzeigen.
+  - Stattdessen MUSS der Nutzer darauf hingewiesen werden, dass ein technischer Fehler aufgetreten ist.
+  - Zusätzlich SOLL eine Option angeboten werden, den Fehler automatisiert oder manuell an den Support zu melden.
+
+<div class="gem-ig-example" data-title="OperationOutcome (XML)">
+    {% fragment OperationOutcome/ExampleFailedToValidateOperationOutcome XML %}
+</div>
+
+- **processing:**  
+  Dieser Code signalisiert einen fachlichen Fehler, den der Nutzer ggf. selbst beheben kann (z.B. fehlende Pflichtangaben wie Medikamentenname).
+  - Im Feld `OperationOutcome.issue.diagnostics` MUSS ein menschenlesbarer Text enthalten sein, der den Fehler beschreibt.
+  - Dieser Text MUSS dem Nutzer angezeigt werden.
+  - Dem Nutzer SOLL die Möglichkeit gegeben werden, den Datensatz zu korrigieren und erneut zu übermitteln.
+
+<div class="gem-ig-example" data-title="OperationOutcome (XML)">
+    {% fragment OperationOutcome/ExampleFailedToProcessOperationOutcome XML %}
+</div>
+
+**Hinweis:**  
+Die eindeutige Unterscheidung zwischen technischen und fachlichen Fehlern unterstützt eine zielgerichtete Fehlerbehandlung und verbessert die Nutzererfahrung. Die automatisierte Weiterleitung technischer Fehler an den Support erleichtert zudem eine schnelle Fehleranalyse und Behebung.
+

@@ -22,11 +22,11 @@ Description: "Anfrage konnte nicht bearbeitet werden"
 * issue[+]
   * severity = #error
   * code = #processing
-  * diagnostics = "MessageHeader verweist auf keine Ressource unter .focus"
+  * diagnostics = "Medikamentenname wurde nicht angegeben."
 * issue[+]
   * severity = #warning
   * code = #processing
-  * diagnostics = "MessageHeader.sender konnte nicht gefunden werden"
+  * diagnostics = "Sender der Nachricht konnte nicht ermittelt werden."
 
 Instance: ExampleFailedToValidateOperationOutcome
 InstanceOf: ATFOperationOutcome
@@ -35,6 +35,6 @@ Title: "Example Failed To Validate Operation Outcome"
 Description: "FHIR Datensatz konnte nicht gelesen/ validiert werden"
 * extension[MessageID].valueString = "8573faac-abf6-4021-be80-750c8619ec06"
 * issue[+]
-  * severity = #fatal
+  * severity = #error
   * code = #invalid
   * diagnostics = "Ressourcen konnten nicht validiert werden"
