@@ -50,6 +50,8 @@ Unter .issue können dem sendenden System als Antwort mehrere Einträge übermit
 
 Sobald ein OperationOutcome.issue.sverity = "error" oder "fatal" enthält, ist davon auszugehen, dass der Vorgang abgebrochen wurde und die Anfrage nicht erfolgreich war.
 
+Weitere Informationen können unter [Fehlerbehandlung](./errorhandling.html) eingesehen werden.
+
 ### Darstellung des Nachrichtenaustausches
 
 Hier beispielhaft ein Nachrichtenaustausch im Anwendungsfall ["E-Rezept Rezeptanforderung"](https://simplifier.net/erezept-servicerequest)
@@ -57,5 +59,4 @@ Hier beispielhaft ein Nachrichtenaustausch im Anwendungsfall ["E-Rezept Rezeptan
 <div class="gem-ig-svg-container" style="--box-width: 700px;">
     {% include atf_communication.svg %}
 </div>
-
 

@@ -12,7 +12,7 @@ Ziel ist es, Fehlverhalten frühzeitig zu erkennen, systematisch zu klassifizier
 
 ### Behandlung von Fehlern im OperationOutcome
 
-Für die Rückmeldung von Fehlern im Rahmen des Nachrichtenaustauschs ist das FHIR-Resource-Typ `OperationOutcome` zu verwenden. Dabei gelten folgende Vorgaben für den Umgang mit Fehlern:
+Für die Rückmeldung von Fehlern im Rahmen des Nachrichtenaustauschs ist das Profil [ATFOperationOutcome](./StructureDefinition-atf-operation-outcome.html) zu verwenden. Dabei gelten folgende Vorgaben für den Umgang mit Fehlern:
 
 - **Severity:** Bei Fehlern MUSS `OperationOutcome.issue.severity = "error"` gesetzt werden.
 - **Code:** Es sind ausschließlich die Codes `"invalid"` oder `"processing"` zu verwenden.
