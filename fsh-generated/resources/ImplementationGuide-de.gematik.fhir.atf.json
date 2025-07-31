@@ -2,9 +2,20 @@
   "resourceType": "ImplementationGuide",
   "id": "de.gematik.fhir.atf",
   "url": "https://gematik.de/fhir/atf/ImplementationGuide/de.gematik.fhir.atf",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "name": "AppTransportFramework",
   "status": "active",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "DE",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Germany"
+        }
+      ]
+    }
+  ],
   "packageId": "de.gematik.fhir.atf",
   "fhirVersion": [
     "4.0.1"
@@ -57,22 +68,6 @@
         },
         "name": "ATF Operation Outcome",
         "description": "Antwort auf eine eingegangene ATF Anfrage",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/atf-use-cases-cs"
-        },
-        "name": "ATF UseCases (CS)",
-        "description": "CodeSystem zur Auflistung der Anwendungsfälle, die das ATF unterstützt.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/atf-use-cases-vs"
-        },
-        "name": "ATF UseCases (VS)",
-        "description": "ValueSet zur Auflistung der Anwendungsfälle, die das ATF unterstützt.",
         "exampleBoolean": false
       },
       {

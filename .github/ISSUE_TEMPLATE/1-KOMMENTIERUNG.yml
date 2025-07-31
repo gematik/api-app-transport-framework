@@ -6,15 +6,6 @@ labels:
 assignees:
   - florianschoffke
 body:
-  - type: markdown
-    attributes:
-      value: |
-        **Die zu bewertenden Ressourcen sind:**
-
-        - [FHIR IG ServiceRequest](https://simplifier.net/guide/erp-servicerequest-implementation-guide?version=1.2.0-rc2)
-        - [FHIR Package ServiceRequest](https://simplifier.net/packages/de.gematik.erp-servicerequest/1.2.0-rc2)
-        - [FHIR IG ATF](https://simplifier.net/guide/atf-implementation-guide/Home/Datenobjekte/MessageHeader?version=1.4.0-rc1)
-        - [FHIR Package ATF](https://simplifier.net/packages/de.gematik.fhir.atf/1.4.0-rc2)
   - type: textarea
     id: issue-description
     attributes:

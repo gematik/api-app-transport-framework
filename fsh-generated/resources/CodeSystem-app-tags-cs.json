@@ -57,8 +57,16 @@
       "display": "Austausch von Zugriffsinformationen von E-Rezepten (z.B. anwendungsfertige Zytostatika Zubereitungen) zwischen Praxis, Apotheke, Krankenhäusern und Pflegeeinrichtungen."
     },
     {
+      "code": "eRezept_Rezeptanforderung",
+      "display": "Strukturierte Rezeptanforderung an einen Arzt, initiiert durch eine Pflegeeinrichung oder heimversorgende Apotheke zur Ausstellung eines Rezeptes."
+    },
+    {
+      "code": "eRezept_ParenteraleZubereitung",
+      "display": "Strukturierte Rezeptanforderung an einen Arzt, initiiert durch eine Apotheke nach dem Start der Zubereitung einer parenteralen Zubereitung."
+    },
+    {
       "code": "atf",
-      "display": "Strukturierte Rezeptanforderung an einen Arzt, initiiert durch eine Apotheke nach dem Start der Zubereitung einer parenteralen Zubereitung"
+      "display": "Strukturierter peer-to-peer Austausch von medizinsichen Daten."
     },
     {
       "code": "eAU",
@@ -138,5 +146,5 @@
   "version": "1.4",
   "date": "2025-07-29",
   "caseSensitive": true,
-  "count": 31
+  "count": 33
 }
