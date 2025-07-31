@@ -3,8 +3,8 @@ RuleSet: Versioning
 * ^status = #active
 * ^experimental = false
 * ^publisher = "gematik GmbH"
-* ^version = "1.4"
-* ^date = "2025-07-29"
+* ^version = "1.4.1"
+* ^date = "2025-07-31"
 
 RuleSet: Meta (profileName)
 * insert Versioning
