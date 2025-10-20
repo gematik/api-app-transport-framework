@@ -8,7 +8,7 @@ Empfangsbestaetigungen sind als Antwort auf jeglichen Nachrichtentyp im Kontext 
 
 |KIM-Header              |Inhalt                                 |verpflichtend|
 |------------------------|---------------------------------------|-------------|
-|X-KIM-Dienstkennung     |atf;Empfangsbestaetigung|ja|
+|X-KIM-Dienstkennung     |atf;empfangsbestaetigung;V1.0|ja|
 |X-KIM-Sendersystem      |\<PS-Bezeichnung>;\<Releaseversion>   |ja|
 |X-KIM-Support           |\<Support-Email-Adresse PS-Hersteller>|nein|
 |Subject                 |eNachricht-Eingangsbestaetigung|ja|
@@ -26,7 +26,7 @@ Weitere Anforderungen der eNachricht-Empfangsbestaetigung sind in der [Spezifika
     From: Arzt123@xyz.kim.telematik
     To: Pflegeheim@xyz.kim.telematik
     In-Reply-To:
-    X-KIM-Dienstkennung: atf;Empfangsbestaetigung
+    X-KIM-Dienstkennung: atf;empfangsbestaetigung;V1.0
     X-KIM-Sendersystem: Beipsiel-PVS-Client;V6.4.4
     ------=_Part_128_456146547.1541654416816
     Content-Type: text/plain; charset=utf-8
