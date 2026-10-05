@@ -4,7 +4,25 @@
   "url": "https://gematik.de/fhir/atf/ImplementationGuide/de.gematik.fhir.atf",
   "version": "1.4.1",
   "name": "AppTransportFramework",
+  "title": "App Transport Framework",
   "status": "active",
+  "date": "2025-07-31",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "name": "gematik GmbH",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://gematik.de"
+        },
+        {
+          "system": "email",
+          "value": "erp-umsetzung@gematik.de"
+        }
+      ]
+    }
+  ],
   "jurisdiction": [
     {
       "coding": [

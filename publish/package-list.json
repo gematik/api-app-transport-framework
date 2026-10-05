@@ -1,0 +1,25 @@
+{
+    "package-id": "de.gematik.fhir.atf",
+    "canonical": "https://gematik.de/fhir/atf",
+    "title": "App Transport Framework",
+    "introduction": "App Transport Framework",
+    "list": [
+        {
+            "version": "1.4.1",
+            "desc": "App Transport Framework",
+            "path": "https://gematik.de/fhir/atf/1.4.1",
+            "status": "release",
+            "current": false,
+            "date": "2025-07-31",
+            "sequence": "E-Rezept",
+            "fhirversion": "4.0.1"
+        },
+        {
+            "version": "current",
+            "desc": "Continuous Integration Build (latest in version control)",
+            "path": "https://gematik.de/fhir/atf/build",
+            "status": "ci-build",
+            "current": true
+        }
+    ]
+}

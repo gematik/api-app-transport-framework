@@ -7,6 +7,12 @@ status: active # draft | active | retired | unknown
 releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 copyrightYear: 2025
 jurisdiction: urn:iso:std:iso:3166#DE "Germany" # https://www.hl7.org/fhir/valueset-jurisdiction.html
+title: App Transport Framework
+date: 2025-07-31
+publisher:
+  name: gematik GmbH
+  url: https://gematik.de
+  email: erp-umsetzung@gematik.de
 
 dependencies:
   de.basisprofil.r4: 1.5.3
